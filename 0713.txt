@@ -69,4 +69,4 @@ file:///D:/%ED%95%99%EC%83%9D%EB%B0%A9/%EB%82%A8%EA%B8%B0%EC%A4%80/fsweb/index.h
 2.sftp -> 파일질라
 3.깃허브 데스크탑
 
-commit(승인)
+commit(승인) - push(업로드)

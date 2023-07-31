@@ -1,31 +1,249 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="reset.css">
     <title>Mcdonalds</title>
-</head>
-<body>
-  <div id="wrap">
-    <header>
-        <h1>Logo</h1>
-        <nav class="gnb">내비게이션</nav>
-    </header>
-    <div id="slide">이미지 슬라이드</div>
-    <div id="contents">
-        <div class="tabs">공지사항/갤러리</div>
-        <div class="banner">배너</div>
-            <div class="shortcut">바로가기</div>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div>
+          <img
+            src="https://www.mcdonalds.co.kr/kor/images/common/logo.png"
+            alt="logo"
+          />
+        </div>
+        <!-- GNB -->
+        <nav class="gnb">
+          <ul class="main">
+            <li>
+              <a href="#">Menu</a>
+              <ul class="sub">
+                <li><a href="#">버거</a></li>
+                <li><a href="#">맥런치</a></li>
+                <li><a href="#">맥모닝</a></li>
+                <li><a href="#">해피 스낵</a></li>
+                <li><a href="#">사이드&디저트</a></li>
+                <li><a href="#">맥카페&음료</a></li>
+                <li><a href="#">해피밀</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Store</a>
+              <ul class="sub">
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">맥딜리버리</a></li>
+                <li><a href="#">맥드라이브</a></li>
+                <li><a href="#">임차문의</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">What'sNew</a>
+              <ul class="sub">
+                <li><a href="#">프로모션</a></li>
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">이달의 해피밀</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Story</a>
+              <ul class="sub">
+                <li><a href="#">브랜드 소개</a></li>
+                <li><a href="#">사회적 책임과 지원</a></li>
+                <li><a href="#">맥도날드 품질 이야기</a></li>
+                <li><a href="#">맥도날드 사람들</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav_r">
+            <button>임차문의</button>
+            <button>RECRUIT</button>
+            <button>ENG</button>
+          </div>
+          <div class="search_i">
+            <a href="#"><img src="../images/search_i.png" alt="search_i" /></a>
+          </div>
+        </nav>
+      </header>
+      <div id="slide">
+        <ul>
+          <li class="slide_img">
+            <a href="#">
+              <img
+                src="../../50_html/assets/images/w1200/Mask_group-1.png"
+                alt="italy1"
+              />
+              <img
+                src="../../50_html/assets/images/w1200/Mask_group.png"
+                alt="italy2"
+              />
+              <img
+                src="../../50_html/assets/images/w1200/Mask_group-2.png"
+                alt="italy3"
+              />
+              <img
+                src="../../50_html/assets/images/w1200/Mask_group-1.png"
+                alt="italy1"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="contents">
+        <h1><b>McDonald's LIVE</b></h1>
+        <div class="card_box">
+        <!-- card1 -->
+          <div class="card">
+            <a href="#">
+              <div class="card_img">
+                <img
+                src="https://www.mcdonalds.co.kr/upload/main/card/1688536163368.jpg"
+                alt="card1_img"
+                />
+              </div>
+              <div>
+                <strong>땅 끝자락 진도에서 찾은<br />한국의 맛</strong>
+              </div>
+            </a>
+          </div>
+          <!-- card2 -->
+          <div class="card">
+            <a href="#">
+              <div class="card_img">
+                <img
+                src="https://www.mcdonalds.co.kr/upload/main/card/1688536267129.jpg"
+                alt="card2_img"
+                />
+              </div>
+              <div>
+                <strong>100% 우리 곡물로 살린 <br />고소한 한국의 맛</strong>
+              </div>
+            </a>
+            </div>
+            <!-- card3 -->
+          <div class="card">
+            <a href="#">
+
+              <div class="card_img">
+                <img
+                src="https://www.mcdonalds.co.kr/upload/main/card/1689752728419.jpg"
+                alt="card3_img"
+                />
+                </div>
+              <div>
+              <strong
+              >맥크리스피 버거 세트 먹고?<br />슈퍼팝 페스티벌 가자!</strong
+              >
+            </div>
+          </a>
+          </div>
+          <!-- card4 -->
+          <div class="card">
+            <a href="#">
+
+              <div class="card_img">
+                <img
+                src="https://www.mcdonalds.co.kr/upload/main/card/1686722914159.jpg"
+                alt="card4_img"
+                />
+              </div>
+              <div>
+                <strong>갓성비 간식 맛집, 맥도날드 해피 스낵!</strong>
+              </div>
+            </a>
+            </div>
+          <!-- card5 -->
+          <div class="card">
+            <a href="#">
+              <div class="card_img">
+                <img
+                src="https://www.mcdonalds.co.kr/upload/main/card/1684299963307.jpg"
+                alt="card5_img"
+                />
+              </div>
+              <div>
+                <strong>여름의 맛!<br />겉바속쫄 맥윙!</strong>
+              </div>
+          </div>
+          <!-- card6 -->
+          <div class="card">
+          <a href="#">
+            <div class="card_img">
+             <img
+            src="https://www.mcdonalds.co.kr/upload/main/card/1685434964328.jpg"
+            alt="card6_img"
+            />
+          </div>
+          <div>
+            <strong>달콤한 아이스크림과<br />진~한 라떼의 만남!</strong>
+          </div>
+        </a>
+      </div>
     </div>
-    <footer>
-        <div class="blogo">하단로고</div>
-        <div class="copy">주소 및 저작권</div>
-        <div class="sns">SNS</div>
-    </footer>
-  </div>
-    
 
+      </div>
+      <footer>
+        <!-- Bottom Menu -->
+        <div class="b_menu">
+          <ul>
+            <li>
+              <a href="#">
+                <b>개인정보 처리방침</b>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b>위치정보 이용약관</b>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b>사이트맵</b>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b>임차문의</b>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b>고객문의</b>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b>인재채용</b>
+              </a>
+            </li>
+          </ul>     
+           </div>
 
-</body>
+           <!-- COPYRIGHT -->
+        <div class="copy">
+          <ul>
+            <li><p>한국맥도날드(유)</p></li>
+            <li>대표이사: 김기원</li>
+            <li>사업자등록번호: 101-81-26409</li>
+            <li>전화주문: 1600-5252</li>
+            <li> COPYRIGHT2019ALL RIGHTS RESERVED BY McDonald's.</li>
+          </ul>
+        </div>
+        <!-- SNS -->
+        <div class="sns">
+          <ul class="sns_i">
+            <li><a href="#"><img src="https://www.mcdonalds.co.kr/kor/images/common/ico_sns.png" alt=""></a></li>
+            <li><a href="#"><img src="" alt=""></a></li>
+            <li><a href="#"><img src="" alt=""></a></li>
+            <li><a href="#"><img src="" alt=""></a></li>
+            <li><a href="#"><img src="https://www.mcdonalds.co.kr/kor/images/common/web_accessibility.png" alt="과학기술정보통신부 Web 접근성 (사)한국시각장애인연합회 2023.5.2 ~ 2024.5.1"></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

@@ -1,73 +1,113 @@
-li {
-    marker-start: none;
+.logo {
+  width: 106px;
+  height: 93px;
+  padding-bottom: 15px;
 }
-
-
-
 header {
-    display: flex;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.gnb {
+  width: 1700px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  background-color: white;
+  border-bottom: 1px solid gray;
+}
+a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+/* ul li {
+    border: 1px solid black;
+  } */
 
 .main .sub {
-    marker: none;
-    
+  marker: none;
 }
-nav {
-    width: 100%;
+.main {
+  display: flex;
+  line-height: 160%;
+}
+.main > li > a {
+  /* border: 1px solid black; */
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 22px;
+  width: 200px;
+}
+.sub {
+  display: none;
+  text-align: left;
+}
+.main:hover .sub {
+  display: block;
 }
 .nav_r {
-    display: flex;
+  display: flex;
 }
 .nav_r > button {
-    font-size: 16px;
-    height: 30px;
-    border-radius: 25%;
-    color: white;
-    border-style: none;
+  font-size: 16px;
+  height: 30px;
+  border-radius: 20%;
+  color: white;
+  border-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-.search_i {
-    background-color: none;
+.nav_btn1 {
+  background-color: #db0007;
 }
-.nav_r :nth-child(1) {
- background-color: #db0007;
+.nav_btn2 {
+  background-color: #d87e00;
 }
-.nav_r :nth-child(2) {
- background-color: #d87e00;
-}
-.nav_r :nth-child(3) {
- background-color: #264a36;
+.nav_btn3 {
+  background-color: #264a36;
 }
 
-.slide_img{
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
+/* contents */
+.slide {
+  width: 1920px;
+  height: 540px;
+  overflow: clip;
 }
-.contents{
-box-sizing: border-box;
-display: flex;
-justify-content: center;
-right: 80px;
+.slide_img {
+  width: 100%;
+}
+.contents {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .card_box {
-    width: 1400px;
-    display: flex;
-    border: 1px solid red;
+  width: 1400px;
+  overflow: clip;
+  display: flex;
 }
 
 .card {
-    border: 1px solid black;
-    width: 400px;
-    height: 300px;
-    margin: 50px;
+  border: 1px solid black;
+  width: 400px;
+  height: 300px;
+  margin: 50px;
 }
-
+.card_text {
+  line-height: 160%;
+}
 
 footer {
-    width: 100%;
-    height: 300px;
-    background-color: rgb(65, 60, 60);
-    display: flex;
+  width: 100%;
+  height: 300px;
+  background-color: #292929;
+  display: flex;
 }
-
+.copy {
+  color: #8c8c8c;
+}
+.sns {
+  display: flex;
+}

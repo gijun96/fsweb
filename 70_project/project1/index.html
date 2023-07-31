@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="reset.css">
-    <title>Mcdonalds</title>
-  </head>
+    <title>Mcdonald's</title>
+</head>
+
   <body>
-    <div id="wrap">
+    <div class="wrap">
       <header>
-        <div>
-          <img
-            src="https://www.mcdonalds.co.kr/kor/images/common/logo.png"
-            alt="logo"
-          />
-        </div>
-        <!-- GNB -->
-        <nav class="gnb">
+          <!-- GNB -->
+          <nav class="gnb">
+            <!-- logo -->
+            <div class="logo">
+               <a href="#"><img src="https://www.mcdonalds.co.kr/kor/images/common/logo.png" alt="mcdonalds_logo"></a>
+            </div>
+            <!-- nav -->
           <ul class="main">
             <li>
               <a href="#">Menu</a>
@@ -59,12 +59,21 @@
             </li>
           </ul>
           <div class="nav_r">
-            <button>임차문의</button>
-            <button>RECRUIT</button>
-            <button>ENG</button>
-          </div>
-          <div class="search_i">
-            <a href="#"><img src="../images/search_i.png" alt="search_i" /></a>
+            <button class="nav_btn1">
+                <a href="#">
+                    임차문의
+                </a>
+            </button>
+            <button class="nav_btn2">RECRUIT</button>
+            <button class="nav_btn3">ENG</button>
+            <div class="search_i">
+                <a href="#" id="search">
+                    <img
+                    src="https://www.mcdonalds.co.kr/kor/images/common/ico_search.png"
+                    alt="logo"
+                    />
+                </a>
+            </div>
           </div>
         </nav>
       </header>
@@ -73,28 +82,26 @@
           <li class="slide_img">
             <a href="#">
               <img
-                src="../../50_html/assets/images/w1200/Mask_group-1.png"
-                alt="italy1"
+                src="https://www.mcdonalds.co.kr/upload/main/banner/1681352070104.jpg"
+                alt="img1"
               />
               <img
-                src="../../50_html/assets/images/w1200/Mask_group.png"
-                alt="italy2"
+                src="https://www.mcdonalds.co.kr/upload/main/banner/1688535855902.jpg"
+                alt="img2"
               />
               <img
-                src="../../50_html/assets/images/w1200/Mask_group-2.png"
-                alt="italy3"
+                src="https://www.mcdonalds.co.kr/upload/main/banner/1688597307977.jpg"
+                alt="img3"
               />
-              <img
-                src="../../50_html/assets/images/w1200/Mask_group-1.png"
-                alt="italy1"
-              />
+              
+              
             </a>
           </li>
         </ul>
       </div>
 
-      <div id="contents">
-        <h1><b>McDonald's LIVE</b></h1>
+      <section id="contents">
+        <h2>McDonald's LIVE</h2>
         <div class="card_box">
         <!-- card1 -->
           <div class="card">
@@ -105,7 +112,7 @@
                 alt="card1_img"
                 />
               </div>
-              <div>
+              <div class="card_text">
                 <strong>땅 끝자락 진도에서 찾은<br />한국의 맛</strong>
               </div>
             </a>
@@ -119,7 +126,7 @@
                 alt="card2_img"
                 />
               </div>
-              <div>
+              <div class="card_text">
                 <strong>100% 우리 곡물로 살린 <br />고소한 한국의 맛</strong>
               </div>
             </a>
@@ -134,9 +141,9 @@
                 alt="card3_img"
                 />
                 </div>
-              <div>
-              <strong
-              >맥크리스피 버거 세트 먹고?<br />슈퍼팝 페스티벌 가자!</strong
+              <div class="card_text">
+              <strong>
+              맥크리스피 버거 세트 먹고?<br />슈퍼팝 페스티벌 가자!</strong
               >
             </div>
           </a>
@@ -151,7 +158,7 @@
                 alt="card4_img"
                 />
               </div>
-              <div>
+              <div class="card_text">
                 <strong>갓성비 간식 맛집, 맥도날드 해피 스낵!</strong>
               </div>
             </a>
@@ -165,7 +172,7 @@
                 alt="card5_img"
                 />
               </div>
-              <div>
+              <div class="card_text">
                 <strong>여름의 맛!<br />겉바속쫄 맥윙!</strong>
               </div>
           </div>
@@ -178,12 +185,15 @@
             alt="card6_img"
             />
           </div>
-          <div>
+          <div class="card_text">
             <strong>달콤한 아이스크림과<br />진~한 라떼의 만남!</strong>
           </div>
         </a>
       </div>
     </div>
+   
+  </div>
+
 
       </div>
       <footer>
@@ -222,7 +232,7 @@
             </li>
           </ul>     
            </div>
-
+           
            <!-- COPYRIGHT -->
         <div class="copy">
           <ul>
@@ -236,11 +246,11 @@
         <!-- SNS -->
         <div class="sns">
           <ul class="sns_i">
-            <li><a href="#"><img src="https://www.mcdonalds.co.kr/kor/images/common/ico_sns.png" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="https://www.mcdonalds.co.kr/kor/images/common/web_accessibility.png" alt="과학기술정보통신부 Web 접근성 (사)한국시각장애인연합회 2023.5.2 ~ 2024.5.1"></a></li>
+            <li><a href="#"><img src="" alt="facebook"></a></li>
+            <li><a href="#"><img src="" alt="instagram"></a></li>
+            <li><a href="#"><img src="" alt="youtube"></a></li>
+            <li><a href="#"><img src="" alt="kakao"></a></li>
+            <li id="web_accessibility"><a href="#"><img src="./image 1.png" alt="과학기술정보통신부 Web 접근성 (사)한국시각장애인연합회 2023.5.2 ~ 2024.5.1"></a></li>
           </ul>
         </div>
       </footer>

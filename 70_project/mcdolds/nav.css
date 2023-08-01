@@ -1,0 +1,79 @@
+/* header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+      width: 106px;
+      top: 20px;
+    }
+    /* nav */
+  .gnb {
+      width: 1700px;
+      display: flex;
+      padding: 20px 200px 15px 400px;
+      background-color: white;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.6);
+    }
+    /* a href style reset */
+    a {
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+    }
+  
+  
+    /* nav_menu */
+    .main .sub {
+      marker: none;
+    }
+    .main {
+      display: flex;
+      line-height: 160%;
+      margin-left: 150px;
+  }
+      .list {
+          width: 720px;
+  }
+    .main > li > a {
+      /* border: 1px solid black; */
+      margin: 20px;
+      margin-left: 35px;
+      font-size: 22px;
+      width: 200px;
+    }
+    .sub {
+      display: none;
+      text-align: left;
+      line-height: 160%;
+      margin-top: 10px;
+    }
+
+    .main:hover .sub {
+      display: block;
+    }
+    /* nav_btn */
+    .nav_r {
+      display: flex;
+      margin-left: 50px;
+    }
+    .nav_r > button {
+      font-size: 16px;
+      height: 30px;
+      border-radius: 20%;
+      color: white;
+      border-style: none;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .nav_btn1 {
+      background-color: #db0007;
+    }
+    .nav_btn2 {
+      background-color: #d87e00;
+    }
+    .nav_btn3 {
+      background-color: #264a36;
+    }
+    

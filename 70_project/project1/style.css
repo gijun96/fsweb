@@ -1,70 +1,92 @@
-/* header */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 header {
-  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gnb {
   width: 1200px;
   display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  background-color: white;
+  border-bottom: 1px solid gray;
 }
+a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+/* ul li {
+      border: 1px solid black;
+    } */
 
-header > div {
-  border: 1px solid black;
-}
-
-/* logo */
-.logo {
-  width: 40px;
-  height: 40px;
-  border: 1px solid black;
-}
-/* nav */
 ul li {
   list-style: none;
 }
-
-nav > ul {
+.main {
   display: flex;
+  line-height: 160%;
 }
-.sub > li {
+.main > li > a {
+  /* border: 1px solid black; */
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 22px;
+  width: 200px;
+}
+.sub {
   display: none;
+  text-align: left;
+}
+.main:hover .sub {
+  display: block;
 }
 
+.content {
+  width: 1200px;
+  height: 700px;
+  border: 1px solid black;
+}
 /* carousel */
-
-.carousel_wrapper {
+.carousel-wrapper {
   width: 1200px;
   height: 300px;
   overflow: hidden;
-  display: flex;
 }
-.carousel_wrapper > .carousel {
+.carousel-wrapper > .carousel {
   display: flex;
   transform: translate3d(0, 0, 0);
   transition: transform 0.2s;
+  /* overflow: hidden; */
 }
-.carousel_wrapper > .carousel > img {
+.carousel-wrapper > .carousel > img {
   width: 1200px;
   height: 300px;
 }
 
-/* contents */
-.contents {
-  display: flex;
+.container {
+  width: 1200px;
+  height: 400px;
+  border: 1px solid black;
 }
-.contents > div {
+.tabs {
   width: 400px;
   height: 400px;
   border: 1px solid black;
 }
-
-.content >a> img{
-  width: 400px;
-  height: 400px;
+.btn {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
-
-/* footer */
 footer {
-  display: inline;
   width: 1200px;
   height: 100px;
-  background-color: #ccc;
+  border: 1px solid black;
 }

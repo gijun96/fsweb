@@ -1,13 +1,27 @@
+::-webkit-scrollbar-button {
+  display: none;
+} /* 스크롤 바 상 하단 버튼 */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
 header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.logo {
+  justify-content: left;
+}
+
 .gnb {
   width: 1200px;
   display: flex;
@@ -43,26 +57,31 @@ ul li {
   display: none;
   text-align: left;
 }
+.sub > li {
+  padding-left: 20px;
+}
 .main:hover .sub {
   display: block;
 }
 
+/* constent */
 .content {
   width: 1200px;
   height: 700px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 /* carousel */
 .carousel-wrapper {
   width: 1200px;
   height: 300px;
   overflow: hidden;
+  /* position: relative; */
 }
 .carousel-wrapper > .carousel {
   display: flex;
   transform: translate3d(0, 0, 0);
   transition: transform 0.2s;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .carousel-wrapper > .carousel > img {
   width: 1200px;
@@ -72,21 +91,33 @@ ul li {
 .container {
   width: 1200px;
   height: 400px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  display: flex;
 }
 .tabs {
   width: 400px;
   height: 400px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
-.btn {
+.tab_btn {
   display: flex;
   margin-top: 10px;
   margin-left: 20px;
 }
 
+.img_content {
+  width: 400px;
+  height: 400px;
+}
+
 footer {
   width: 1200px;
   height: 100px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  display: flex;
+  background-color: #ccc;
+}
+footer > div {
+  width: 400px;
+  height: 100px;
 }

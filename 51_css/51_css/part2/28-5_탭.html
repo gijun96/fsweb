@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>탭</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      #tabs div {
+        position: absolute;
+        top: 40px;
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+      }
+      #tabs li {
+          /* float: left; */
+          display: inline-block;
+        border: 1px solid black;
+        margin-left: 10px;
+        padding: 8px 16px;
+        background-color: aquamarine;
+      }
+      
+
+      /* 
+
+      .hidden {
+        display: none;
+      }
+      .block {
+        display: block;
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="tabs">
+      <!-- 버튼 영역 -->
+      <ul class="btn">
+        <li>
+          <a href="#tab1">메뉴1</a>
+        </li>
+        <li><a href="#tab2">메뉴2</a></li>
+      </ul>
+
+      <!-- 내용영역 -->
+
+      <div id="tab1">
+        
+      </div>
+      <div id="tab2">두 번째 내용</div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

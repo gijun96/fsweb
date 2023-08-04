@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>탭</title>
+    <style>
+      /* 초기화 */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      ul li {
+        font-size: 14px;
+        list-style: none;
+      }
+      a {
+        color: black;
+        text-decoration-line: none;
+        margin-right: 10px;
+      }
+      a:hover {
+        color: blue;
+      }
+      #tabs{
+        width: 400px;
+      }
+      /* 버튼 */
+      #tabs .btn li {
+        /* float: left; */
+        display: inline-block;
+        background-color: aquamarine;
+        padding: 8px 16px;
+      }
+
+      /* 내용 공통  */
+      .btn div {
+        position: absolute;
+        top: 40px;
+        width: 400px;
+        height: 160px;
+      }
+      /* 공지사항 */
+      #tab1 {
+        background-color: lightblue;
+        display: none;
+        
+      }
+
+      #tab1 li {
+        border-bottom: 1px solid #ccc;
+        margin: 8px;
+        padding-bottom: 0.6em;
+    }
+    #tab1 span {
+          width: 340px;
+        display: inline-block;
+      }
+
+      /* 겔러리 */
+      #tabs #tab2 {
+        background-color: tomato;
+        padding: 16px;
+        display: flex;
+        width: calc(400px-32px);
+        /* box-sizing: border-box; */
+        /* display: none; */
+      }
+      #tab2 img{
+        width: 100px;
+      }
+      #tab2 >a {
+        padding: 15px;
+      }
+
+      /* 
+
+      .hidden {
+        display: none;
+      }
+      .block {
+        display: block;
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="tabs">
+      <!-- 버튼 영역 -->
+      <ul class="btn">
+        <li>
+          <a href="#tab1">공지사항</a>
+        </li>
+        <li><a href="#tab2">겔러리</a></li>
+      </ul>
+
+      <!-- 내용영역 -->
+
+      <div id="tab1">
+        <ul>
+          <li>
+            <a href="#"
+              ><span>맞춤 플랜을 제안하는 크리에이티브.</span> 2023-08-02</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span>JUST 쇼핑몰과 함께 하실 가슴 따뜻한..</span> 2023-08-02</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <span>코리아웨딩페어 결혼박람회가 열립니다.</span>
+              2023-08-02</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <span>마진없이 아낌없이 드리는 마지막 찬스!</span>
+              2023-08-02</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div id="tab2">
+        <a href="#"><img src="../../assets/g1.jpg" alt="g1"></a>
+        <a href="#"><img src="../../assets/g2.jpg" alt="g2"></a>
+        <a href="#"><img src="../../assets/g3.jpg" alt="g3"></a>
+    </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

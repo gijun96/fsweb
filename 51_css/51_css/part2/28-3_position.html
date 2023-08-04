@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+      .main_img {
+        position: relative;
+        width: 100%;
+        height: 800px;
+        text-align: center;
+        /* aspect-ratio: auto 1500/800; */
+        aspect-ratio:  15/8;
+    }
+      .main_img div{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* margin-left: -150px;
+        margin-top: -50px; */
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        line-height: 50px;
+      }
+     
+      
+      img{
+        /* 
+            가로 중앙
+            1. 블록레벨 요소: :margin: 0 auto;
+            2. 인라인 요소 -> text align:center; 사용하여 가운데 배치할 수 있다.
+         */
+        /* text-align: center; */
+      }
+.tit1{
+    /* padding: 8px 16px; */
+    background-color: #000;
+    /* color: white; */
+    /* opacity는 불투명도 0(투명), 1(불투명) 단위없음 */
+    opacity: 0.75;
+    padding: 8px 16px;
+    /* font-size: 36px; */
+    font-weight: bolder;
+    /* letter-spacing: 4px; */
+    text-align: center;
+}
+.main{
+    color: white;
+    font-size: 36px;
+    /* text-align: center; */
+    padding: 8px 16px;
+    text-align: center;
+    letter-spacing: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main_img">
+        <img src="../../assets/Architecture.jpg" alt="Architecture" />
+        <div>
+            <span class="tit1">BR</span><span class="tit2">Architecture</span>
+      </div>
+    </div>
+  </body>
+</html>

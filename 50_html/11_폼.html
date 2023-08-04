@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML</title>
+  </head>
+
+  <body>
+    <h1>폼</h1>
+    <!-- 
+        <form>: 폼 요소 그룹핑
+        <fieldset>: 그룹핑
+            <legend>: fieldset으로 그룹핑한 콘테츠의 제목
+
+        <label>
+        <input>: 한 줄 텍스트 입력, 버튼, ...
+                input은 빈태그
+        <button>: 버튼
+        <textarea>: 여러 줄 텍스트 입력
+        <select>: 목록
+            <option>
+            <optgroup>
+        <datalist>: 콤보 = 목록 + 입력
+     -->
+
+    <!-- 
+        <input type="값">
+        값: text, password, hidden
+            submit, reset, button, file, image
+            search, email, tel, url
+      -->
+    <p>폼(양식)? 검색 창, 로그인 창, 회원가입, 게시판</p>
+    <!-- 서버 프로그래밍언어: php, jsp, asp -->
+    <!-- 자동 완성 기능:  autocomplete="on" -->
+    <h2>검색</h2>
+    <form action="search.jsp" method="get" autocomplete="off">
+      <fieldset>
+        <legend>검색 창</legend>
+        <!-- 검색 입력 상자 -->
+        구글 검색:
+        <input type="search" name="search" />
+        <!-- 검색 버튼 -->
+        <input type="submit" value="검색" />
+      </fieldset>
+    </form>
+    <h2>로그인</h2>
+    <form action="login.jsp">
+      <fieldset>
+        <legend>로그인</legend>
+
+        <!-- 아이디 -->
+        <label for="user_id"></label>아이디:
+        <input type="text" id="user_id" placeholder="아이디를 입력하세요" />
+        <!-- 패스워드 -->
+        패스워드:
+        <label for="user_pw"></label>
+        <input type="password" name="user_pw" id="" user_pw  placeholder="비밀번호"/>
+
+        <!-- 로그인 버튼 -->
+        <!-- value는 버튼의 이름 -->
+        <input type="submit" value="로그인" />
+      </fieldset>
+    </form>
+
+    <h2>회원 가입</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>회원 가입</legend>
+
+        <!-- 이용 약관 -->
+        <div>
+          <!-- 체크박스 -->
+          <input type="checkbox" name="checkbox" id="chk1">
+          <label for="chk1">
+              ooo 이용약관 동의(필수)
+          </label>
+        </div>
+
+        <div>
+          <!-- 글상자 -->
+          <!-- cilumns(열), row(행) -->
+          <textarea readonly>여러분을 환영합니다. ooo 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서
+              감사합니다. 본 약관은 -중략-</textarea>
+        </div>
+
+        <div>
+          <!-- text 입력 상자 -->
+          <label for="birth">생년월일</label>
+          <!-- value는 초기값이면서 서버로 전송될 데이터 -->
+            <input type="text" name="birth_year" id="birth" value="" placeholder="년">
+          
+          <!-- 목록 상자 -->
+            <select name="list">
+                <option value="mon">월</option>
+                <optgroup label="겨울">
+                    <option value="dec">12</option>
+                    <option value="jan">1</option>
+                    <option value="feb">2</option>
+                </optgroup>
+                <optgroup label="봄">
+                    <option value="mar">3</option>
+                    <option value="mar">4</option>
+                    <option value="apr">5</option>
+                </optgroup>
+                <optgroup label="여름">
+                    <option value="may">6</option>
+                    <option value="jun">7</option>
+                    <option value="jul">8</option>
+                </optgroup>
+                <optgroup label="가을">
+                    <option value="aug">9</option>
+                    <option value="oct">10</option>
+                    <option value="nov">11</option>
+                </optgroup>
+            </select>
+          
+          <!-- text 입력 상자 -->
+        <input type="text" name="day" id="" value="" placeholder="일">  
+        
+
+        <div>
+          <!-- 이메일 -->
+          본인 확인 이메일
+          <input type="text" name="user_id2">@
+          <input type="text" name="user_domain" list="mail">
+            <datalist id="mail">
+                <option value="naver">naver.com</option>
+                <option value="daum">daum.net</option>
+                <option value="google">google.com</option>
+                <option value="nate">nate.com</option>
+            </datalist>
+
+            <!-- 이메일 -->
+            <br>
+            <input type="email" name="user_mail">
+
+        </div>
+
+            <div>
+          <!-- 전화번호 -->
+            <label for="user_tel">휴대전화</label>
+            <!-- 
+                폼 유효성 검사
+             -->
+            <input type="tel" name="user_tel" id="user_tel" >
+            </div>
+
+        <!-- 동의 여부 확인 -->
+        <!-- 체크 박스는 여러 개의 항목 중 여러개 선택 가능-->
+        <label><input type="checkbox" name="languege1" value="HTML">HTML</label>
+        <label><input type="checkbox" name="languege2" value="CSS">CSS</label>
+        <label><input type="checkbox" name="languege3" value="Javascript">Javascript</label>
+
+
+
+
+        <!-- 라디오 버튼은 여러 개의 항목 중 1개만 선택 가능 -->
+        <!-- 라디오버튼은 name은 같은 이름을 쓴다. -->
+           <input type="radio" name="agree" value="y">
+           <label for="agree">동의함.</label>
+            <input type="radio" name="disagree" value="n">
+            <label for="disagree">동의하지 않음.</label>
+            <!-- 전송버튼 -->
+            <!-- vlaue는 버튼의 이름 -->
+            <button type="submit" value="가입하기">가입하기</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

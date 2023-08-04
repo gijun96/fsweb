@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <title>한 페이지 내에서 링크</title>
+  </head>
+  <body>
+    <!-- 
+        인라인 요소
+            - 줄바꿈 x(왼쪽에서 오른쪽 가로 배치)
+            -가로/세로 컨텐츠의 크기
+            - 인라인 요소는 블록레벨 요소를 작식으로 가질수 없다.
+                단, a태그는 예외
+        <a href="#값|URL|파일|메일|전화번호">
+        #값 : 현재 페이지의 최상단
+        <태그 id="값">
+
+     -->
+    <ul>
+      <li><a href="#section1">섹션1</a></li>
+      <li><a href="#section2">섹션2</a></li>
+    </ul>
+    <h1>한 페이지 내에서 링크</h1>
+    <!-- 글로벌 속성: id, class, title등
+        글로벌 속성이란 모든 태그에 사용할 수 있는 공통 속성
+
+    -->
+    <h2 id="section1">섹션1</h2>
+    <p>
+      의미없는 텍스트, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Nesciunt laboriosam accusantium eius consequatur sint placeat laudantium,
+      iste expedita sequi quo nihil veniam est commodi excepturi. Deserunt neque
+      inventore ducimus nam? Lorem, ipsum dolor sit amet consectetur adipisicing
+      elit. Nostrum exercitationem, atque quis explicabo ut tenetur eveniet,
+      consectetur ab quod sit a aliquid consequuntur architecto. Error quibusdam
+      reiciendis obcaecati praesentium vel. Lorem ipsum dolor sit amet
+      consectetur, adipisicing elit. Excepturi fugiat fuga provident consequatur
+      eligendi explicabo expedita assumenda dolorum sed harum aperiam voluptates
+      quidem ipsam quasi quae recusandae ex laboriosam est vitae, eaque,
+      officiis tempora atque. Ab, ut saepe, aliquid dignissimos minima ipsam
+      beatae hic, a necessitatibus distinctio sunt? Ad itaque corrupti facilis
+      aspernatur aliquam inventore. Ipsam, neque exercitationem necessitatibus
+      veritatis error fugiat excepturi repellendus debitis atque explicabo
+      incidunt vero sunt officiis possimus magnam, recusandae enim blanditiis
+      odio voluptatum pariatur sit. Doloribus obcaecati veniam iure enim ea id
+      accusamus, officiis et facilis, architecto cum laborum sapiente odit
+      excepturi, temporibus sint amet dignissimos provident alias? Labore
+      laborum aliquid et non eum? Voluptas ullam molestiae animi voluptates
+      optio rerum quibusdam, repellendus quidem esse dolorum impedit odit
+      perspiciatis assumenda quos quasi corrupti officiis modi. Ex nobis
+      perspiciatis aut quos perferendis eligendi voluptate. Fugiat voluptas
+      provident alias iusto recusandae voluptatum! A corrupti illum rerum
+      laboriosam tenetur, minus, possimus esse ullam laudantium illo quam nemo
+      cumque. Provident autem consequuntur at sit, amet molestias ullam culpa
+      explicabo velit ex ducimus, dolore vero, id pariatur nam ab quis
+      cupiditate maiores neque porro exercitationem et repudiandae accusamus!
+      Ipsum porro rem voluptatibus minus itaque nobis laboriosam ratione sunt
+      assumenda totam.
+    </p>
+    <h2 id="section2">섹션2</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dignissimos
+      atque est maiores expedita, eveniet ducimus iste facilis cum esse, fuga
+      illo perferendis aperiam illum asperiores, repellendus sit a minus. Sunt
+      neque facere quas expedita quia suscipit corrupti, exercitationem ex,
+      iusto ab repellat quod aliquid cum at deleniti omnis dolores nesciunt quos
+      beatae quidem cupiditate. Reprehenderit laboriosam veritatis hic minus
+      voluptatum quo ut ex. Sunt, odio. Explicabo neque recusandae excepturi
+      itaque velit qui quo voluptatum laborum, consectetur unde autem beatae et
+      aliquam soluta delectus laboriosam praesentium perferendis totam rem
+      voluptatibus magnam! Consequuntur voluptatum natus iusto sequi delectus
+      officia debitis cupiditate, laborum sit fugiat dicta, velit voluptatem
+      dignissimos quaerat accusantium. Assumenda vero error tempora! Et in
+      repellendus itaque voluptate ipsum, corrupti enim perspiciatis ducimus
+      quae, voluptatibus beatae? Harum assumenda minus eligendi qui dolor,
+      delectus asperiores hic praesentium at incidunt vitae aspernatur quidem
+      sed dolore minima numquam voluptas aut dignissimos ad suscipit perferendis
+      sunt dolorem. Tempore necessitatibus repellat quasi sapiente vitae cumque
+      fugit iusto harum. Nesciunt sequi enim ab neque aspernatur officiis
+      repudiandae laboriosam porro voluptas libero voluptatem, amet et corporis,
+      sapiente dolore quia magni. Vel voluptatibus sed praesentium consectetur
+      ullam explicabo exercitationem, illum totam libero temporibus ut veniam
+      beatae recusandae nulla.
+    </p>
+
+    <h2>푸터2</h2>
+    <a href="#top">위로가기</a>
+
+<!-- 좋은 예 -->
+<p><a href="#">나는 단락이다.</a></p>
+<!-- 나쁜 예 -->
+<a href="#">
+    <p>나는 단락이다.</p>
+</a>
+
+  </body>
+</html>

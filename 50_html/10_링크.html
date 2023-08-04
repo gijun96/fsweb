@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML</title>
+    <style>
+      /* 크기는 CSS로 작성 */
+      img {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>하이퍼링크</h1>
+    <!-- 
+        URL(Uniform Resourse Locator)
+        프로토콜://도메인(IP):포트/경로/파일명
+        https://www.naver.com
+        http://127.0.0.1:5500/50_html/10_링크.html
+
+        <frameset> <frame> => (X)
+            <iframe> (O) 
+        <a href="URL" target="_blank">
+        <태그 필수속성="값" [선택속성="값"]>
+    -->
+
+    <!-- 현재 페이지(임시 페이지): # -->
+    <a href="#">텍스트</a>
+    <a href="#">
+      <img src="./assets/images/cocacola.png" alt="cocacola" />
+    </a>
+    <!-- 현재 창: _self -->
+    <a href="https://naver.com">네이버</a>
+    <a href="https://nid.naver.com/user2/join/agree?lang=ko_KR&domain=null" target="_self">회원가입</a>
+    <!-- 새 창: _blank -->
+    <a href="https://news.naver.com/" target="_blank">네이버뉴스</a>
+    <!-- 전화번호: tel -->
+    <a href="tel:+010-3674-5733">010-3674-5733</a>
+    <!-- 이메일: mailto -->
+    <a href="mailto:kj5733@naver.com">kj5733@naver.com</a>
+    <!-- N메일: https://mail.naver.com/write/popup?srvid=note&to=id@naver.com -->
+
+    <hr />
+    <!-- 
+      <a href="값">
+        값: URL,tel, mail, 경로/파일(html, jpg, pdf)
+     -->
+     <!-- 상대 경로: 코드가 작성된 파일 기준 -->
+
+    <!-- 같은 폴더: 파일명만 기록한다. -->
+    <a href="09_이미지.html">09_이미지.html</a>
+    <!-- 하위 폴더: 폴더/파일명 -->
+    <a href="assets/pic_trulli.jpg">트룰리</a>
+    <!-- 상위 폴더: ../파일명 -->
+    <a href="../workplace.jpg">작업</a>
+
+     <!-- 루트 경로(/): 코드가 작성된 파일과 관계없이 작업영역 
+           폴더로 부터 연결할 파일의 위치를 지정-->
+     <a href="/50_html/09_이미지.html">09_이미지.html</a>
+     <a href="/50_html/assets/trulli.jpg">트룰리</a>
+     <a href="/workplace.jpg">작업</a>
+      
+
+
+
+
+  </body>
+</html>

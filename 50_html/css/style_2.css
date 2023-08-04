@@ -1,0 +1,90 @@
+body *{
+    margin: 0;
+    padding: 0;
+
+}
+
+ div{
+    border: 1px solid black;
+    text-align: center;
+}
+header{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+ }
+ul li{
+    list-style: none;
+    padding-right:0 ;
+}
+.main> li{
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+}
+.main>li:hover{
+    background-color: bisque;
+}
+
+.sub> li{
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+.sub>li:hover{
+    color: white;
+    background-color: black;
+}
+ .logo>img {
+    width: 200px;
+    height: 40px;
+ }
+
+
+
+ .wrap{
+    display: flex;
+    width: 1000px;
+    height: 600px;
+ }
+ .container{
+    width: 800px;
+    height: 500px;
+ }
+.section1{
+    width: 800px;
+    height: 300px;
+}
+.section1> img{
+    height: 300px;
+}
+
+ .section2{
+    display: flex;
+ }
+ .section2>div{
+    width: 400px;
+    height: 200px;
+ }
+ footer{
+    display: flex;
+ }
+
+
+ footer> div:nth-child(1){
+    height: 90px;
+    width: 800px;
+ }
+ footer> div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    
+ }
+ .fside>div{
+    width: 200px;
+    height: 45px;
+    /* height: ; */
+ }
+ 
+ 

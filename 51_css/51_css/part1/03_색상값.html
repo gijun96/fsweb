@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp */
+
+        /* HEX: 16진수 -> 0~9, A~F   -> #RRGGBB 또는 #RGB */ 
+        /* #RRGGBB 또는 #RGB */
+
+        /* rgb(0~255, 0~255, 0~255) */  
+
+        /* rgba(0~255, 0~255, 0~255, 0~1) */
+
+        /* hsl(0~359, 0~100%, 0~100%) */
+        
+        /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+        /* 
+            영문 키워드는 테스트용
+            포플 제작시 #RRGGBB
+            투명도 필요시 rgba(r, g, b, a);
+        */
+        /* id >class> element */
+        .cName {
+            color: blue;
+        }
+
+        #CHex {
+            color: red;
+        }
+        p{
+            color: #ffff00;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>CSS 색상 값</h1>
+    <p class="cName">red</p>
+    <p id="cHex">#ff0000</p>
+    <p id="cRgb">rgb(255, 0, 0)</p>
+    <p id="cRgba">rgba(255, 0, 0, 0.5)</p>
+    <p id="cHsl">hsl(0, 100%, 50%)</p>
+    <p id="cHsla">hsla(0, 100%, 50%, 0.5)</p>
+</body>
+</html>

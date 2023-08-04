@@ -1,0 +1,103 @@
+cat notic_index.php 
+<?php 
+        header('Content-Type: text/html; charset=utf-8;');
+        $connect=mysqli_connect("localhost","root","msd11047103!","notic_db");
+        $query2 =
+  "select NAME,DESTINATION,date_format(STARTTIME,'%m-%d-%H:%i')as STARTTIME,date_format(RETURNTIME,'%m-%d-%H:%i') as RETURNTIME,PURPOSE,REMARK FROM board_db ORDER BY STARTTIME asc;";
+        $result2 = mysqli_query($connect,$query2);
+?>
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" cotent="width=device-width, initial-scale=1">
+<!--<link rel=stylesheet href='css/style.css' type='text/css'>-->
+<link rel=stylesheet href='./test.css' type='text/css'>
+<script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+<title>게시판</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" intergrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+
+<script>
+/**setInterval(function(){
+  $("#board_area").load(location.href+" #board_area","");
+}, 5000);**/
+
+function updateData(){
+        $.ajax({
+        url: 'update_data_index.php',
+        type: 'GET',
+        dataType:'html',
+        success: function(response){
+                $('.result_table').html(response);
+        },
+        error: function(){
+         alert('데이터를 가져오는 동안 오류가 발생했습니다.');
+        }
+        });
+}
+
+updateData();
+
+setInterval(function(){
+        updateData();
+},5000);
+
+</script>
+<!-- wrapper -->
+<div class="wrap">
+<!-- header -->
+    <header>
+        <div class="logo">
+            <img src="http://www.dsmbio.com/index/images/logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li class="menu">
+                    <ul>
+                        <li class="notice">공지사항</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main fram -->
+    <div id="main_fram" class="table-responsive"> 
+        <h2 class="table_cap">
+                <?php 
+                $yoil = date('w');
+                $weekdays = array('일','월','화','수','목','금','토');
+                $weekdayString = $weekdays[$yoil];
+                $today=date("Y년m월d일 ");
+                echo $today.$weekdayString."요일";
+                ?>
+            </h2>
+            <div id="board_area">
+                <table class="table table-bordered table-dark">
+                    <thead>
+          <tr>
+              <th>이름</th>
+              <th>행선지</th>
+              <th>출발시간</th>
+              <th>귀사예정시간</th>
+              <th>용무</th>
+              <th>비고</th>
+            </tr>
+        </thead>
+        <tbody class ="result_table">
+        </tbody>
+    </table>
+</div>
+
+<!-- container -->
+<div id="notic">
+    <p>공지사항
+    </p>
+    
+</div>
+</div>
+</div>
+
+</body>
+</html>

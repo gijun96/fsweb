@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body h1 ul {
+    margin: 0;
+}
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+.clearfix::after{
+    content:'';
+    display: block;
+    clear: both;
+  }
+
+
+/* 헤더 */
+header {
+    position: fixed;
+    width:100%;
+    height: 55px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    background-color: #fff;
+    z-index: 999;
+}
+
+
+.logo{
+    float: left;
+    margin-left: 40px;
+}
+#gnb{
+    float: right;
+    padding-top: 20px;
+    padding-right: 40px;
+}
+
+#gnb li{
+    display: inline-block;
+    margin: 0 16px;
+    
+}
+#gnb a{
+    text-decoration: none;
+    color: black
+}
+
+
+/* 세션 공통 */
+.sec{
+    height: 700px;
+    width: 1500px;
+    margin: 0 auto;
+    position: relative;
+    top: 55px;
+}
+/* 섹션1 */
+.txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* transform: translate(-50%, -50%); */
+    color: black;
+    /* background-color: yellow; */
+    margin-top: -10px;
+    margin-left: -80px;
+}
+
+.tit1 {
+    padding: 8px 16px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
+    opacity: .75;
+}
+.main_img > img {
+height: 700px;
+width: 1500px;
+}
+
+/* 섹션2, 3 공통 */
+.sec23 li{
+    float: left;
+    width: 360px;
+    height: 240px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.sec23 li:nth-of-type(4n){
+    margin-right: 0;
+}
+
+
+/* 섹션2 */
+#sec2 li{
+   
+    position: relative;
+}
+
+#sec2 li>img{
+    width: 360px;
+    height: 240px;
+    
+}
+#sec2 li span{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 8px 16px;
+    color: white;
+}
+
+
+
+/* 섹션3 */
+#sec3 li{
+    display: inline-block;
+}
+#sec3 img{
+    width: 360px;
+    height: 240px;
+}
+
+/* 섹션4 */
+#sec4{
+    background-color: rgb(226, 141, 43);
+
+}
+/* 푸터 */
+footer{
+background-color: antiquewhite;
+}

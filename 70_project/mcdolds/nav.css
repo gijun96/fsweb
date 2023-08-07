@@ -34,7 +34,7 @@ header {
       margin-left: 150px;
   }
       .list {
-          width: 720px;
+          width: 740px;
   }
     .main > li > a {
       /* border: 1px solid black; */
@@ -42,12 +42,17 @@ header {
       margin-left: 35px;
       font-size: 22px;
       width: 200px;
+      line-height: 100px;
     }
     .sub {
       display: none;
       text-align: left;
       line-height: 160%;
       margin-top: 10px;
+    }
+    .sub li{
+      margin-left: 30px;
+      width: 150px;
     }
 
     .main:hover .sub {
@@ -57,6 +62,8 @@ header {
     .nav_r {
       display: flex;
       margin-left: 50px;
+    justify-content: end;
+    line-height: 100px;
     }
     .nav_r > button {
       font-size: 16px;
@@ -64,8 +71,8 @@ header {
       border-radius: 20%;
       color: white;
       border-style: none;
-      margin-left: 10px;
-      margin-right: 10px;
+      margin: 10px;
+      padding-top: 15px;
     }
     .nav_btn1 {
       background-color: #db0007;

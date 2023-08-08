@@ -128,6 +128,7 @@ ul li {
 .tab_menu .list li {
   float: left;
   margin-right: 14px;
+  height: 30px;
 }
 .tab_menu .list li.is_on .btn {
   font-weight: bold;
@@ -135,13 +136,14 @@ ul li {
 }
 .tab_menu .list .btn {
   font-size: 13px;
+  border: 1px solid black;
 }
 .tab_menu .cont_area {
   margin-top: 10px;
 }
 .tab_menu .cont_area .cont {
   display: none;
-  background: #555;
+  background: #353535cc;
   color: #fff;
   text-align: left;
   width: 350px;
@@ -150,7 +152,9 @@ ul li {
   font-size: 12px;
   line-height: 160%;
 }
-
+#tab1 li{
+  color: white;
+}
 
 .shortcut {
   width: 400px;

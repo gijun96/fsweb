@@ -3,44 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>이케아</title>
+    <title>NIKE 나이키</title>
+    <link rel="shortcut icon" href="./assets/nike_image/logo.png" />
     <link rel="stylesheet" href="./css/main.css" />
-    <!-- <style>
-.clearfix::after{
-  content:'';
-  display: block;
-  clear: both;
-}
-ul{
-  width: 1504px;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  /* background-color: yellow; */
-  /* overflow: hidden; */
-}
-li{
-  float: left;
-}
-
-    #sec2 li{
-      margin: 30px;
-      width: 300px;
-      height: 280px;
-      border: 1px solid black;
-    }
-    #sec2 li>img{
-      width: 300px;
-    }
-  </style> -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
   </head>
   <body>
     <!-- header -->
     <header class="clearfix">
       <!-- 로고 -->
-      <h1 class="logo">
-        <a href="#">Logo</a>
-      </h1>
+      <div class="logo">
+        <a href="#"
+          ><img src="./assets/nike_image/logo.png" alt="logo" /><span
+            ><h1>NIKE</h1></span
+          ></a
+        >
+      </div>
       <!-- 내비게이션 -->
       <nav id="gnb">
         <ul>
@@ -56,11 +35,13 @@ li{
       <!-- section1 -->
       <div id="sec1" class="sec">
         <div class="main_img">
-          <img src="../images/Quiet_ocean.jpg" alt="asdasd" />
+          <img src="./assets/nike_image/1500_800.png" alt="main_img" />
         </div>
         <div class="txt">
-          <span class="tit1"><b>BR</b></span>
-          <span>asdasdasd</span>
+          <div class="tit1">
+            <img src="./assets/nike_image/logo_white.png" alt="logo" />
+          </div>
+          <span>Nike</span>
         </div>
       </div>
       <!-- //section1 -->
@@ -70,42 +51,42 @@ li{
         <h2>section2</h2>
         <ul class="clearfix">
           <li>
-            <img src="../project1/assets/best_img.jpg" alt="best1" /><span
+            <img src="./assets//nike_image/1.jpg" alt="best1" /><span
               >메뉴1</span
             >
           </li>
           <li>
-            <img src="../project1/assets/best_img.jpg" alt="best2" /><span
+            <img src="./assets/nike_image/2.jpg" alt="best2" /><span
               >메뉴2</span
             >
           </li>
           <li>
-            <img src="../project1/assets/best_img.jpg" alt="best3" /><span
+            <img src="./assets/nike_image/3.jpg" alt="best3" /><span
               >메뉴3</span
             >
           </li>
           <li class="item_4n">
-            <img src="../project1/assets/best_img.jpg" alt="best4" /><span
+            <img src="./assets/nike_image/4.jpg" alt="best4" /><span
               >메뉴4</span
             >
           </li>
           <li>
-            <img src="../project1/assets/best_img.jpg" alt="best5" /><span
+            <img src="./assets/nike_image/5.jpg" alt="best5" /><span
               >메뉴5</span
             >
           </li>
           <li>
-            <img src="../project1/assets/best_img.jpg" alt="best6" /><span
+            <img src="./assets/nike_image/6.jpg" alt="best6" /><span
               >메뉴6</span
             >
           </li>
           <li>
-            <img src="../project1/assets/best_img.jpg" alt="best7" /><span
+            <img src="./assets/nike_image/7.jpg" alt="best7" /><span
               >메뉴7</span
             >
           </li>
           <li class="item_4n">
-            <img src="../project1/assets/best_img.jpg" alt="best8" /><span
+            <img src="./assets/nike_image/8.jpg" alt="best8" /><span
               >메뉴8</span
             >
           </li>
@@ -127,7 +108,7 @@ li{
         </p>
         <ul class="clearfix">
           <li>
-            <img src="../../50_html/assets/honors/20225282447948.png" alt="best1" />
+            <img src="./assets/nike_image/jorden1.jpg" alt="best1" />
             <h3>제목</h3>
             <p>기간</p>
             <p>
@@ -136,7 +117,7 @@ li{
             </p>
           </li>
           <li>
-            <img src="../../50_html/assets/honors/20225282447948.png" alt="best1" />
+            <img src="./assets/nike_image/jorden2.jpg" alt="best1" />
             <h3>제목</h3>
             <p>기간</p>
             <p>
@@ -145,7 +126,7 @@ li{
             </p>
           </li>
           <li>
-            <img src="../../50_html/assets/honors/20225282447948.png" alt="best1" />
+            <img src="./assets/nike_image/jorden3.jpg" alt="best1" />
             <h3>제목</h3>
             <p>기간</p>
             <p>
@@ -154,7 +135,7 @@ li{
             </p>
           </li>
           <li>
-            <img src="../../50_html/assets/honors/20225282447948.png" alt="best1" />
+            <img src="./assets/nike_image/jorden4.jpg" alt="best1" />
             <h3>제목</h3>
             <p>기간</p>
             <p>
@@ -168,13 +149,75 @@ li{
 
       <!-- section4 -->
       <section id="sec4" class="sec">
-        <h2>section4</h2>
+        <div class="bimg">
+          <h2>section4</h2>
+          <a href="#"><img src="./assets/nike_image/main.jpg" alt="bimg" /></a>
+        </div>
       </section>
       <!-- //section4 -->
     </div>
 
     <!-- footer -->
-    <footer>Copyright 2023 IKEA. All rights reserved.</footer>
+    <footer>
+      <div class="foot_top">
+        <div class="b_menu">
+          <ul class="main">
+            <li>
+              <ul class="sub">
+                <li class="footer_point"><a href="#">새로운 소식</a></li>
+                <li class="footer_point"><a href="#">맴버가입</a></li>
+                <li class="footer_point"><a href="#">매장안내</a></li>
+                <li class="footer_point"><a href="#">나이키 저널</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="sub">
+                <li class="footer_point"><a href="#">도움말</a></li>
+                <li><a href="#">로그인 안내</a></li>
+                <li><a href="#">주문배송조회</a></li>
+                <li><a href="#">반품 정책</a></li>
+                <li><a href="#">결제 방법</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">문의하기</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="sub">
+                <li class="footer_point"><a href="#">ABOUT NIKE</a></li>
+                <li><a href="#">소식</a></li>
+                <li><a href="#">채용</a></li>
+                <li><a href="#">투자자</a></li>
+                <li><a href="#">지속가능성</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="b_sns">
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="./assets/sns/twitter.png" alt="트위터"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/sns/facebook.png" alt="페이스북"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/sns/youtube.png" alt="유튜브"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/sns/instagram.png" alt="인스타그램"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <!-- //footer -->
   </body>
 </html>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.counter {
+    color: white;
+}
+
+footer {
+    color: white;
+}
+footer>a  {
+    color:white;
+}
+footer .copy {color:white}
+a {
+    color: black;
+    text-decoration: none;
+}

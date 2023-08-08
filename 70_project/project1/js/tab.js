@@ -1,33 +1,23 @@
-const tab = document.querySelector('tab_btn');
-// const tab_1 = document.querySelector('#tab1');
-// const tab_2 = document.querySelector('#tab2');
-const tab_btn = document.querySelectorAll('tab_btn li');
+const tabList = document.querySelectorAll('.tab_menu .list li');
+const contents = document.querySelectorAll('.tab_menu .cont_area .cont')
+let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
 
+for(var i = 0; i < tabList.length; i++){
+  tabList[i].querySelector('.btn').addEventListener('click', function(e){
+    e.preventDefault();
+    for(var j = 0; j < tabList.length; j++){
+      // 나머지 버튼 클래스 제거
+      tabList[j].classList.remove('is_on');
 
-
-function tabClick(e){
-    e.preventEvent();
-    for(i =0; i<tab.length; i++){
-        console.log(i);
-        for(j=0; j<tab.length; j++){
-            console.log(j);
-        
-        }
+      // 나머지 컨텐츠 display:none 처리
+      contents[j].style.display = 'none';
     }
+
+    // 버튼 관련 이벤트
+    this.parentNode.classList.add('is_on');
+
+    // 버튼 클릭시 컨텐츠 전환
+    activeCont = this.getAttribute('href');
+    document.querySelector(activeCont).style.display = 'block';
+  });
 }
-
-tab_btn.addEventLister('click', tabClick);
-
-
-
-// tab_1.addEventListener('click', ()=>{
-//     tab_2.classList.add('tab_block');
-//     tab_1.classList.remove('tab_none');
-//     tab_1.classList.add('tab_block');
-// })
-
-// tab_2.addEventListener('click', ()=>{
-//     tab_1.classList.add('tab_block');
-//     tab_2.classList.remove('tab_none');
-//     tab_2.classList.add('tab_block');
-// })

@@ -118,39 +118,39 @@ ul li {
 .container > div{
   margin-left: 20px
 }
-.tabs {
-  width: 400px;
-  height: 200px;
-  /* border: 1px solid black; */
+/* tab */
+.tab_menu {
+  position: relative;
 }
-.tab_btn {
-  display: flex;
-  padding: 4px 8px;
+.tab_menu .list {
+  overflow: hidden;
 }
-.tab_btn li{
-  padding-right: 20px ;
+.tab_menu .list li {
+  float: left;
+  margin-right: 14px;
 }
-.tab_btn >a{
-  background-color: #082D57;
-  color: #F4F5F7;
+.tab_menu .list li.is_on .btn {
+  font-weight: bold;
+  color: green;
+}
+.tab_menu .list .btn {
+  font-size: 13px;
+}
+.tab_menu .cont_area {
+  margin-top: 10px;
+}
+.tab_menu .cont_area .cont {
+  display: none;
+  background: #555;
+  color: #fff;
+  text-align: left;
+  width: 350px;
+  height: 150px;
+  /* line-height: 100px; */
+  font-size: 12px;
   line-height: 160%;
 }
-.tabCon{
-  width: 350px;
-  height: 120px;
-  background-color: #F4F5F7;
-  border: 1px solid  black;
-  font-size: 13px;
-  /* overflow:hidden;
-  white-space:nowrap;
-  text-overflow:ellipsis */
-}
-.tab_block{
-  display: block;
-}
-.tab_none{
-  display: none;
-}
+
 
 .shortcut {
   width: 400px;

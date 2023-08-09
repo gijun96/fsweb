@@ -1,6 +1,17 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 10px;
+}
+body {
+  font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+}
+
 body,
 h1,
 h2,
@@ -284,32 +295,39 @@ nav ul {
   font-size: 18px;
   font-weight: bold;
   margin: 15px 0;
+  padding-left: 15px;
 }
 .map_container {
   width: 630px;
 }
-.sec4_input {
+.mail_form {
   display: flex;
   flex-wrap: wrap;
 }
 .map_container > span {
   font-size: 15px;
   padding: 8px;
-  margin-bottom: 30px;
   line-height: 161%;
+  /* text-align: center; */
+}
+.map_container span img{
+  margin-right: 8px;
+  
 }
 
-.sec4_input input {
+
+.mail_form input {
   margin: 12px 10px;
   width: 290px;
   height: 30px;
+  border: 1px solid #777;
 }
 #long_in {
   display: inline;
   width: 600px;
   height: 30px;
 }
-.sec4_input button {
+.mail_form button {
   height: 40px;
   margin: 15px;
   margin-left: auto;

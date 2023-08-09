@@ -6,8 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        /* 글꼴 이름에 공백이 있을 경우 ''으로 묶는다. */
+
+        /* 
+            타이포 (typo) 시스템
+
+            color: 글자색
+            font-family: 글꼴;
+            font-weight: 기울임;
+            font-size: 크기;
+            line-height: 줄간격;
+            letter-spacing; 자간 -> 글자와 글자 간격
+            word-spacing; 어간 -> 단어 사이 간격
+            white-spactig 공백; -> 줄바꿈
+            본문 간격은 1.5~2 사이(1.616황금비율)
+            
+            (속기형)
+            font: size(크기)/lh(즐간격) family(글꼴);
+
+            text-align: 텍스트 정렬;    -> 인라인 요소의 좌우
+            vertical-align; 수직 정렬;  -> 인라인 요소의 상하 
+            text-index: 들여쓰기; -> 인라인 요소 숨기기
+
+            box-shadow : 요소의 그림자
+            text-shadow: 글자 그림자
+
+
+        */
+
+        /* 
+        글꼴 이름에 공백이 있을 경우 ''으로 묶는다. */
+        /* font-family: 글꼴1, 글꼴2, 글꼴3, ..;    
+        1. serif - 획 x,깨끗함, 현대적 -> 주로 웹
+        2. sans-serif -> 획O, 우아함, 독창적 -> 주로 인쇄물
+        3. monospace -> 고정, 너비, 기계적
+        4. cursive -필기체
+        5. fantasy -장식
+        무료폰트
+        https://www.dafont.com/theme.php?cat=702
+        1. ttf/otf
+
+        */
+
+            /* 포폴 작업 시 가능한 무료 폰트 이용 */
+
         /* .ff의 글꼴을  'Courier New', Courier, monospace로 지정해 보세요.*/
+        .ff{
+            font-family: 'Courier New', Courier, monospac,'sea life';
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         
     </style>
 </head>

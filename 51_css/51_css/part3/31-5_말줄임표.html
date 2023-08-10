@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>말줄임표</title>
+    <style>
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+         a {
+            color: black;
+            text-decoration: none;
+         }
+         a:hover{
+            color:blue;
+            text-decoration: underline;
+         }
+        li {
+            width: 400px;
+            /* 박스 영역을 벗어난 텍스트 숨김 */
+            overflow: hidden;
+            /* 줄바꿈 하지 않음 */
+            white-space: nowrap;
+            /* 말줄임표 : 생략 */
+            text-overflow: ellipsis;
+        }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>
+
+          <a href="#"
+            >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error,
+            eius.</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Cupiditate, consequuntur.</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio,
+            dolores!</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus, adipisci.</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

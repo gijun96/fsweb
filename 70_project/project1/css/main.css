@@ -1,19 +1,38 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* typo */
+html{
+  font-size: 10px;
+}
 
+body{
+  font: 1.5rem/1.6 'Noto Sans KR', sans-serif; 
+  /* font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.8; */
+}
 
 /* common */
 .wrap{
   width: 1200px;
   margin: 0 auto;
 }
-
-
+a {
+  color: black;
+  text-decoration: none;
+}
+.main a{
+  font-size: 1.8rem;
+}
+.sub a{
+  font-size: 1.4rem;
+}
 
 /* header */
 header {
@@ -35,11 +54,7 @@ header {
   background-color: white;
   border-bottom: 1px solid gray;
 }
-a {
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-}
+
 /* ul li {
       border: 1px solid black;
     } */
@@ -132,7 +147,7 @@ ul li {
 }
 .tab_menu .list li.is_on .btn {
   font-weight: bold;
-  color: green;
+  background-color: green;
 }
 .tab_menu .list .btn {
   font-size: 13px;
@@ -145,15 +160,20 @@ ul li {
   display: none;
   background: #353535cc;
   color: #fff;
-  text-align: left;
   width: 350px;
   height: 150px;
   /* line-height: 100px; */
-  font-size: 12px;
-  line-height: 160%;
+  font-size: 8px;
+  line-height: 1.8;
+  font-weight: lighter;
 }
-#tab1 li{
-  color: white;
+#tab1 span{
+  display: inline-block;
+  width: 334px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 16px;
 }
 
 .shortcut {
@@ -176,9 +196,10 @@ footer {
 /* 주소 및 저작권 */
 .copyright{
   color:rgba(255,255,255,0.5);
-  font-size: 11px;
+  font-size: 12px;
   width: 750px;
   line-height: 160%;
+  text-align: center;
 }
 .copyright a{
   color: #F4F5F7;

@@ -5,9 +5,7 @@ body ul {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  display: block;
-}
+
 
 body {
   display: flex;
@@ -97,6 +95,25 @@ input {
 #tabs input:checked + div {
   display: block;
 }
+.carousel{
+  width: 1200px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.list{
+  display: flex;
+}
+.list li{
+  width: 120px;
+  background-color: lightcoral;
+  border: 1px solid black;
+  
+}
+.container{
+  display: flex;
+}
+
 /* 내용 공통  */
 #tabs div {
   display: none;
@@ -105,6 +122,10 @@ input {
   width: 400px;
   height: 160px;
 }
+
+
+
+
 /* 공지사항 */
 #tab1 {
   background-color: lightblue;
@@ -119,6 +140,13 @@ input {
 #tab1 span {
   display: inline-block;
   width: 310px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+#tab1 li a{
+  font-size: 14px;
 }
 
 /* 갤러리 */
@@ -139,3 +167,11 @@ input {
 /* banner */
 
 /* shortcut */
+
+
+footer{
+  display: flex;
+}
+.sns ul{
+  display: flex;
+}

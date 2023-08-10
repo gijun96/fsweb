@@ -6,17 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        /* .tdn에 텍스트 장식을 제거해 보세요. */
+        /* 
 
+            ver CSS3.x
+            text-dacoration-color : 색
+            text-dacoration-thickness : 두께
+                값: px, %
+            text-dacoration-line : 위치
+                값: underline, overline, line-through
+            text-dacoration-style : 종류
+                값: solid, dashed, dotted, double, wavy
+            (속기형)
+            text-decoration line thickness style color;
+
+
+        */
+
+
+        /* .tdn에 텍스트 장식을 제거해 보세요. */
+        .tdn {
+            text-decoration: none;
+        }
 
         /* .tdu에 텍스트 밑줄을 지정해 보세요. */
+        .tdu {
+            /* text-decoration: underline;
+            text-decoration-thickness: 1%;
+            text-decoration-style: wavy;
+            text-decoration-color: red; */
 
+            text-decoration: underline 1% wavy red;
+        }
 
         /* .tdo에 텍스트 윗줄을 지정해 보세요. */
-
+        .tdo{
+            text-decoration: overline;
+        }
 
         /* .tdl에 텍스트 취소선을 지정해 보세요. */
-
+        .tdl{
+            text-decoration: line-through;
+        }
         
     </style>
 </head>

@@ -5,8 +5,6 @@ body ul {
   box-sizing: border-box;
 }
 
-
-
 body {
   display: flex;
   justify-content: center;
@@ -61,8 +59,9 @@ ul li {
   /* border: 1px solid black; */
   margin-top: 15px;
   padding: 20px;
-  font-size: 22px;
-  width: 200px;
+  font-size: 15.4px;
+  width: 160px;
+  height: 40px;
 }
 .sub {
   display: none;
@@ -76,17 +75,6 @@ ul li {
   display: block;
   background-color: rgba(244, 244, 244, 0.6);
 }
-#contents {
-  height: 200px;
-}
-#modal {
-  display: none;
-}
-
-#contents > div {
-  float: left;
-  width: 400px;
-}
 /* tabs(notice & gallery) */
 /* 탭 */
 input {
@@ -95,22 +83,27 @@ input {
 #tabs input:checked + div {
   display: block;
 }
-.carousel{
+.carousel {
   width: 1200px;
   height: 300px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
-.list{
+.list {
   display: flex;
+  margin-left: 20px;
+  width: 400px;
+  height: 40px;
 }
-.list li{
-  width: 120px;
+.list li a {
+  display: inline;
+  width: 80px;
+  height: 30px;
+  padding: 10px;
   background-color: lightcoral;
-  border: 1px solid black;
-  
 }
-.container{
+.container {
   display: flex;
 }
 
@@ -123,30 +116,26 @@ input {
   height: 160px;
 }
 
-
-
-
 /* 공지사항 */
 #tab1 {
   background-color: lightblue;
 }
-
+#tab1 ul {
+  padding-top: 10px;
+  font-size: 14px;
+}
 #tab1 li {
   border-bottom: 1px solid red;
   padding-bottom: 8px;
-  margin: 8px 0;
 }
 
 #tab1 span {
   display: inline-block;
-  width: 310px;
+  width: 340px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   vertical-align: middle;
-}
-#tab1 li a{
-  font-size: 14px;
 }
 
 /* 갤러리 */
@@ -168,10 +157,9 @@ input {
 
 /* shortcut */
 
-
-footer{
+footer {
   display: flex;
 }
-.sns ul{
+.sns ul {
   display: flex;
 }

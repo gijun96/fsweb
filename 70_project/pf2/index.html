@@ -9,13 +9,15 @@
   <body>
     <header>
       <div class="logo">
-        <span><b>BR</b> Architects</span>
+        <a href="#"
+          ><span><b>BR</b> Architects</span></a
+        >
       </div>
       <nav>
         <ul class="nav_r">
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#sec2">Projects</a></li>
+          <li><a href="#sec3">About</a></li>
+          <li><a href="#sec4">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -25,9 +27,9 @@
         <img src="./assets/Architecture.jpg" alt="Architecture" />
       </div>
 
-      <section class="sec2" id="sec2">
-        <h1>Projects</h1>
-        <ul>
+      <section class="section sec2" id="sec2">
+        <h3>Projects</h3>
+        <ul class="sec2img">
           <li>
             <a href="#"
               ><img src="./assets/House.jpg" alt="Summer House" /><span
@@ -51,29 +53,114 @@
           </li>
           <li>
             <a href="#"
-              ><img src="" alt="Barn House" /><span>Barn House</span></a
+              ><img src="./assets/House (3).jpg" alt="Barn House" /><span
+                >Barn House</span
+              ></a
             >
           </li>
           <li>
             <a href="#"
-              ><img src="" alt="Summer House" /><span>Summer House</span></a
+              ><img src="./assets/House (3).jpg" alt="Summer House" /><span
+                >Summer House</span
+              ></a
             >
           </li>
           <li>
             <a href="#"
-              ><img src="" alt="Brick House" /><span>Brick House</span></a
+              ><img src="./assets/House (2).jpg" alt="Brick House" /><span
+                >Brick House</span
+              ></a
             >
           </li>
           <li>
-            <a href="#"><img src="" alt="Renovated" /><span>Renovated</span></a>
+            <a href="#"
+              ><img src="./assets/House (1).jpg" alt="Renovated" /><span
+                >Renovated</span
+              ></a
+            >
           </li>
           <li>
             <a href="#"
-              ><img src="" alt="Barn House" /><span>Barn House</span></a
+              ><img src="./assets/House.jpg" alt="Barn House" /><span
+                >Barn House</span
+              ></a
             >
           </li>
         </ul>
       </section>
+
+      <section class="section sec3" id="sec3">
+        <h3>ABOUT</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+        <div class="cardbox">
+          <ul >
+            <li class="card">
+              <img src="./assets/John.jpg" alt="John">
+              <h3>John Doe</h3>
+              <p>CEO & Founder</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                <button>Contact</button>
+              </p>
+            </li>
+           
+            <li class="card">
+              <img src="./assets/Mike.jpg" alt="Mike">
+              <h3>Jane Doe</h3>
+              <p>Architect</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                <button>Contact</button>
+              </p>
+            </li>
+            <li class="card">
+              <img src="./assets/Dan.jpg" alt="Dan">
+              <h3>Mike Ross</h3>
+              <p>Architect</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                <button>Contact</button>
+              </p>
+            </li>
+            <li class="card">
+              <img src="./assets/Jane.jpg" alt="Jane">
+              <h3>Dan Star</h3>
+              <p>Architect</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                <button>Contact</button>
+              </p>
+            </li>
+          
+          </ul>
+        </div>
+      </section>
+
+      <section class="section sec4" id="sec4">
+        <h3>CONTACT</h3>
+        <p>Lets get in touch and talk about your next project.</p>
+
+        <form action="#" class="comment_form">
+          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Email">
+          <input type="text" placeholder="Subject">
+          <input type="text" placeholder="Comment">
+          <button type="submit">SEND MESSAGE</button>
+        </form>
+        <img src="./assets/map.jpg" alt="">
+      </section>
+      <footer>
+        <span>copyright</span>
+        <button class="gototop" onclick="window.scrollTo(0, 0)">
+        <img src="./assets/top.png" alt="top"></img></button>
+      </footer>
+
     </div>
   </body>
 </html>

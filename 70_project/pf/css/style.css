@@ -108,12 +108,31 @@ nav ul {
   letter-spacing: 10px;
 }
 .title span {
-  font-size: 32px;
+  font-size: 48px;
   margin: 8px 8px;
 }
 .title img {
   width: 100%;
 }
+
+/* clock */
+.clock{
+  position: absolute;
+  bottom: 15px;
+  left: 90%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+#time{
+  font-size: 48px;
+}
+#date{
+  font-size: 24px;
+}
+
+
+
 /* sectoin2 */
 .sec2 {
   margin: 120px auto 50px auto;

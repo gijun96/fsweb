@@ -1,0 +1,152 @@
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 타이포 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+html {
+  font-size: 10px;
+}
+body {
+  font: 1.6rem/1.5 "Noto Sans KR", sans-serif;
+  color: #333;
+}
+li {
+  list-style: none;
+}
+h2 {
+  font-size: 4rem;
+  line-height: 45px;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+dl {
+  color: #fff;
+}
+dt {
+  font-size: 2.4rem;
+  /* border-bottom: 1px solid white; */
+  display: block;
+  font-weight: 700;
+}
+dd {
+  font-size: 1.8rem;
+}
+/* 섹션 공통 */
+/* 
+    display: 
+        none, block, inline, inline-block
+        list-item -> <li>
+        table-cell -> <td>, <th>
+    vertical-align : 수직 정렬; -> inline요소, 테이블 셀
+*/
+section {
+    height: 100vh;
+    display: table-cell;
+  vertical-align: middle;
+}
+/* 섹션1 */
+#sec1 {
+  background-color: #ece9de;
+}
+.container {
+  /* <li> width 393*3 */
+  width: 1179px;
+  /* 블록레벨요소의 가로 가운데 위치 */
+  margin: 0 370px;
+}
+.container p {
+  margin-top: 25px;
+}
+.container ul {
+  display: flex;
+  margin-top: 50px;
+}
+.container li {
+  height: 493px;
+  width: 393px;
+  position: relative;
+  background: #444 no-repeat 50% 50% / cover;
+}
+
+.container li a img {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+li a img:nth-child(2){
+    display: none;
+}
+.sec1_li:nth-of-type(n):hover a img:nth-child(2){
+    display: block;
+}
+    
+.sec1_li span {
+  display: block;
+}
+.sec1_li:nth-of-type(1) {
+  background-image: url(../assets/풀무원/s01_list_img1.jpg);
+}
+.sec1_li:nth-of-type(2) {
+  background-image: url(../assets/풀무원/s01_list_img2.jpg);
+}
+.sec1_li:nth-of-type(3) {
+  background-image: url(../assets/풀무원/s01_list_img3.jpg);
+}
+.sec1_li:nth-of-type(n):hover {
+  background-image: none;
+}
+.sec1_li:nth-of-type(n):hover dl {
+  display: block;
+  opacity: 1;
+  transition: .5s;
+}
+
+/* position:absolute; -> 요소의 width:콘텐츠 크기 */
+.sec1_li dl {
+  position: absolute;
+  top: 330px;
+  left: 15%;
+  width: 70%;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transition: .5s;
+}
+.sec1_li dt {
+  height: 25px;
+  line-height: 4px;
+  margin-bottom: 12px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid white;
+
+}
+/* 
+    .sec1_li dt::after {
+        content: '';
+        dispaly: block;
+        height: 2px;
+        width: 240px;
+        background-color: white;
+        margin: 6px auto 0;
+
+    }
+*/
+
+
+
+/* 섹션2 */
+#sec2 {
+    width: 1920px;
+    height: 509px;
+    background-image: url(../assets/풀무원/main_bg_3.jpg);
+}

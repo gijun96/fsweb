@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        p {text-decoration: underline overline; font-size: 3rem; line-height: 3em;}
+
+        /* 
+            img {vertical-align: top;}
+
+            vertical-align: 수직 정렬;
+                display 속성이 inline, inline-block, table-cell 요소에 적용된다.
+                display:inline; -> <img>, <video>, <b>, <i>, ...
+                display:inline-block; -> <button>, <input>
+                display:table-cell; -> <td>, <th>
+
+                값: 숫자(px, %), 키워드
+                키워드:
+                    baseline: 부모 요소의 기준선(baseline)에 맞춤(기본값)
+                    text-top: 요소의 맨 위를 부모 텍스트의 맨 위에 맞춤
+                    top: 요소의 맨 위를 줄에서 가장 큰 요소의 맨 위에 맞춤
+                    middle: 부모 요소 중앙에 맞춤
+                    bottom: 요소의 맨 아래를 줄에서 가장 낮은 요소에 맞춤
+                    text-bottom: 요소의 맨 아래를 부모 텍스트의 맨 아래에 맞춤
+                    super: 부모의 윗첨자 기준선에 맞춤
+                    sub: 부모의 아래첨자 기준선에 맞춤
+
+                    <sub>: 아랫첨자
+                    <sup>: 윗첨자
+        */
+
+        /* text-align 속성은 블록 레벨 요소에 지정한다. */
+        /* vertical-align 속성은 인라인 요소에 지정한다. */
+        .vat img {vertical-align: top;}
+        .vam img {vertical-align: middle;}
+        .vab img {vertical-align: bottom;}
+
+        /* px 단위는 텍스트 baseline 기준, 음수 가능 */
+        /* % 단위는 부모 요소의 줄 간격 기준, 음수 가능 */
+        /* em 단위는 부모 요소의 글꼴 크기, 음수 가능 */
+
+        /* input, button {
+            box-sizing: content-box;
+            width: 50px;
+            height:20px ;
+            vertical-align: top;
+        } */
+
+        
+        input {
+            box-sizing: content-box;
+            width: 50px;
+            height:50px ;
+            vertical-align: middle;
+        }
+        
+        button {
+            box-sizing: content-box;
+            width: 50px;
+            height:20px ;
+            vertical-align: middle;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div><input type="text">
+        <button>버튼</button>
+    </div>
+
+
+</body>
+</html>

@@ -16,18 +16,33 @@
         div:hover {
             width: 200px;
         }
+
+        /* 
+            가속도(easing)
+            등속(linear)
+            transition-timing-function: 시간 함수;
+                값: ease, ease-in, ease-out, ease-in-out, linear
+        */
+
+
         /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 빠름 */
-
+        /* 느림 -> 빠름 -> 느림 */
+        .trs1{transition-timing-function: ease;}
+        /*빠름 - 느림 -> 출발 동작 */
         /* 느린 시작 */
-
+        .trs2{transition-timing-function: ease-in;}
+        /* 느림 - 빠름 - 느림 */
         /* 느린 끝 */
-
+        .tras3{transition-timing-function: ease-out;}
         /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 느림 */
-
+        .tras4{transition-timing-function: ease-in-out;}
         /* 등속 */
-
+        .tras5{transition-timing-function: linear;}
         /* cubic-bezier(n,n,n,n) */
-        /* https://cubic-bezier.com/#.17,.67,.83,.67  */
+        .trs6{
+            transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+            /* https://cubic-bezier.com/#.17,.67,.83,.67  */
+        }
         
     </style>
 </head>

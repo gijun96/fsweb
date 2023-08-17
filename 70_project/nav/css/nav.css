@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+header{
+    width: 100%;
+    display: flex;
+}
+nav{
+    display: flex;
+}
+.logo{
+    width: 270px;
+    height: 90px;
+    background-color: antiquewhite;
+}
+
+.depth1 {
+    width: 900px;
+}
+.depth1>li {
+    display: inline-block;
+    width: 20%;
+    height: 90px;
+    border: 1px solid red;
+    text-align: center;
+}
+
+.depth2 {
+    display: none;
+}

@@ -8,26 +8,28 @@
     <style>
         div {
             position: relative;
-            width:100px;
-            height:100px;
-            background: yellow;
+            top: -100px;
+            left: -100px;
+            width:300px;
+            height:300px;
             margin:20px;
-            left:0px; top:0px;
         }
-
+        
         .wrap {
             width:300px;
-            border:1px solid red;
+            /* border:1px solid red; */
             background: transparent;
             margin-bottom: 100px;
         }
-
+        
         /* 애니메이션 실행 여부 */
         .wrap:hover .anim {
             animation-play-state: running;
         }
         .anim {
-            animation: rotate 1s infinite linear paused;
+            background: url(./KakaoTalk_20230818_124005227.png) no-repeat 50% 50%/cover;
+            animation: rotate 10s infinite linear paused;
+            text-indent: -999em;
         }
         @keyframes rotate {
             0% {transform: rotate(0);}

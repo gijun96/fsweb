@@ -10,6 +10,15 @@ section {
   padding-bottom: 69px;
   font-size: 12px;
 }
+.sec1 {
+  height: 806px;
+  display: block;
+}
+.autoSlide {
+  width: 1600px;
+  overflow: hidden;
+}
+
 .sec1 p {
   position: absolute;
   bottom: 30%;
@@ -105,7 +114,19 @@ section {
 }
 .item_list {
   display: flex;
+  transition-duration: 0.8s;
+  animation: fade-in 0.8s;
+  transition-timing-function: ease-out;
 }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .item_list li {
   text-align: center;
 
@@ -139,6 +160,7 @@ section {
   border: 1px solid #777;
   opacity: 0.9;
 }
+
 .btn:hover {
   cursor: pointer;
 }

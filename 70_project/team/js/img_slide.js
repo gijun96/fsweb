@@ -3,6 +3,7 @@ const next_btn = document.querySelector('.btn_r');
 
 const item_li = document.querySelector('.item_list');
 
+
 let index = 0;
 
 prev_btn.addEventListener('click',() =>{
@@ -12,8 +13,9 @@ prev_btn.addEventListener('click',() =>{
         index -= 1;
     };
     console.log(index);
-
+    
     item_li.style.transform = `translateX(-${1320 * index}px)`;
+ 
 })
 
 next_btn.addEventListener('click',() =>{
@@ -23,4 +25,7 @@ next_btn.addEventListener('click',() =>{
         index += 1;
     }
     item_li.style.transform= `translateX(-${1320 * index}px)`;
+    
+    console.log(index);
 })
+

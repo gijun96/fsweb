@@ -1,8 +1,17 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Futura Bold", sans-serif;
+  src: url(../font/Futura\ Bold.ttf);
+}
+
 /* reset */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+body {
+  font-family: "Futura Bold", sans-serif;
 }
 ul {
   list-style: none;
@@ -35,7 +44,6 @@ header {
   margin-left: 30px;
 }
 #navlogo {
-  font-family: "Futura Bold", sans-serif;
   vertical-align: 5px;
 }
 .nav_r {
@@ -47,15 +55,15 @@ header {
 /* //header */
 
 /* main Img */
-.main {
+.sec1 {
   width: 1500px;
   height: 800px;
   margin: 0 auto;
 }
-.main img {
+.sec1 img {
   position: relative;
 }
-.main h1 {
+.sec1 h1 {
   color: white;
   opacity: 0.9;
 }
@@ -130,7 +138,7 @@ header {
 /* sec3 */
 .cardbox ul {
   width: 1500px;
-  margin: 50px auto 0;  
+  margin: 50px auto 0;
   display: flex;
   justify-content: center;
 }
@@ -198,67 +206,73 @@ footer {
   display: flex;
   flex-direction: column;
 }
-.f_top{
-  background: url(../images/logo_white.png) no-repeat;
+.f_top {
   width: 1500px;
   margin: 0 auto;
   display: flex;
 }
-.menu_list{
+.menu_list {
   display: flex;
   margin-right: auto;
 }
-#main_bMenu li a{
+#main_bMenu li a {
   color: white;
   font-size: 16px;
 }
-.b_menu{
+.b_menu {
   margin: 10px 30px;
-
 }
-.b_menu li{
+.b_menu li {
   line-height: 160%;
-  }
-.b_menu li a{
-  color:black;
+}
+.b_menu li a {
+  color: black;
   padding: 4px 8px;
   font-size: 14px;
 }
-.b_menu li:first-of-type a{
+.b_menu li:first-of-type a {
   color: white;
   font-size: 16px;
 }
-
 /* sns */
-.sns_list{
+.sns_list {
   display: flex;
   margin: 15px 30px 0 0;
 }
-.sns_list li{
+.sns_list li {
   padding: 4px 8px;
 }
-
-
 /* copyright */
-.copyright{
+.copyright {
   width: 1500px;
   margin: 30px auto 0;
   font-size: 11px;
   color: #fff;
 }
-
-
+.b_logo img {
+  width: 80px;
+  height: 80px;
+}
 /* topBtn */
 .gototop {
   position: absolute;
-  top: -50px;
+  top: 50px;
   right: 50px;
   cursor: pointer;
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  border: 1px solid black;
   background-color: white;
   color: white;
-  opacity: .5;
   background: url(../images/logo.png) no-repeat 50% 50%;
+  z-index: 5;
+}
+.gototop p {
+  position: absolute;
+  top: 36px;
+  right: 17px;
+  font-size: 11px;
+  z-index: 6;
+  text-align: center;
 }

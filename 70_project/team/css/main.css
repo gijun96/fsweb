@@ -2,9 +2,20 @@
 @import url(typo.css);
 @import url(./common.css);
 
+/* scroll_bar */
+body::-webkit-scrollbar {
+  width: 12px; /* 스크롤바의 너비 */
+}
 
+body::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: #fecad4; /* 스크롤바의 색상 */
 
-
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
 
 section {
   max-width: 1600px;
@@ -32,7 +43,7 @@ section {
 .sec1 button {
   width: 130px;
   height: 45px;
-  background-color: pink;
+  background-color: #fecad4;
   border: none;
   text-align: center;
   vertical-align: middle;
@@ -57,7 +68,7 @@ section {
 .sec2 button {
   width: 200px;
   height: 45px;
-  border: 1px solid pink;
+  border: 1px solid #fecad4;
   background-color: white;
   margin-top: 40px;
 }
@@ -84,7 +95,7 @@ section {
   bottom: 10%;
   left: 50%;
   translate: -50% -50%;
-  border-bottom: 1px solid pink;
+  border-bottom: 1px solid #fecad4;
   line-height: 20px;
 }
 
@@ -148,7 +159,7 @@ section {
   text-align: center;
   margin: 23px 157px 0;
   background: none;
-  border: 1px solid pink;
+  border: 1px solid #fecad4;
 }
 .btn {
   width: 50px;

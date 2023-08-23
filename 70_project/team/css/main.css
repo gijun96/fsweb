@@ -18,15 +18,31 @@ section {
   display: flex;
   overflow: hidden;
 }
-.mainslide {
+.mainSlide {
   width: 1600px;
 }
 
 .sec1 h2 {
   position: absolute;
   bottom: 30%;
-  left: 10%;
+  left: 7%;
   font-size: 64px;
+  opacity: 0;
+  animation: fadeInText 2s 0.1s ease-out forwards;
+}
+@keyframes fadeInText {
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    left: 10%;
+    text-shadow: 2px 2px 4px gray;
+    color: #333;
+  }
 }
 .sec1 button {
   width: 130px;
@@ -37,19 +53,10 @@ section {
   vertical-align: middle;
   position: absolute;
   bottom: 20%;
-  left: 10%;
+  left: 5%;
   cursor: pointer;
-  /* 버튼 클릭시 버튼 눌림 표현 */
-  box-shadow: 3px 3px 3px black;
-  transition-duration: 0.1s;
-}
-/* 버튼이 눌렸을 때 일어나는 효과 */
-.sec1 button:active {
-  box-shadow: none;
-  /* 버튼이 눌리면 box-shadow위치까지 이동 */
-  margin-left: 3px;
-  margin-top: 3px;
-  border: 1px solid black;
+  opacity: 0;
+  animation: fadeInText 2s 0.2s ease-out forwards;
 }
 
 .sec2 {
@@ -59,10 +66,10 @@ section {
   flex-direction: column;
   align-items: center;
 }
-.sec2_top{
+.sec2_top {
   display: flex;
   align-items: center;
-  height: 450px;
+  height: 400px;
   overflow: hidden;
 }
 .inner {
@@ -70,10 +77,13 @@ section {
   height: 425px;
   margin-top: 75px;
 }
-
-.inner_banner img{
+.inner_banner {
+  margin-top: auto;
+  margin-bottom: 25px;
+}
+.inner_banner img {
   width: 520px;
-  height: 346.32px;
+  height: 315px;
 }
 .sec2 button {
   width: 200px;
@@ -98,7 +108,7 @@ section {
   margin-bottom: 6px;
   position: relative;
 }
-.category li div{
+.category li div {
   width: 255px;
   height: 200px;
   background-color: #fecad4;
@@ -108,23 +118,23 @@ section {
   width: 255px;
   height: 200px;
 }
-.category li img:hover{
+.category li img:hover {
   scale: 110% 110%;
 }
-.category_name{
+.category_name {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
   font-weight: lighter;
-  opacity: .6;
+  opacity: 0.6;
 }
-.category_name:hover a{
+.category_name:hover a {
   scale: 120% 120%;
 }
-.category_name a{
+.category_name a {
   padding-bottom: 15px;
-  border-bottom: 3px solid palevioletred;
+  border-bottom: 2px solid palevioletred;
 }
 .category li p {
   position: absolute;
@@ -207,6 +217,7 @@ section {
   margin: 23px 157px 0;
   background: none;
   border: 1px solid #fecad4;
+  cursor: pointer;
 }
 .btn {
   width: 50px;
@@ -234,20 +245,85 @@ section {
 .btn_r {
   right: 55px;
 }
-
-.event {
-  width: 1600px;
-  margin: 0 auto;
-  margin-top: 190px;
-}
-.sec4_banner{
-  width: 1600px;
-  overflow: hidden;
-}
-.sec4_slide{
-  overflow: hidden;
+.list_bar {
   display: flex;
+  position: absolute;
+  left: 38%;
+  bottom: 1%;
+}
+.list_bar div {
+  width: 70px;
+  height: 4px;
+  border-radius: 20%;
+  background-color: #777;
+  margin-right: 8px;
+}
+.bar {
+  background-color: #fecad4;
+  width: 70px;
+  height: 4px;
+  border-radius: 20%;
+}
 
+.sec4 {
+  width: 1600px;
+  margin-bottom: 30px;
+  background: rgb(254, 202, 212);
+  background: linear-gradient(
+    180deg,
+    rgba(254, 202, 212, 0) 0%,
+    rgba(254, 202, 212, 0.3897934173669467) 100%
+  );
+}
+.sec4 h2 {
+  font-size: 24px;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  opacity: 0.3;
+  border-bottom: 2px solid #777;
+}
+.sec4_banner {
+  width: 1600px;
+  overflow: hidden;
+}
+.banner_card {
+  display: flex;
+  justify-content: center;
+}
+
+.banner_card li {
+  width: 310px;
+  height: 340px;
+  border: 1px solid black;
+  margin: 20px;
+  text-align: center;
+  border-radius: 10%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.banner_card li :hover img {
+  scale: 105% 105%;
+  transition-duration: 0.3s;
+}
+.banner_card li img {
+  width: 310px;
+  height: 223px;
+  padding-bottom: 10px;
+}
+
+.banner_card li span {
+  font-size: 12px;
+  margin: 8px 0;
+  padding-bottom: 4px;
+  font-weight: lighter;
+  border-bottom: 1px solid #fecad4;
+}
+.banner_card li span:nth-of-type(1) {
+  display: block;
+  font-size: 18px;
+  margin: 12px 0;
+  letter-spacing: 1px;
+  border: none;
 }
 
 footer {

@@ -34,12 +34,6 @@ button {
   border: none;
 }
 
-.claerfix {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 /* header */
 header {
   position: fixed;
@@ -57,15 +51,15 @@ header {
   border-bottom: 1px solid #f3f3f3;
 }
 
-.header_inner, .scroll_down{
+.header_inner,
+.scroll_down {
+  display: flex;
   max-width: 1600px;
   height: 70px;
   margin: 0 auto;
   padding: 0 80px;
-  
 }
-.header_inner{
-  color: white;
+.header_inner {
   /* 배경 그라디언트 */
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -75,39 +69,59 @@ header {
   );
 }
 
-.gnb li {
-  display: inline-block;
-  width: 100px;
-  height: 70px;
-}
-.sublist {
-  display: none;
-}
-
 /* 스크롤 내릴 때 .header_inner의 scroll_down 클래스 추가하여 css 적용 */
 .scroll_down {
   color: black;
   background-color: #fff;
 }
+.scroll_down .gnb > li a {
+  color: black;
+}
+
+.gnb li {
+  display: inline-block;
+  width: 100px;
+  height: 70px;
+}
+.gnb li a {
+  color: white;
+}
+.sub_list {
+  display: none;
+}
+.sub_list li a {
+  color: black;
+}
+
 /* header_inner, scroll_down hover */
-.header_inner:hover, .scroll_down:hover {
+.header_inner:hover,
+.scroll_down:hover {
   height: 240px;
+  color: black;
   background: #fff;
   width: 100%;
 }
-.header_inner:hover .sublist, .scroll_down:hover .sublist  {
+.header_inner:hover .sub_list,
+.scroll_down:hover .sub_list {
   display: block;
 }
+.header_inner:hover .gnb li a {
+  color: black;
+}
+.header_inner:hover .logo {
+  background: url(../assets/images/common/logo_pandora.svg) no-repeat center;
+}
+.scroll_down .logo {
+  background: url(../assets/images/common/logo_pandora.svg) no-repeat center;
+}
 
-
-
-
+/* ============================================== */
 .logo {
-  float: left;
+  display: flex;
   width: 120px;
   height: 50px;
   margin: 5px 150px 0 20px;
-  background: url(../assets/images/common/logo_pandora.svg) no-repeat center
+  background: url(../assets/images/common/logo_pandora_wt.svg) no-repeat center
     center;
 }
 
@@ -119,8 +133,8 @@ header {
 }
 
 nav {
-  float: left;
   height: 70px;
+  margin-right: auto;
 }
 
 .gnb {
@@ -129,7 +143,7 @@ nav {
 }
 
 .gnb > li {
-  margin-right: 32px;
+  margin-right: 20px;
   padding: 0 16px;
   line-height: 70px;
 }
@@ -137,7 +151,7 @@ nav {
   border-bottom: 1px solid #fecad4;
   padding-bottom: 4px;
 }
-.sublist li a:hover {
+.sub_list li a:hover {
   opacity: 0.7;
   border-bottom: none;
   width: 30px;
@@ -159,15 +173,24 @@ nav {
   width: 240px;
   height: 40px;
   line-height: normal;
-  border: 1px solid #27251f;
+  border: 1px solid #fff;
   border-radius: 2px;
+}
+.header_inner:hover .search,
+.scroll_down .search {
+  border: 1px solid #27251f;
+}
+.header_inner:hover .search button,
+.scroll_down .search button {
+  background: url(../assets/images/common/ico_search.svg) no-repeat center
+    center/20px;
 }
 
 .search_btn {
   display: inline-block;
   width: 40px;
   height: 38px;
-  background: url(../assets/images/common/ico_search.svg) no-repeat center
+  background: url(../assets/images/common/ico_search_wt.svg) no-repeat center
     center/20px;
   text-indent: -999rem;
 }
@@ -175,18 +198,17 @@ nav {
 .header_inner .search input {
   height: 30px;
   padding: 1px 2px;
-  color: black;
-  opacity: 0.5;
+  color: white;
   border: none;
   background-color: transparent;
   outline: none;
 }
-.scroll_down .search input{
+.scroll_down .search input,
+header_inner:hover .search input {
   height: 30px;
   padding: 1px 2px;
   color: black;
   border: none;
-  opacity: 0.5;
   background-color: transparent;
   outline: none;
 }
@@ -205,13 +227,14 @@ nav {
   color: black;
 }
 
-
 /* .gnb_icon {
     display: flex;
 } */
-
+.gnb_icon {
+  margin-left: 12px;
+  display: flex;
+}
 .gnb_icon li {
-  float: left;
   width: 40px;
   height: 38px;
   margin-left: 12px;
@@ -225,17 +248,17 @@ nav {
 }
 
 .gnb_icon li:nth-of-type(1) {
-  background: url(../assets/images/common/ico_store.svg) no-repeat center
+  background: url(../assets/images/common/ico_store_wr.svg) no-repeat center
     center/16px;
 }
 
 .gnb_icon li:nth-of-type(2) {
-  background: url(../assets/images/common/ico_mypage.svg) no-repeat center
+  background: url(../assets/images/common/ico_mypage_wt.svg) no-repeat center
     center/20px;
 }
 
 .gnb_icon li:nth-of-type(3) {
-  background: url(../assets/images/common/ico_cart.svg) no-repeat center
+  background: url(../assets/images/common/ico_cart_wt.svg) no-repeat center
     center/18px;
 }
 

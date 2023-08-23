@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>PANDORA</title>
+    <title>PANDORA_판도라</title>
   </head>
 
   <body>
@@ -28,19 +28,24 @@
             <ul class="gnb">
               <li>
                 <a href="#">판도라</a>
+                <ul class="sublist">
+                  <li><a href="#">submenu</a></li>
+                  <li><a href="#">submenu</a></li>
+                </ul>
               </li>
               <li>
-                <a href="#"
-                  >Jewelry
-                  <!-- lnb=local navigation bar -->
-                  <ul class="lnb">
-                    <li><a href="#">Rings & Bracelets</a></li>
-                    <li><a href="#">Necklaces & Earrings</a></li>
-                  </ul>
-                </a>
+                <a href="#">Jewelry</a>
+                <ul class="sublist">
+                  <li><a href="#">submenu</a></li>
+                  <li><a href="#">submenu</a></li>
+                </ul>
               </li>
               <li>
                 <a href="#">notice</a>
+                <ul class="sublist">
+                  <li><a href="#">submenu</a></li>
+                  <li><a href="#">submenu</a></li>
+                </ul>
               </li>
             </ul>
           </nav>
@@ -49,12 +54,12 @@
               <button type="button" class="search_btn" id="searchHeaderBtn">
                 Search button
               </button>
-              <input type="text" placeholder="SEARCH" />
+              <input class="ser_input" type="text" placeholder="SEARCH" />
             </div>
             <!-- //.search -->
             <ul class="gnb_icon claerfix">
               <li>
-                <a href="##">store</a>
+                <a href="#">store</a>
               </li>
               <li>
                 <a href="#">mypage</a>
@@ -73,40 +78,43 @@
       <div id="contents">
         <!-- section1 -->
         <section class="sec1">
-          <img src="./assets/images/main/sec1_img.jpg" alt="main_img" />
-          <p>SEEK THE SUN</p>
-          <button>바로가기</button>
+          <div class="main">
+            <div class="mainslide">
+              <img src="./assets/images/main/sec1_img.jpg" alt="main_img" />
+              <h2>SEEK THE SUN</h2>
+            </div>
+            <div class="mainslide hidden">
+              <img src="./assets/images/main/slide_img.png" alt="main_img" />
+              <h2>SEEK THE SUN</h2>
+            </div>
+            <div class="mainslide hidden">
+              <img src="./assets/images/main/slide_img2.png" alt="main_img" />
+              <h2>SEEK THE SUN</h2>
+            </div>
+            <div class="mainslide">
+              <img src="./assets/images/main/sec1_img.jpg" alt="main_img" />
+              <h2>SEEK THE SUN</h2>
+            </div>
+          </div>
+          <button onclick="location.href = '#'">바로가기</button>
         </section>
         <!-- //section1 -->
 
         <!-- section2 -->
         <section class="sec2">
-          <div class="inner">
-            <p>New pieces to love</p>
-            <p class="tit">
-              Discover a world of charms, bracelets and much more.
-            </p>
-            <button><a href="#">바로가기</a></button>
+          <div class="sec2_top">
+            <div class="inner">
+              <p>New pieces to love</p>
+              <h2 class="tit">
+                Discover a world of charms, bracelets and much more.
+              </h2>
+              <button onclick="location.href = '#'">바로가기</button>
+            </div>
+            <div class="inner_banner">
+              <img src="./assets/images/main/category_banner.jpg" alt="" />
+            </div>
           </div>
           <ul class="category">
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/main/category_1.png"
-                  alt="category1"
-                />
-                <p>NEW ARRIVALS</p></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/main/category_2.png"
-                  alt="category2"
-                />
-                <p>CHARMS & DANGLES</p></a
-              >
-            </li>
             <li>
               <a href="#"
                 ><img
@@ -115,6 +123,11 @@
                 />
                 <p>EARRINGS</p></a
               >
+            </li>
+            <li>
+              <div class="category_name">
+                <a href="#"> <h4>귀걸이</h4></a>
+              </div>
             </li>
             <li>
               <a href="#"
@@ -126,6 +139,16 @@
               >
             </li>
             <li>
+              <div class="category_name">
+                <a href="#"> <h4>목걸이</h4></a>
+              </div>
+            </li>
+            <li>
+              <div class="category_name">
+                <a href="#"> <h4>반지</h4></a>
+              </div>
+            </li>
+            <li>
               <a href="#"
                 ><img
                   src="./assets/images/main/category_5.png"
@@ -133,6 +156,11 @@
                 />
                 <p>RINGS</p></a
               >
+            </li>
+            <li>
+              <div class="category_name">
+                <a href="#"> <h4>팔찌</h4></a>
+              </div>
             </li>
             <li>
               <a href="#"
@@ -150,8 +178,8 @@
         <!-- section3 -->
         <section class="sec3">
           <div class="bg_box">
-            <img src="./assets/images/main/section3.png" alt="" />
-            <p>HIGH SUMMER 2023</p>
+            <img src="./assets/images/main/section3.png" alt="box_img" />
+            <h2>HIGH SUMMER 2023</h2>
           </div>
           <div class="slide">
             <ul class="item_list">
@@ -159,64 +187,72 @@
                 <img src="./assets/images/main/item1.png" alt="item1" />
                 <p>투톤 셀레셜 트리플 댕글 참</p>
                 <p>￦138,000</p>
-                <button>제품보기</button>
+                <button onclick="location.href = '#'">제품보기</button>
               </li>
               <li>
                 <img src="./assets/images/main/item2.png" alt="item2" />
                 <p>오팔러센트 오션 딥 블루 참</p>
                 <p>￦75,000</p>
-                <button>제품보기</button>
+                <button onclick="location.href = '#'">제품보기</button>
               </li>
               <li>
                 <img src="./assets/images/main/item3.png" alt="item3" />
                 <p>블루 뮤라노 글래스 버터플라이 댕글 참</p>
                 <p>￦118,000</p>
-                <button>제품보기</button>
+                <button onclick="location.href = '#'">제품보기</button>
               </li>
               <li>
                 <img src="./assets/images/main/item4.png" alt="item4" />
                 <p>셀레셜 썬, 스타&문 클립 참</p>
                 <p>￦78,000</p>
-                <button>제품보기</button>
+                <button onclick="location.href = '#'">제품보기</button>
               </li>
               <li>
                 <img src="./assets/images/main/item5.png" alt="item5" />
                 <p>카메라, 하트 & 컴퍼스 트리플 댕글 참</p>
                 <p>￦118,000</p>
-                <button>제품보기</button>
+                <button onclick="location.href = '#'">제품보기</button>
               </li>
               <li>
                 <img src="./assets/images/main/item6.png" alt="item6" />
                 <p>오프너볼 패스포트 댕글 참</p>
                 <p>￦78,000</p>
-                <button>제품보기</button>
+                <button onclick="location.href = '#'">제품보기</button>
               </li>
               <li>
                 <img src="./assets/images/main/item7.png" alt="item7" />
                 <p>디즈니 더 리틀 머메이드 시셸 참</p>
                 <p>￦138,000</p>
-                <button>제품보기</button>
+                <button onclick="location.href = '#'">제품보기</button>
               </li>
               <li>
                 <img src="./assets/images/main/item8.png" alt="item8" />
                 <p>디즈니 더 리틀 머메이드 세바스찬 게 댕글 참</p>
                 <p>￦138,000</p>
-                <button>제품보기</button>
+                <button onclick="location.href = '#'">제품보기</button>
               </li>
               <li>
                 <img src="./assets/images/main/item9.png" alt="item9" />
                 <p>디즈니 더 리틀 머메이드 에리얼 댕글 참</p>
                 <p>￦158,000</p>
-                <button>제품보기</button>
+                <button onclick="location.href = '#'">제품보기</button>
               </li>
             </ul>
           </div>
           <button class="btn btn_l">&lt;</button>
-          <but class="btn btn_r">&gt;</but>
+          <button class="btn btn_r">&gt;</button>
         </section>
-        <div class="event">
-          <img src="./assets/images/main/event_bn.png" alt="event_bner" />
-        </div>
+        <!-- sec4 -->
+        <section class="event">
+          <h2>Event</h2>
+          <div class="sec4_banner">
+            <ul class="sec4_slide">
+              <li><a href="#"><img src="./assets/images/main/event_bn.png" alt="event_bner"></a></li>
+              <li><a href="#"><img src="./assets/images/main/event_bn.png" alt="event_bner"></a></li>
+              <li><a href="#"><img src="./assets/images/main/event_bn.png" alt="event_bner"></a></li>
+            </ul>
+          </div>
+        </section>
         <!-- //section3 -->
       </div>
       <!-- //#contents -->
@@ -333,6 +369,7 @@
       <!-- footer -->
     </div>
     <!-- //#wrap -->
+    <script src="./js/img_slide.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/img_slide.js"></script>
   </body>

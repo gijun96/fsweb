@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-
 /* scroll_bar */
 body::-webkit-scrollbar {
   width: 12px; /* 스크롤바의 너비 */
@@ -22,8 +21,6 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background-color: #f0f0f0;
 }
-
-
 ul {
   list-style: none;
 }
@@ -60,34 +57,56 @@ header {
   border-bottom: 1px solid #f3f3f3;
 }
 
-.header_inner {
+.header_inner, .scroll_down{
   max-width: 1600px;
   height: 70px;
   margin: 0 auto;
   padding: 0 80px;
+  
+}
+.header_inner{
+  color: white;
   /* 배경 그라디언트 */
   background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.639093137254902) 47%,
-    rgba(0, 212, 255, 0) 100%
+    rgba(0, 0, 0, 0.3) 1%,
+    rgba(255, 255, 255, 0) 100%
   );
 }
+
+.gnb li {
+  display: inline-block;
+  width: 100px;
+  height: 70px;
+}
+.sublist {
+  display: none;
+}
+
 /* 스크롤 내릴 때 .header_inner의 scroll_down 클래스 추가하여 css 적용 */
 .scroll_down {
-  max-width: 1600px;
-  height: 70px;
-  margin: 0 auto;
-  padding: 0 80px;
+  color: black;
   background-color: #fff;
 }
+/* header_inner, scroll_down hover */
+.header_inner:hover, .scroll_down:hover {
+  height: 240px;
+  background: #fff;
+  width: 100%;
+}
+.header_inner:hover .sublist, .scroll_down:hover .sublist  {
+  display: block;
+}
+
+
+
 
 .logo {
   float: left;
-  width: 170px;
-  height: 70px;
-  margin: 10px 0;
+  width: 120px;
+  height: 50px;
+  margin: 5px 150px 0 20px;
   background: url(../assets/images/common/logo_pandora.svg) no-repeat center
     center;
 }
@@ -102,17 +121,26 @@ header {
 nav {
   float: left;
   height: 70px;
-  margin-left: 30px;
 }
 
 .gnb {
   display: flex;
+  position: relative;
 }
 
 .gnb > li {
   margin-right: 32px;
   padding: 0 16px;
   line-height: 70px;
+}
+.gnb li a:hover {
+  border-bottom: 1px solid #fecad4;
+  padding-bottom: 4px;
+}
+.sublist li a:hover {
+  opacity: 0.7;
+  border-bottom: none;
+  width: 30px;
 }
 
 .lnb {
@@ -144,21 +172,39 @@ nav {
   text-indent: -999rem;
 }
 
-.search input {
+.header_inner .search input {
   height: 30px;
   padding: 1px 2px;
-  color: #f0f0f0;
+  color: black;
+  opacity: 0.5;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.scroll_down .search input{
+  height: 30px;
+  padding: 1px 2px;
+  color: black;
   border: none;
   opacity: 0.5;
   background-color: transparent;
+  outline: none;
 }
 
-.search input::placeholder {
+.header_inner .ser_input::placeholder {
   /* font-weight: lighter; */
   letter-spacing: 2px;
   font-size: 12px;
   color: white;
 }
+
+.scroll_down .ser_input::placeholder {
+  /* font-weight: lighter; */
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: black;
+}
+
 
 /* .gnb_icon {
     display: flex;

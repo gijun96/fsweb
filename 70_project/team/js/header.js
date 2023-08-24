@@ -25,3 +25,10 @@ function init() {
 }
 // function init 실행
 init();
+
+
+
+header.addEventListener('mouseover', ()=>{
+  header.classList.add("scroll_down");
+  header.classList.remove("header_inner");
+})

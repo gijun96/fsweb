@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 table, th, td {
-    border:1px solid;
+    border:1px solid black;
     border-collapse: collapse;
     text-align: center;
 }

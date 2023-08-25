@@ -183,6 +183,7 @@ section {
   z-index: 9;
   left: 50%;
   transform: translateX(-50%);
+  transition-duration: 2s;
   top: 47%;
 }
 .item_list {
@@ -330,6 +331,10 @@ section {
   display: inline-block;
   width: 600px;
 }
+.hide{
+  display: none;
+}
+
 .side_banner{
   overflow: hidden;
 }

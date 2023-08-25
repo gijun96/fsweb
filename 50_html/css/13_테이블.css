@@ -1,25 +1,34 @@
 @charset "utf-8";
 
-table, th, td {
-    border:1px solid black;
-    border-collapse: collapse;
-    text-align: center;
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+th {
+  background: lightcoral;
 }
 td {
-    width:100px;
-    height:100px;
+  /* td와 th를 중복 적용 시키면 td내용이 적용됨 */
+  width: 100px;
+  height: 100px;
 }
+tr td:first-child{
+    background: lightgreen;
+}
+tr td:first-child~td{
+    background: lightgoldenrodyellow;
+}
+
+
 
 caption {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-#table1 th, #table1 td {
-    height:30px;
-}
-col:nth-of-type(1) {
-    background: yellow;
-}
-thead tr:nth-of-type(1) {
-    background: lightgreen;
+#table1 th,
+#table1 td {
+  height: 30px;
 }

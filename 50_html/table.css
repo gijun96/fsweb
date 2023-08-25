@@ -7,6 +7,10 @@ table{
     border-collapse: collapse;
     text-align: center;
 }
+th{
+    width: 100px;
+    background: lightcoral;
+}
 td{
     width: 100px;
     height: 100px;

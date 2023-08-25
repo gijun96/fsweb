@@ -133,18 +133,18 @@ section {
 .category_name:hover a {
   scale: 120% 120%;
 }
-.category_name a {
-  padding-bottom: 15px;
-  border-bottom: 2px solid palevioletred;
-}
 .category li p {
   position: absolute;
   bottom: 10%;
   left: 50%;
   translate: -50% -50%;
-  /* border-bottom: 1px solid #fecad4; */
   line-height: 20px;
 }
+.category li span{
+  text-decoration: palevioletred underline solid 2px;
+  text-underline-position: under;
+}
+
 
 .sec3 {
   width: 1600px;

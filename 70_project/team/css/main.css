@@ -139,24 +139,24 @@ section {
   translate: -50% -50%;
   line-height: 20px;
 }
-.category li span{
+.category li span {
   text-decoration: palevioletred underline solid 2px;
   text-underline-position: under;
 }
-
 
 .sec3 {
   width: 1600px;
   height: 979px;
   margin: 140px auto 0;
   overflow: clip;
+ 
 }
 .bg_box {
+  position: relative;
   max-width: 1600px;
   max-height: 979px;
-  background-image: url(../assets/images/main/sec3_bgi.jpg);
   padding-top: 381px;
-  position: relative;
+  background: url(../assets/images/main/sec3_bgi.jpg) no-repeat center fixed;
 }
 .bg_box img {
   position: absolute;
@@ -202,10 +202,10 @@ section {
 
 .item_list li {
   text-align: center;
+  font-size: 14px;
   /* 다음 리스트 간격 */
   /* transform: translateX(-300%); */
 }
-
 
 .item_list li img {
   height: 346px;
@@ -217,7 +217,7 @@ section {
   text-align: center;
   margin: 23px 157px 0;
   background: none;
-  border: 1px solid #fecad4;
+  border: 1px solid black;
   cursor: pointer;
 }
 .btn {
@@ -257,18 +257,17 @@ section {
   height: 4px;
   background-color: #777;
   margin-right: 8px;
-  opacity: .3;
+  opacity: 0.3;
   cursor: pointer;
 }
-.list_bar div:first-child{
+.list_bar div:first-child {
   background-color: black;
   width: 70px;
   height: 4px;
-  opacity: .7;
+  opacity: 0.7;
   background-color: #333;
   transform: translateX(78px);
 }
-
 
 .sec4 {
   max-width: 1920px;
@@ -303,12 +302,12 @@ section {
   position: relative;
   margin-left: 34px;
 }
-.sec4_mainBanner p{
+.sec4_mainBanner p {
   position: absolute;
   left: 10%;
   color: white;
 }
-.sec4_mainBanner:hover p{
+.sec4_mainBanner:hover p {
   opacity: 1;
   animation: fade-in 1s;
   transition-timing-function: ease-out;
@@ -321,21 +320,21 @@ section {
     opacity: 1;
   }
 }
-.sec4_mainBanner p:nth-of-type(1){
+.sec4_mainBanner p:nth-of-type(1) {
   top: 45%;
   font-size: 24px;
 }
-.sec4_mainBanner p:nth-of-type(2){
+.sec4_mainBanner p:nth-of-type(2) {
   font-size: 72px;
   top: 50%;
   display: inline-block;
   width: 600px;
 }
-.hide{
+.hide {
   display: none;
 }
 
-.side_banner{
+.side_banner {
   overflow: hidden;
 }
 .side_banner li {
@@ -350,27 +349,26 @@ section {
   width: 300px;
   height: 180px;
 }
-.side_banner li img:hover{
+.side_banner li img:hover {
   opacity: 1;
   animation: fade-banner 2s ease-in;
 }
 @keyframes fade-banner {
-  0%{
+  0% {
     opacity: 0;
-}
-  100%{
-      opacity: 1;
-
+  }
+  100% {
+    opacity: 1;
   }
 }
-.side_banner p{
+.side_banner p {
   color: #fff;
   font-size: 14px;
   position: absolute;
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 4px 8px;
 }
 

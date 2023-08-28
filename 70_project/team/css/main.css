@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import url(typo.css);
-@import url(./common.css);
 @import url(./header_transform.css);
 
 section {
@@ -189,7 +188,8 @@ section {
 .item_list {
   display: flex;
   animation: fade-in 0.8s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
 }
 @keyframes fade-in {
   from {
@@ -202,10 +202,10 @@ section {
 
 .item_list li {
   text-align: center;
-
   /* 다음 리스트 간격 */
   /* transform: translateX(-300%); */
 }
+
 
 .item_list li img {
   height: 346px;

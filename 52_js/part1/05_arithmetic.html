@@ -15,6 +15,24 @@
             산술 연산자: +(더하기), -(빼기), *(곱하기), /(나누기), %(나머지), **(거듭제곱)
         */
 
+
+        // + 문자열 연결 연산
+        //  숫자 + 숫자 -> 숫자
+        //  순자 + 문자열 -> 문자열
+        //  문자열 + 숫자 -> 문자열
+        // 문자열 + 문자열 -> 문자열
+        let a = 5;
+        let b = 4;
+        let c = '2';
+        document.write(`a + c = ${a +c} <br>`);
+        document.write(`a + c + b= ${a + c + b} <br> ${typeof(c)}`);
+        document.write(`
+        <h2>대입(할당) 연산자</h2>
+        c = b -> ${c = b} <br>
+        ${typeof(c)}
+        `);
+
+
         var num1 = 15;
         var num2 = 2;
         var result;

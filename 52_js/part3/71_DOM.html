@@ -17,7 +17,7 @@
 
 <body>
     <ul>
-        <li>목록1</li>
+        <li id="blue">목록1</li>
         <li>목록2</li>
         <li class="red">목록3</li>
         <li>목록4</li>
@@ -36,14 +36,35 @@
 
             DOM에 접근하기
             - document.getElementById('아이디명')
-            - document.getElementsByClassName('클래스명')
+            - document.getElementsByClassName('클래스명').item(숫자);
+            - document.getElementsByClassName('클래스명')[숫자];
             - document.getElementsByTagName('태그명')
             - document.querySeletor('선택자')
             - document.querySeletorAll('선택자들')
 
             객체.style.속성 = 값;
         */
+        let a = 10;
+        a  += 1;
+        // 백틱(`) => ''을 한 번만 기록
+        // 보간법: ${변수}
+        document.write(
+            `<hr> ${a} <br> ${a} <br> ${a} <br>${a} <br>${a} <br>${a} <br>${a} <br>${a} <br>${a} <br>${a} <br>${a} <br>v`
+        );
 
+        // <li id="blue">목록1</li>
+        // <li>목록2</li>
+        // <li class="red">목록3</li>
+        document.getElementById("blue").style.color = 'blue';
+        document.querySelector(".red").style.color = 'red';
+        document.getElementsByTagName('li')[3].style.border = "1px solid red";
+
+        // 속성
+        // HTML 태그의 내용 변경
+        // ~.innerText : ~안에 텍스트
+        // ~.innerHTML : ~안에 HTML 태그 (텍스트 포함)
+        document.querySelector(".red").style.background = "yellow";
+        document.querySelector('.red').innerText = 'yellow';
     </script>
 </body>
 

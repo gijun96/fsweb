@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul li{
+  list-style: none;
+}
+.wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.carousel_wrap{
+  position: relative;
+  border: 5px solid violet;
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+}
+.carousel{
+  width: 700px;
+  height: 400px;
+  display: flex;
+  flex: 0 0 auto;
+  border: 8px solid red;
+  
+}
+.carousel li{
+  position: absolute;
+  width: 700px;
+  height: 400px;
+  animation: slide 9s infinite;
+}
+@keyframes slide {
+  0% {left:0;}
+  5% {left:-700px;}
+  33.33% {left:-700px;}
+  38% {left:-1400px;}
+  66.66% {left:-1400px;}
+  71% {left:-2100px;}
+  99.99% {left:-2100px;}
+  100% {left:0px;}
+}
+.carousel li:nth-of-type(4){
+  transform: translateX(2100px);
+} 
+li img{
+  width: 700px;
+  height: 400px;
+}
+@slide{
+    transform: translateX(-100%);
+}

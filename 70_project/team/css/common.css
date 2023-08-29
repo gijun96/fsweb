@@ -198,9 +198,13 @@ nav {
 .sub_list li a:hover {
   opacity: 0.7;
   border-bottom: none;
-  width: 30px;
+  width: 35px;
+  height: 5px;
 }
-
+.Jewelry{
+  width: 240px;
+  overflow: clip;
+}
 .lnb {
   display: none;
 }

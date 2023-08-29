@@ -188,14 +188,16 @@ section {
 .item_list {
   display: flex;
   animation: fade-in 0.8s;
-  transition-timing-function: ease-in-out;
-  transition-duration: 1.2s;
+  transition-timing-function: linear;
+  transition-duration: 0.8s;
 }
+
 @keyframes fade-in {
   from {
     opacity: 0;
-  }
-  to {
+  }to{
+    opacity: .5;
+  }to {
     opacity: 1;
   }
 }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css"
+    />
+    <title>Slider</title>
+    <style>
+      body{
+        padding: 0;
+        margin: 0;
+      }
+      .bx-pager {
+        top: 90%;
+      }
+      .bx-wrapper .bx-pager.bx-default-pager a {
+        width: 40px;
+        height: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 25%;
+      }
+      .section{
+        height: 100%;
+        overflow: hidden;
+      }
+      .slider_wrap{
+        position: relative;
+      }
+/* 
+      미디어의 크기(<img>, <video>) object-fit: cover, contain, ..
+                    object-position: x위치, y위치;
+      배경이미지의 크기 background-size: cover, contain;
+                        background-position: x위치, y위치;
+*/
+
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="slider_wrap">
+
+        <div class="bxslider">
+          <div><img src="./assets/slide1.jpg" alt="이미지1" /></div>
+          <div><img src="./assets/slide2.jpg" alt="이미지2" /></div>
+          <div><img src="./assets/slide3.jpg" alt="이미지3" /></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+  라이브러리 : *.js, *.css
+  2.HTML 코드
+  3.JS 코드는 라이브러리(*.js) 밑에 작성한다.
+ -->
+
+    <!-- 
+    jquery? 자바스크립트 라이브러리 언어
+
+   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bxslider CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
+    <!-- slick -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>

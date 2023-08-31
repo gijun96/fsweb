@@ -50,6 +50,18 @@ header {
   top: 0;
   left: 0;
 }
+/* .bg{
+  /* text-indent: -999999px; */
+  /* background-color: white;
+  height: 240px;
+  width: 1920px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+  
+} */
+ */
 
 .top_notice {
   height: 35px;
@@ -59,6 +71,7 @@ header {
 }
 
 .header_inner {
+  position: relative;
   display: flex;
   max-width: 1600px;
   height: 70px;

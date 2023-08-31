@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css"
+    />
+    <title>Slider</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .bx-wrapper {
+        margin: 0;
+      }
+
+      .slider_wrap {
+        width: 1044px;
+        height: 100%;
+        /* overflow: hidden; */
+        margin: 0 auto;
+        border: 1px solid black;
+      }
+      .bx-pager {
+        top: 110%;
+      }
+      .bx-wrapper .bx-pager.bx-default-pager a {
+        width: 40px;
+        height: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 25%;
+      }
+      .bxslider>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 
+      미디어의 크기(<img>, <video>) object-fit: cover, contain, ..
+                    object-position: x위치, y위치;
+      배경이미지의 크기 background-size: cover, contain;
+                        background-position: x위치, y위치;
+*/
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="slider_wrap">
+        <div class="bxslider">
+          <div>
+            <img src="./assets/item1.png" alt="이미지1" />
+            <p>asdasdㅁㄴㅇㅁㄴㅇ</p>
+            <p>&#8361;13,2000</p>
+            <button>제품보기</button>
+          </div>
+          <div><img src="./assets/item2.png" alt="이미지2" /> <p>asdasdㅁㄴㅇㅁㄴㅇ</p>
+            <p>13,2000</p>
+            <button>제품보기</button></div>
+          <div><img src="./assets/item3.png" alt="이미지3" /> <p>asdasdㅁㄴㅇㅁㄴㅇ</p>
+            <p>13,2000</p>
+            <button>제품보기</button></div>
+          <div><img src="./assets/item4.png" alt="이미지4" /> <p>asdasdㅁㄴㅇㅁㄴㅇ</p>
+            <p>13,2000</p>
+            <button>제품보기</button></div>
+          <div><img src="./assets/item5.png" alt="이미지5" /> <p>asdasdㅁㄴㅇㅁㄴㅇ</p>
+            <p>13,2000</p>
+            <button>제품보기</button></div>
+          <div><img src="./assets/item6.png" alt="이미지6" /> <p>asdasdㅁㄴㅇㅁㄴㅇ</p>
+            <p>13,2000</p>
+            <button>제품보기</button></div>
+          <div><img src="./assets/item7.png" alt="이미지7" /> <p>asdasdㅁㄴㅇㅁㄴㅇ</p>
+            <p>13,2000</p>
+            <button>제품보기</button></div>
+          <div><img src="./assets/item8.png" alt="이미지8" /> <p>asdasdㅁㄴㅇㅁㄴㅇ</p>
+            <p>13,2000</p>
+            <button>제품보기</button></div>
+          <div><img src="./assets/item9.png" alt="이미지9" /> <p>asdasdㅁㄴㅇㅁㄴㅇ</p>
+            <p>13,2000</p>
+            <button>제품보기</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+  라이브러리 : *.js, *.css
+  2.HTML 코드
+  3.JS 코드는 라이브러리(*.js) 밑에 작성한다.
+ -->
+
+    <!-- 
+    jquery? 자바스크립트 라이브러리 언어
+
+   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bxslider CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
+    <!-- slick -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>

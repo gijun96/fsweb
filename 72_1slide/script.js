@@ -18,10 +18,13 @@
 
 $('.bxslider').bxSlider({
   // auto: true,
-  autoControls: true,
-  stopAutoOnClick: true,
+  // autoControls: true,
+  // stopAutoOnClick: true,
   pager: true,
-  // slideWidth: 1200
+  slideWidth: 1320,
+  minSlides:3,
+  maxSlides:3,
+  moveSlide:3
 });
 
 const wrapper = document.querySelector(".bx-wrapper");

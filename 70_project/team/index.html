@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/images/common/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/main_desktop.css">
     <title>PANDORA_판도라</title>
   </head>
 
@@ -71,25 +73,24 @@
           <!-- //.util -->
         </div>
         <!-- //.header_inner -->
-        <div class="bg">bg</div>
       </header>
       <!-- //header -->
 
       <div id="contents">
         <!-- section1 -->
         <section class="sec1">
-          <div class="main">
-            <div class="mainSlide">
+          <div class="sec1_slider main">
+            <div>
               <img src="./assets/images/main/sec1_img.jpg" alt="main_img">
-              <h2>SEEK THE SUN</h2>
+              <!-- <h2>SEEK THE SUN</h2> -->
             </div>
-            <!-- <div class="mainSlide hidden">
+            <div>
               <img src="./assets/images/main/slide_img.png" alt="main_img">
             </div>
-            <div class="mainSlide hidden">
+            <div>
               <img src="./assets/images/main/slide_img2.png" alt="main_img">
             </div>
-          </div> -->
+          </div>
           <h2>SEEK THE SUN</h2>
           <button onclick="location.href = '#'">바로가기</button>
         </section>
@@ -380,9 +381,15 @@
     </footer> <!-- footer -->
     </div>
     <!-- //#wrap -->
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bxslider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
     <script src="./js/main_tab.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/main_img_slide.js"></script>
     <script src="./js/main_banner_slide.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

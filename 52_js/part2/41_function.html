@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML+JS</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>함수</h1>
-    <p class="p" onclick="fn();"></p>
+    <p>함수1 출력</p>
+    <p>함수2 출력</p>
+    <p>함수3 출력</p>
+    <p>함수4 출력</p>
+    <p>함수5 출력</p>
+    <p>함수6 출력</p>
     <script>
-        /* 
+      /* 
+            1. 매개변수(매개 값)
+            2. return; => 값 되돌려 주거나 , 함수 종료
+            3. 스코프(scope, 영역) - 변수, 함수
+
+
+            문(statement)
+            1. 표현식(expression): 결과 값이 있는 문장;
+            2. 함수문, 제어문(if, for) - 결과 값이 없는 문장;
+
             변수(variables)
                 - 1개의 데이터를 저장
                 - var 키워드를 이용하여 선언
@@ -24,8 +37,11 @@
                 
                 
                 함수 정의
+
+                선언적 함수 : 이름이 있는 함수
                 function 함수명() {
                     코드;
+                    return [표현식];
                 }
                 
                 익명 함수(함수명이 없는 함수) 정의
@@ -34,6 +50,7 @@
                 }
                 
                 함수 호출
+                함수([매개 값]){};
                 함수명();
                 또는
                 참조변수();
@@ -44,19 +61,19 @@
                 
                 일반 함수의 경우 함수 정의 전에 함수 호출문이 있어도 호이스팅(hoisting) 방식이 적용되어 실행되지만 익명 함수는 적용되지 않는다.
         */
-        
-                /*
+
+      /*
                 1 부터 5까지 화면 출력하시오
                 1, 2, 3, 4, 5
                 */
-               /*
+      /*
                선언적 함수 -> 이름이 있는 함수
-               function 함수(){
+               function 함수([parameter]){
                    코드;
                    
                 }
                 -함수 호출
-                함수();
+                함수([argument]);
                 
                 이벤트 : click, load, DOMContentLoaded, mouseenter, ...
                 // DOMContentLoaded:DOM의 내용 불러온 후
@@ -67,12 +84,41 @@
                 창이 돔*(HTML태그구조)의 내용을 불러왔는지 듣고 있다가
                  추가 이벤트가 완료되면 함수 수행
 
-                 */    
+                 */
+      // 요소 선택
+      const p = document.getElementsByTagName("p");
+      // console.log(p);
+    
+    // HTML 내용 : innerHTML, innerText 속성
+    // HTML 속성
+    // 요소.[HTML속성] = 값;
+    // CSS속성
+    // 요소.style.[CSS속성] = 값;
 
-
-
-                </script>
-                
-</body>
-
+      const div = document.querySelector("p");
+      const fn = (para1, para2) => {
+        p[0].innerHTML += "<br>";
+        p[0].innerText += para1 + para2;
+      };
+    fn(3, 5);
+      const fn2 = (para3) => (
+          p[1].innerHTML += "<br>",
+          p[1].innerText += para3
+          ); 
+          fn2(16);
+          function fn3(para4, para5, para6) {
+              p[2].innerText += para4 + para5 + para6;
+            }
+            p[2].innerHTML += "<br>",
+            fn3(5, 6, 7);
+            function fn6(a, b, c) {
+                p[3].innerHTML += '<br>';
+                p[3].innerText += a + b + c;
+                return a - b - c;
+            }
+            var refVar = fn6(10, 20, 30);
+            p[3].innerHTML += "<br>",
+      p[3].innerText += refVar;
+    </script>
+  </body>
 </html>

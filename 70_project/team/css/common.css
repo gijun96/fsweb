@@ -50,18 +50,8 @@ header {
   top: 0;
   left: 0;
 }
-/* .bg{
-  /* text-indent: -999999px; */
-  /* background-color: white;
-  height: 240px;
-  width: 1920px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -999;
-  
-} */
- */
+
+ 
 
 .top_notice {
   height: 35px;
@@ -101,7 +91,7 @@ header {
 .gnb_icon li:nth-of-type(2){
   position: relative;
 }
-.gnb_icon li:nth-of-type(2):hover .mypage_login{
+.mypage_login{
   display: block;
   display: flex;
   flex-direction: column;
@@ -114,22 +104,9 @@ header {
   text-align: center;
   transform: translateX(-50%);
   background: white;
-}
-.mypage_login{
-/* 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 300px;
-  height: 170px;
-  position: absolute;
-  left: 0;
-  top: 50px;
-  text-align: center;
-  transform: translateX(-50%);
-  background: white; */
   display: none;
 }
+
 .mypage_login p{
   margin: 4px auto;
 }

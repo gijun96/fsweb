@@ -4,11 +4,11 @@
 @import url(../css/main_phone.css) (min-width:992px);
 /* @import url(./common.css); */
 
-/* @media (min-width:992px) { */
+@media (min-width:992px) {
 
 
 section {
-  max-width: 390px;
+  max-width: 1600px;
   margin: 0 auto;
   position: relative;
   top: 30px;
@@ -24,7 +24,7 @@ section {
   overflow: hidden;
 }
 .mainSlide {
-  width: 390px;
+  width: 1600px;
 }
 
 .sec1 h2 {
@@ -70,7 +70,7 @@ section {
 }
 
 .sec2 {
-  max-width: 390px;
+  max-width: 1300px;
   display: flex;
   margin-top: 80px;
   flex-direction: column;
@@ -83,7 +83,7 @@ section {
   overflow: hidden;
 }
 .inner {
-  width: 390px;
+  width: 500px;
   height: 425px;
   margin-top: 75px;
 }
@@ -382,4 +382,5 @@ section {
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 4px 8px;
+}
 }

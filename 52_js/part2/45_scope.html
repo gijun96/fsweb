@@ -1,27 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML+JS</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>스코프(Scope)</h1>
     <script>
-        /* 
+      /* 
             스코프(Scope): 변수 또는 함수의 유효 범위
 
             지역 변수(Local Variables)
                 - 스코프 영역에서 선언한 변수로 스코프 영역에서만 사용할 수 있다.
             전역 변수(Global Variables)
                 - 자바스크립트 모든 영역에서 사용할 수 있는 변수
-        */
 
+                변수키워드 : var -> let, const
+
+                재귀(자기)호출함수 -> 무한 루프에 빠진다.
+                function 함수(){
+                    if(조건식){
+                        함수();
+                    }
+                }
+                함수();
+
+                즉시호출함수
+                (function 함수(){
+                    코드;
+                }());
+
+
+                var: 함수 영역 변수
+                전역 변수: 함수 밖에서 선언한 변수
+                지역 변수: 함수 내에서 선언한 변수
+                함수 내에서 전역 변수 변경 가능
+                지역 변수는 함수 밖에서 변경 불가능
+                전역 변수와 같은 이름의 지역 변수를 쓰면 별 개의 변수로 사용된다.
+                함수 내에서 선언 없이 할당한 변수는 전역 변수와 같이 사용된다.
+                제어문에서 선언한 변수는 전역 변수와 같이 사용된다.
+                사용 후 아래서 선언할 수 있다.(호이스팅)
+                재선언 가능(재선언 시 먼저 선언한 변수는 무시된다.)
+
+                let: 블록 영역 변수
+                전역 변수: 블록 밖에서 선언한 변수
+                지역 변수: 블록 안에서 선언한 변수
+                선언 후 사용(호이스팅 불가)
+                재선언 불가
+
+                const: 블록 영역 변수
+                전역 변수: 블록 밖에서 선언한 변수
+                지역 변수: 블록 안에서 선언한 변수
+                선언과 할당을 함께 해야함.
+                재선언, 재할당 불가
+                요소, 배열, 객체, 함수를 할당하여 사용한다.
+        
+        */
+        // var은 변수의 재선언 가능
+        var global1 = '전역변수'; /* global 전역변수 */
+        var global1 = 2 ; 
+        console.log(global1);
+        
+        const global2 = '전역변수'; /* global 전역변수 */
+        console.log(global2);
+        // let은 변수의 재선언 불가능, 블록이 다르면 선언 가능
+        //  변수값 재할당가능
+        let global3 = '전역변수'; /* global 전역변수 */
+        global3 = 30;
+        console.log(global3);
+        // undefined => 변수 선언 후 핟당값이 없을 때
+
+        function fn(){
+            let global3 = '지역변수';
+            console.log(global3);
+        }
+        fn();
 
     </script>
-</body>
-
+  </body>
 </html>

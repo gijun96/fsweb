@@ -1,7 +1,54 @@
 $('.sec1_slider').bxSlider({
   auto: true,
-  autoControls: true,
+  autoControls: false,
   stopAutoOnClick: true,
   pager: true,
-  slideWidth: 1600
+  slideWidth: 1600,
+  controls: false,
 });
+
+$('.item_list').bxSlider({
+  pager: true,
+  slideWidth: 345,
+  minSlides: 3, 
+  maxSlides: 3,
+  controls: true,
+  auto: true  
+});
+
+document.querySelector(".item_list").style.background = "none";
+
+
+let category = document.querySelectorAll(".category li");
+console.log(category);
+
+const ca_name = document.querySelector(".category_sub");
+// window.innerWidth
+// setInterval(windowWidth, 500);
+// function windowWidth(){
+//   console.log(window.innerWidth);
+// }
+
+console.log(category[1]);
+
+console.log(window.innerWidth);
+
+window.onresize = function(){tablet()};
+
+function tablet(){
+  if(window.innerWidth < 992){
+    category[1].style.display = "none";
+    category[3].style.display = "none";
+    category[4].style.display = "none";
+    category[6].style.display = "none";
+  }else{
+    category[1].style.display = "block";
+    category[3].style.display = "block";
+    category[4].style.display = "block";
+    category[6].style.display = "block";
+  }
+
+}
+
+
+tablet();

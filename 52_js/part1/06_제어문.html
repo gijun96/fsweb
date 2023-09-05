@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제어문 control statements</title>
+
+  <style>
+    .fixed{
+      position: fixed;
+      right: 10%;
+    }
+  </style>
+</head>
+<body>
+  <h1>제어문</h1>
+  <div class="fixed">
+    <label for="box">a = </label>
+    <input id="a" type="text" placeholder="값을 입력하시오.">
+  </div>
+  <h2>if</h2>
+  <p class="p1">결과:</p>
+  <h2>if~else</h2>
+  <p class="p2">결과:</p>
+  <h2>if~else if~else</h2>
+  <p class="p3">결과:</p>
+  <h2>switch~case</h2>
+  <p class="p4">결과:</p>
+  <h2>for</h2>
+  <p class="p5">결과:</p>
+  <h2>while</h2>
+  <p class="p6">결과:</p>
+  <h2>do~while</h2>
+  <p class="p7">결과:</p>
+  <h2>break</h2>
+  <p class="p8">결과:</p>
+  <h2>continue</h2>
+  <p class="p9">결과:</p>
+  <script>
+
+    // prompt('안내문장', '초기값_생략가능');
+    // prompt의 결과값은 문자이다.
+    // let a = prompt('숫자를 입력해주세요.');
+    let a = 0;
+    const inEle = document.querySelector("input");    
+    const p = document.querySelectorAll('p');
+    console.log(p);
+    for(let i = 0; i<10; i++){
+      p[i];
+      console.log(p[i]);
+    }
+    console.log
+    // const pEle1 = document.querySelector('.p1');
+    // const pEle2 = document.querySelector('.p2');
+    // const pEle3 = document.querySelector('.p3');
+    // const pEle4 = document.querySelector('.p4');
+    // const pEle5 = document.querySelector('.p5');
+    // const pEle6 = document.querySelector('.p6');
+    // const pEle7 = document.querySelector('.p7');
+    // const pEle8 = document.querySelector('.p8');
+    // const pEle9 = document.querySelector('.p9');
+    // 자동형 변환
+    // prompt로 입력된 문자'10' 연산자를 통해 자동형변환되어 number로 형 변환된다.
+
+    // 문자열과 숫자를 비교(>, >=, <, <=)하면? false
+    // 문자끼리는 사전순으로 뒤에 나오는 문자열이 크다.
+
+    a = 11;
+    // if의 첫 번째 경우
+    if(a > 5){
+      pEle1.style.color = 'red';
+    }
+    pEle1.style.color = 'blue';
+
+    // if두 번째 경우
+    if(a > 5){
+      console.log("if 탈출!");
+      pEle2.innerHTML += ' a > 5 = true';
+      pEle2.style.color = 'red';
+    }else{
+      pEle2.style.color = 'blue';
+      pEle2.innerHTML += ' a > 5 = false';
+    }
+    
+    /*
+      데이터 유형
+      1. 문자열 (String): '' or ""
+      2. 숫자형 (Number): 0 
+      3. 불-논리값 (boolean): true or false
+      4. undefined
+      5. 객체 (Object): Null
+
+      연산자 
+      1. 산술
+      2. 비교
+      a는 10보다 크다
+      a > 10
+      a는 20보다 작거나 같다
+      a <= 20
+      3. 논리
+      a는 10보다 크면서(and &&) 20보다 작다
+      a > 10 && a < 20
+      a는 10보다 크거나(또는 ||) 20보다 작다
+      a > 10 || a < 20
+      a는 10보다 작거나 같다(!)
+      !(a>10)
+      4. 대입(할당)
+      5. 조건
+
+      조건식
+      조건식에 사용할 표현식 결과는 true or false
+      false: null, undefined, '', 0, false
+
+      제어문
+      1. 조건문: if, else
+      2. 선택문: swich~case, default
+      3. 반복문: for, do, while
+
+    property(속성): CSS 속성
+    attribute(속성): HTML 속성
+
+    요소.HTML 속성 ='value';
+    요소.setAttribute = (속성, 값);
+    요소.style.CSS속성 ='value';
+
+    
+    switch(a){
+     case 1: 코드; [break;]
+     case 2: 코드; [break;]
+     case 3: 코드; [break;]
+     ...
+     [default: 코드;]
+   }
+    */
+   inEle.value = 2;
+   switch(Number(inEle.value)){
+    case 1: pEle4.innerText +="a가 1이다.";
+      break;
+    case 2: pEle4.innerHTML += "a는 2다.";
+      break;
+    default:
+      pEle4.setAttribute('title', 'a는 1, 2가 아니다.');
+    }
+      // console.log(inEle.value);
+    /*
+      for: (초기값;조건식;증감식){
+        코드;
+      }
+    */
+      for(let i = 0; i<10;i++){
+        if(i === 5) break;
+        pEle5.innerHTML += '<br>' + i;
+      }
+      /*
+      초기식
+        while(조건식){
+          // 조건식이 true이면 코드 실행
+          //  조건식이 false이면 while문 빠져나감.
+          코드;
+          증감식;  
+        }
+      */
+     let i = 0;
+     while(i<10){
+      pEle6.innerHTML += '<br>' + i;
+      i++;
+     }
+    /*
+    do~while문은 조건값이 false여도 한번은 실행된다.
+    초기식
+     do{
+      // 조건식이 true이면 코드 실행
+      // 조건식이 false이면 do~while 탈출
+      코드;
+      증감식;
+     }while(조건식)
+    */
+   i = 0;
+   do{
+    pEle7.innerHTML += '<br>' + i;
+    i++
+   }while(i < 10)
+
+/*
+   제어문에서 break를 만나면 제어문을 탈출한다.
+   if문에서 실행코드가 한 문장이면 중괄호 생략 가능
+*/
+for(let i = 1; i <11; i++){
+  pEle8.innerHTML += '<br>' + i; 
+}
+
+
+/*
+  제어문에서 continue를 만나면 제어문의 시작으로 올라간다.
+*/
+for(let i = 0; i <10;i ++){
+  if( 3<= i && i<= 6) continue;
+  pEle9.innerHTML += '<br>' + i; 
+}
+
+  </script>
+
+</body>
+</html>

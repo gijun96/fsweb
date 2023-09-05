@@ -8,7 +8,7 @@ $('.sec1_slider').bxSlider({
 });
 
 $('.item_list').bxSlider({
-  pager: true,
+  pager: false,
   slideWidth: 345,
   minSlides: 3, 
   maxSlides: 3,
@@ -29,10 +29,6 @@ const ca_name = document.querySelector(".category_sub");
 //   console.log(window.innerWidth);
 // }
 
-console.log(category[1]);
-
-console.log(window.innerWidth);
-
 window.onresize = function(){tablet()};
 
 function tablet(){
@@ -41,14 +37,12 @@ function tablet(){
     category[3].style.display = "none";
     category[4].style.display = "none";
     category[6].style.display = "none";
-  }else{
+  }else if(window.innerWidth > 992){
     category[1].style.display = "block";
     category[3].style.display = "block";
     category[4].style.display = "block";
     category[6].style.display = "block";
   }
-
 }
-
 
 tablet();

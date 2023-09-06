@@ -1,3 +1,13 @@
+const sideOn_btn = document.querySelector(".sideOn_btn");
+const side_menu = document.querySelector(".side_menu");
+
+sideOn_btn.addEventListener("mouseover", ()=>{
+  side_menu.style.transform = "translateX(250px)";
+})
+sideOn_btn.addEventListener("mouseout", ()=>{
+  side_menu.style.transform = "translateX(-250px)";
+})
+
 $('.sec1_slider').bxSlider({
   auto: true,
   autoControls: false,

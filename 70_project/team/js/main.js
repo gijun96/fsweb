@@ -19,6 +19,14 @@ $('.item_list').bxSlider({
 document.querySelector(".item_list").style.background = "none";
 
 
+const  popup = document.querySelector(".popup");
+const  popup_X = document.querySelector(".popup_X");
+
+popup_X.addEventListener("click", ()=>{
+  popup.style.display = "none";
+})
+
+
 let category = document.querySelectorAll(".category li");
 console.log(category);
 

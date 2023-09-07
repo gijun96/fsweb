@@ -1,13 +1,17 @@
 const sideOn_btn = document.querySelector(".sideOn_btn");
 const side_menu = document.querySelector(".side_menu");
-
-sideOn_btn.addEventListener("mouseover", ()=>{
+const ta_header = document.querySelector(".ta_header");
+ta_header.addEventListener("mouseover", ()=>{
   side_menu.style.transform = "translateX(250px)";
 })
-sideOn_btn.addEventListener("mouseout", ()=>{
+ta_header.addEventListener("mouseout", ()=>{
   side_menu.style.transform = "translateX(-250px)";
 })
 
+//   /* .sideOn_btn img:hover {
+  // transform: rotate(90deg);
+  // transition-duration: 0.5s;
+// } */
 $('.sec1_slider').bxSlider({
   auto: true,
   autoControls: false,

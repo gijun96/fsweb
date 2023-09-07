@@ -6,17 +6,14 @@
     <title>nav</title>
     <link rel="stylesheet" href="/css/reset.css">
     <style>
-        a{text-decoration: none;}
         ul li{
-            list-style: none;
+          list-style: none;
+        }
+        a{
+          color: black;
+          text-decoration: none;
         }
         /* typo: 크기, 색 */
-        html{
-            font-size: 10px;
-        }
-        body{
-            font-size: 1.4rem;
-        }
         .main a {
             color: #000;
             font-size: 1.8rem;
@@ -25,48 +22,46 @@
             color: #00000079;
             font-size: 1.4rem;
         }
-
+        #nav{
+          width: 200px;
+          margin: 100px;
+        }
         /* 1depth */
         .main {
-            display: flex;
+            /* display: flex; */
         }
         .main>li {
-            margin: 0 8px;
+          margin: 0 8px;
+          width: 100%;
+
         }
         .main>li>a {
             background: #004fe2;
-            padding: 4px 16px;
+            display: block;
+            padding: 0 4px;
         }
-        .main>li a:hover + .sub, .sub:hover{
-            transform: translateY(0);
-            transform: translateX(-35%);
-            /* visibility: visible;
-            */ 
-            opacity: 1; 
-            display: flex;
-            
+        .main>li a:hover + .sub, .sub:hover {
+          /* display: block; */
+          padding:14px 0 16px ;
+          height: auto;
         }
+
         /* 2depth */
         .sub {
-            position: absolute;
+            text-align: center;
+            background: #2bff00;
             /* display:none은 전환 효과가 적용되지 않는다 */
-            /* visibility: hidden;
-            transition: .5s;
-            transform: translateY(50px); */
-            opacity: 0;
-            display: none;
-            padding: 14px 16px;
-            /* border: 1px solid red; */
-        }
-        
-        .sub li{
-            background: lightblue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid black;
-            padding: 4px 8px;
-            margin: 0 4px;
+            transition: 1s;
+            /* display: none; */
+            height: 0;
+            /* padding: 14px 0 16px; */
+            overflow: hidden;
+          }
+          .sub li:first-child{
+            margin-top: 16px;
+          }
+        .sub a {
+            display: block;
         }
     </style>
 </head>

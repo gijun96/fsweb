@@ -1142,10 +1142,10 @@ body {
     height: 30px;
     vertical-align: top;
   }
-  .sideOn_btn img:hover {
+  /* .sideOn_btn img:hover {
     transform: rotate(90deg);
     transition-duration: 0.5s;
-  }
+  } */
   .side_menu {
     display: flex;
     flex-direction: column;

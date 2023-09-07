@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
+
     <style>
         body {
             height: 2000px;
@@ -23,18 +24,85 @@
         .box2 {
             background: blue;
         }
+        .box3 {
+            background: green;
+        }
         p {
+            position: fixed;
+            left: 50%;
+            top: 20%;
+
             font-size: 30px;
         }
     </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function(){
+            const qs = sel => document.querySelector(sel);
+            // const qs = function(sel){return document.querySelector(sel)};
+            const box1 =qs('.box1');
+            const box2 =qs('.box2');
+            const box3 =qs('.box3');
+            const txt = qs('p');
+            box3.addEventListener("click", ()=>{txt.innerText = "박스3 click!"})
+        });
+        /*
+            Element.addEventListener("event", function(para){
+                코드;
+            });
+            Element.addEventListener("event", function(){fn(para);});
+
+             Element.addEventListener("event", fn);
+             function fn(){
+                code;
+             }
+        */
+       
+    </script>
 </head>
 
 <body>
-    <div class="box1">박스1</div>
+    <!-- 변수는 값을 저장하는 공간 -->
+    <!-- 함수는 코드를 저장하는 공간 -->
+    <div class="box1" >박스1</div>
     <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
     <p></p>
 
     <script>
+        /*
+            화살표 함수
+            (para1, para2, para3, ...)=>{코드1; 코드2; 코드3; ...}
+            매개변수 1개면 ()생략 가능
+            코드가 1개이면 {}생략가능
+            1개의 코드가 return문이면 return 함께 생략
+        */
+            
+            // const qs = sel => document.querySelector(sel);
+            function qs(sel){
+                return document.querySelector(sel);
+            }
+            const box1 =qs('.box1');
+            const box2 =qs('.box2');
+            const box3 =qs('.box3');
+            const txt = qs('p'); 
+
+            box1.onclick = ev1;
+            box2.onclick = ev2;
+            // box3.onclick = ev3;
+
+            function ev1(){
+                txt.innerText = "box1 click!";
+            }
+            function ev2(){
+                txt.innerText = "box2 click!";
+            }
+            // function ev3(){
+            //     txt.innerText = "box3 click!";
+            // }
+            /*
+                Element.addEventListener(event, function);
+
+            */
         /* 
             Event(이벤트): 웹 문서 영역 안에서 웹 브라우저 또는 사용자가 행하는 동작
 
@@ -49,7 +117,8 @@
             <태그 on이벤트명="함수명()">
 
             //방법2
-            요소.onclick = 함수;
+            요소.onEvent = 함수;
+
             function 함수(){}
 
             //방법3

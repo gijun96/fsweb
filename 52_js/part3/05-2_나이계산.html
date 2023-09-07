@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>나이 계산하기</h1>
+    <input type="text">
+    <button>확인</button>
+
+    <script>
+        const dt = new Date();
+        const year = dt.getFullYear();
+        // input 요소 선언
+        const input = document.querySelector("input");
+        const btn = document.querySelector("button");
+        // age() 함수를 선언한다.
+        let currage = 0; 
+
+        const p = document.createElement("p");
+        function age(){
+            // console.log(input.value);
+            // console.log("year", year);
+            currage = year - input.value +1;
+            // console.log("current_age", currage);
+                document.body.appendChild(p);
+            p.innerText = `현재나이는 ${currage}세`;
+
+        }
+        btn.addEventListener("click", age);
+
+        // 변수 선언 및 할당
+
+        // 입력: 태어난 년도
+        // birthYear = prompt("당신의 태어난 년도를 4자리로 입력하세요.", '2000');
+
+        // 처리: 나이 계산
+        // 나이 = 현재년도 - 태어난연도 + 1
+        // 나이 = 2023 - 2000 + 1 -> 24살
+        // age = currentYear - birthYear + 1;
+
+        // 나이 출력
+        // 문자열 + 변수 + 문자열
+        // document.write('당신의 나이는 ' + age + '살입니다.');
+        // input.innerHTML = `'당신의 나이는 ' + ${currage} + '살입니다.'`
+    </script>
+</body>
+
+</html>

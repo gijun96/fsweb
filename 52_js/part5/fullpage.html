@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>현대자동차</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <!-- 4개의 페이지 -->
+      <!-- 첫 번째 섹션 -->
+      <div class="section s1" data-anchor="s1">
+        <h1>section1</h1>        
+      </div>
+      
+      <!-- 2 번째 섹션 -->
+      <div class="section s2" data-anchor="s2">
+        <h1>section2</h1>        
+        
+      </div>
+      
+      <!-- 3 번째 섹션 -->
+      <div class="section s3" data-anchor="s3">
+        
+        <h1>section3</h1>        
+      </div>
+      
+      <!-- 네 번째 섹션 -->
+      <div class="section s4" data-anchor="s4">
+        <h1>section4</h1>        
+  
+      </div>
+    </div>
+    <script>
+      $("#wrap").fullpage({
+        sectionsColor: ["lightblue", "skyblue", "cadetblue", "darkblue"],
+        navigation: true,
+        navigationTooltips: ["툴팁1", "툴팁2", "툴팁3", "툴팁4"],
+        showActiveTooltip: true,
+      });
+    </script>
+  </body>
+</html>

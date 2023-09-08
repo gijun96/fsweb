@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트</title>
+  <style>
+    
+    
+    div{
+      height: 700vh;
+      width: 100%;
+      background: lightblue;
+    }
+    p{
+      position: fixed;
+      left: 50%;
+      top: 10%;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>여기에 출력</p>
+  </div>
+  
+
+<script>
+  const box = document.querySelector('div');
+  const txt =document.querySelector('p');
+  box.onwheel = (e)=>{
+    if(e.deltaY > 0){
+      // 마우스 휠을 아래로
+      box.style.background = "pink";
+      txt.innerText = `스크롤Y 값: ${window.scrollY}`;
+      
+    }else{
+      // 마우스 휠을 위로
+      box.style.background = "blue";
+      box.style.color = "white";
+      txt.innerText = `스크롤Y 값: ${window.scrollY}`;
+
+    }
+  }
+  
+
+
+
+</script>
+
+
+</body>
+</html>

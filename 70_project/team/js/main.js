@@ -28,7 +28,7 @@ popup_X.addEventListener("click", ()=>{
 
 
 let category = document.querySelectorAll(".category li");
-console.log(category);
+// console.log(category);
 
 const ca_name = document.querySelector(".category_sub");
 // window.innerWidth
@@ -54,3 +54,26 @@ function tablet(){
 }
 
 tablet();
+
+
+const map =document.querySelector('.map');
+const map_popup = document.querySelector('.popup');
+
+map.addEventListener("click", ()=>{
+  map_popup.style.display = "flex";
+})
+
+const pop_b_arr = document.querySelectorAll(".popup_b p");
+console.log(pop_b_arr[0]);
+console.log(pop_b_arr[1]);
+const closeBtn = document.querySelectorAll(".close_btn");
+// close_btn
+console.log(closeBtn);
+
+pop_b_arr[0].addEventListener("click", ()=>{
+  map_popup.style.display = "none";
+})
+
+pop_b_arr[1].addEventListener("click", ()=>{
+  map_popup.style.display = "none";
+})

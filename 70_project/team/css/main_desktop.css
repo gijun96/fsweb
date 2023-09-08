@@ -5,26 +5,44 @@
 @import url(./main_phone.css);
 
 /* @import url(./common.css); */
+*{
+  box-sizing: border-box;
+}
 .popup{
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 460px;
-  height: 500px;
-  border: 1px solid black;
+  width: 650px;
+  border: 2px solid black;
   z-index: 99;
   transform: translate(-50%, -50%);
   background: #fff;
+  display: none;
+  align-items: center;
 }
 .popup_box{
   width: 100%;
-  height: 470px;
-  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.popup_box h3{
+  width: 600px;
+  border-bottom: 1px solid #777;
+  margin: 20px;
 }
 .popup_close{
+  position: absolute;
+  top: 0;
+  right:0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  background-color: #fff;
+  width: 100px;
+  border: 1px solid black;
 }
 .popup_X{
   padding:2px 4px;
@@ -32,6 +50,21 @@
   background-color: #777;
   color: #fff;
 }
+.popup_b{
+  /* border: 1px solid black; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.popup_b p{
+  width: 50%;
+  text-align: center;
+  padding: 8px 16px;
+}
+.popup_b p:first-child{
+  border-right: 2px solid rgba(0, 0, 0, .1);
+}
+.btn{cursor: pointer;}
 /* desktop */
 @media (min-width: 992px) {
   .ta_header {

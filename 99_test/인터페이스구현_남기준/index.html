@@ -425,6 +425,7 @@ Element.clientWidth 속성은 인라인 요소나 CSS 상에 존재하지 않는
         //   console.log("index -1 :" + (index - 1));
 
         indi[index - 1].style.background = "#fff";
+        tit(index);
       }
 
       // AutoSlide
@@ -439,9 +440,26 @@ Element.clientWidth 속성은 인라인 요소나 CSS 상에 존재하지 않는
         indicator(counter);
      } , 5000);
      
+     /*
+      <h1 class="tit1">McDonald's</h1>
+          <p class="tit2">Burgers, Fries & More. Quality Ingredients.</p>
+     */
 
+     const tit1 = document.querySelector('.tit1');
+     const tit2 = document.querySelector('.tit2');
 
-
+     function tit(num){
+      if(num ===1){
+        tit1.innerText = "McDonald's";
+        tit2.innerText = "Burgers.";
+      }else if(num ===2){
+        tit1.innerText = "맥도날드";
+        tit2.innerText = "Fries & More.";
+      }else{
+        tit1.innerText = "맛있는 햄버거";
+        tit2.innerText = "Quality Ingredients.";
+      }
+     }
     </script>
   </body>
 </html>

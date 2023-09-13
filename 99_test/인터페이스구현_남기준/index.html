@@ -426,6 +426,22 @@ Element.clientWidth 속성은 인라인 요소나 CSS 상에 존재하지 않는
 
         indi[index - 1].style.background = "#fff";
       }
+
+      // AutoSlide
+      // 5초마다 다음 이미지 & 인디케이터 이동
+        setInterval(function(){
+          if (counter >= carouselImages.length - 1) return;
+        carouselSlide.style.transition = `transform 0.4s ease-in-out`;
+        counter++;
+        //   console.log(counter);
+        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+        // console.log(counter);
+        indicator(counter);
+     } , 5000);
+     
+
+
+
     </script>
   </body>
 </html>

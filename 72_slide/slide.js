@@ -17,7 +17,6 @@ Element.clientWidth 속성은 인라인 요소나 CSS 상에 존재하지 않는
 // html에서 0번째 요소인 Clone요소를 가리기 위해 첫번쨰 이미지의 width값 만큼     carousel-slide의 translateX값을 이동시킨다.
 const size = carouselImages[0].clientWidth;
 carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-
 prevBtn.addEventListener("click", () => {
   if (counter <= 0) return;
   carouselSlide.style.transition = `transform 0.4s ease-in-out`;
@@ -71,7 +70,7 @@ for (let i = 0; i < indi.length; i++) {
 }
 
 function indicator(index) {
-  if (index === 0 || index === 4) return;
+  if (index === 0 || index === 5) return;
   for (let i = 0; i < indi.length; i++) {
     indi[i].style.background = "#777";
   }
@@ -79,3 +78,4 @@ function indicator(index) {
 
   indi[index - 1].style.background = "#fff";
 }
+

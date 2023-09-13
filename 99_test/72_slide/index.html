@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맥도날드_남기준</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body{
+        font-family: 'Noto Sans KR';
+        font-size: 14px;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      /* header */
+      .wrap {
+        width: 1200px;
+        height: 600px;
+        border: 1px solid black;
+        margin: 0 auto;
+        position: relative;
+      }
+      header {
+        width: 1200px;
+        height: 95px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        transition: 0.5s;
+      }
+      header:hover {
+        border-top: none;
+        border-left: none;
+        background: #fff;
+      }
+      .header_inner {
+        display: flex;
+        width: 100%;
+        height: 95px;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .header_inner:hover .gnb li a {
+        color: black;
+      }
+      .header_inner:hover .sub {
+        height: 140px;
+        z-index: 99;
+        transition: 0.5s;
+      }
+      .header_inner::after {
+        content: "";
+        background: #fff;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        top: 95px;
+        position: absolute;
+        z-index: 7;
+        transition: 0.5s;
+      }
+      .header_inner:hover::after {
+        height: 140px;
+        transition: 0.5s;
+      }
+
+      .logo {
+        margin: 20px 0;
+      }
+      .logo img {
+        width: 75px;
+        height: 65px;
+        object-fit: cover;
+      }
+      .gnb {
+        display: flex;
+        width: 600px;
+        justify-content: space-around;
+      }
+      .gnb > li {
+        position: relative;
+        display: flex;
+        /* line-height: 95px; */
+        margin-right: 40px;
+      }
+      .gnb li a {
+        color: white;
+        font-size: 18px;
+      }
+
+      .gnb > li:hover {
+        border-bottom: 1px solid #ffbc0d;
+      }
+
+      .sub {
+        /* display: none; */
+        position: absolute;
+        width: 200px;
+        height: 0;
+        text-align: center;
+        color: #fff;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+      }
+      .sub li {
+        margin: 8px 16px;
+      }
+      .sub li a{
+        font-size: 14px;
+      }
+
+      .h_btn {
+        display: flex;
+        color: white;
+      }
+      .h_btn li {
+        margin-right: 20px;
+      }
+      .h_btn li button {
+        color: #fff;
+        border: none;
+        width: 80px;
+        height: 40px;
+        border-radius: 20px;
+      }
+      .h_btn li:nth-of-type(1) button {
+        background: red;
+      }
+      .h_btn li:nth-of-type(2) button {
+        background: #d87e00;
+      }
+      .h_btn li:nth-of-type(3) button {
+        background: #264a36;
+      }
+
+      /* section */
+      /* carousel */
+      .carousel-container {
+        width: 1200px;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        /* border: 8px solid blue; */
+      }
+
+      .carousel-slide {
+        display: flex;
+        width: 1200px;
+        height: 500px;
+      }
+      .carousel-slide img {
+        width: 100%;
+        object-fit: cover;
+      }
+      #prevBtn {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(-50%, -50%);
+        z-index: 6;
+        font-size: 48px;
+        background: none;
+        border: none;
+        border-radius: 15px;
+        color: #fff;
+        opacity: 0.4;
+        cursor: pointer;
+      }
+
+      #nextBtn {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(50%, -50%);
+        z-index: 6;
+        font-size: 48px;
+        background: none;
+        border: none;
+        border-radius: 15px;
+        color: #fff;
+        opacity: 0.4;
+        cursor: pointer;
+      }
+      /* indicator */
+      .indi {
+        display: flex;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .indi li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #777;
+        text-indent: -9899999px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .indi li:first-of-type {
+        background: #fff;
+      }
+      /* //indicator */
+      /* //carousel */
+      /* tit */
+      .tit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-align: center;
+      }
+      .tit1 {
+        font-size: 48px;
+        color:#ffbc0d;
+      }
+      .tit2 {
+        font-size: 24px;
+      }
+      /* //section */
+      .footer {
+        margin: 0 auto;
+        width: 1200px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="header_inner">
+          <div class="logo">
+            <a href="#"
+              ><img
+                src="https://www.mcdonalds.co.kr/kor/images/common/logo.png"
+                alt="logo"
+            ></a>
+          </div>
+          <ul class="gnb">
+            <li>
+              <a href="#">Menu</a>
+              <ul class="sub">
+                <li><a href="#">버거</a></li>
+                <li><a href="#">맥런치</a></li>
+                <li><a href="#">맥모닝</a></li>
+                <li><a href="#">해피 스낵</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Store</a>
+              <ul class="sub">
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">맥딜리버리</a></li>
+                <li><a href="#">맥드라이브</a></li>
+                <li><a href="#">임차문의</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">What's New</a>
+              <ul class="sub">
+                <li><a href="#">프로모션</a></li>
+                <li><a href="#">새로운 소식</a></li>
+                <li><a href="#">이달의 해피밀</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Story</a>
+              <ul class="sub">
+                <li><a href="#">브랜드 소개</a></li>
+                <li><a href="#">사회적 책임과 지원</a></li>
+                <li><a href="#">맥도날드 품질 이야기</a></li>
+                <li><a href="#">맥도날드 사람들</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- sns -->
+          <ul class="h_btn">
+            <li>
+              <button onclick="location.href = '#'">임차문의</button>
+            </li>
+            <li>
+              <button onclick="location.href = '#'">RECRUIT</button>
+            </li>
+            <li>
+              <button onclick="location.href = '#' ">ENG</button>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- section -->
+      <section class="carousel-container">
+        <div class="carousel-slide">
+          <img src="./assets/slide3.jpg" id="lastClone" alt="slide3" >
+          <img src="./assets/slide1.png" alt="slide1">
+          <img src="./assets/slide2.jpg" alt="slide2">
+          <img src="./assets/slide3.jpg" alt="slide3">
+          <img src="./assets/slide1.png" id="firstClone" alt="slide1" >
+        </div>
+        <button id="prevBtn">&lt;</button>
+        <button id="nextBtn">&gt;</button>
+        <ul class="indi">
+          <li><a href="#"></a>1</li>
+          <li><a href="#"></a>2</li>
+          <li><a href="#"></a>3</li>
+        </ul>
+        <div class="tit">
+          <h1 class="tit1">McDonald's</h1>
+          <p class="tit2">Burgers, Fries & More. Quality Ingredients.</p>
+        </div>
+      </section>
+      <!-- footer -->
+      <footer class="footer">
+        <p>Copyright 남기준. All rights resolved.</p>
+      </footer>
+    </div>
+    <script>
+      const carouselSlide = document.querySelector(".carousel-slide");
+      const carouselImages = document.querySelectorAll(".carousel-slide img");
+
+      // Buttons
+      const prevBtn = document.querySelector("#prevBtn");
+      const nextBtn = document.querySelector("#nextBtn");
+
+      const indi = document.querySelectorAll(".indi li");
+      // Counter
+      let counter = 1;
+      // 인디케이터 index
+      let index = 1;
+
+      /*
+Element.clientWidth 속성은 인라인 요소나 CSS 상에 존재하지 않는 요소에 대해서는 0을 나타내고, 그렇지 않다면 엘리먼트의 내부 너비를 픽셀로 나타냅니다. 내부 너비는 안쪽 여백(패딩)을 포함하지만, 테두리, 바깥 여백(마진) 그리고 수직 스크롤바의 너비는 포함하지 않습니다.
+*/
+      // html에서 0번째 요소인 Clone요소를 가리기 위해 첫번쨰 이미지의 width값 만큼     carousel-slide의 translateX값을 이동시킨다.
+      const size = carouselImages[0].clientWidth;
+      carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+
+      // prevBtn 클릭시 실행
+      prevBtn.addEventListener("click", () => {
+        // counter가 0보다 작거나 같을 때 return
+        if (counter <= 0) return;
+        carouselSlide.style.transition = `transform 0.4s ease-in-out`;
+        counter--;
+        //   console.log(counter);
+        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+        // console.log(counter);
+        indicator(counter);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        // counter가 (이미지 길이-1) 보다 크거나 같으면 return
+        if (counter >= carouselImages.length - 1) return;
+        carouselSlide.style.transition = `transform 0.4s ease-in-out`;
+        counter++;
+        //   console.log(counter);
+        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+        // console.log(counter);
+        indicator(counter);
+      });
+      // transition이 끝났을 때 해당 요소의 아이디를 판별하여 동작 실행
+      carouselSlide.addEventListener("transitionend", () => {
+        // id가 "lastClone"일때 counter를 변경하여 carousel.Slide의 위치 변경
+        if (carouselImages[counter].id === "lastClone") {
+          // carouselSlide.style.transition = "none"; => 위치이동시 이동소요시간을 0
+          carouselSlide.style.transition = "none";
+          // counter = carouselImages.length - 2; => 이미지중 clone요소를 제외한 나머지 이미지
+          counter = carouselImages.length - 2;
+          carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+        }
+        // id가 "firstClone"일때 counter를 변경하여 carousel.Slide의 위치 변경
+        if (carouselImages[counter].id === "firstClone") {
+          carouselSlide.style.transition = "none";
+          counter = carouselImages.length - counter;
+          carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+        }
+        // console.log(counter);
+        indicator(counter);
+      });
+
+      // 인디케이터
+      // console.log(indi);
+      // 인디케이터 클릭시 인디케이터 모두를 #777색상을 입힌 후
+      // 클릭 이벤트 받은 요소만 #fff 색상을 가진다.
+      for (let i = 0; i < indi.length; i++) {
+        indi[i].addEventListener("click", () => {
+          for (let j = 0; j < indi.length; j++) {
+            indi[j].style.background = "#777";
+          }
+          counter = i + 1;
+          index = counter;
+          indi[i].style.background = "#fff";
+          carouselSlide.style.transition = `transform 0.4s ease-in-out`;
+          carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+        });
+      }
+      // Btn으로 이동 시 매개변수 index로 counter를 받아 인디케이터의 색상변경에 적용한다.
+      function indicator(index) {
+        if (index === 0 || index === 4) return;
+        for (let i = 0; i < indi.length; i++) {
+          indi[i].style.background = "#777";
+        }
+        //   console.log("index -1 :" + (index - 1));
+
+        indi[index - 1].style.background = "#fff";
+      }
+    </script>
+  </body>
+</html>

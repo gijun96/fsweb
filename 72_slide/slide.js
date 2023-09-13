@@ -71,7 +71,7 @@ for (let i = 0; i < indi.length; i++) {
 }
 
 function indicator(index) {
-  if (index === 0 || index === 5) return;
+  if (index === 0 || index === 4) return;
   for (let i = 0; i < indi.length; i++) {
     indi[i].style.background = "#777";
   }

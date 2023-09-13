@@ -329,7 +329,7 @@
         </ul>
         <div class="tit">
           <h1 class="tit1">McDonald's</h1>
-          <p class="tit2">Burgers, Fries & More. Quality Ingredients.</p>
+          <p class="tit2">Burgers</p>
         </div>
       </section>
       <!-- footer -->
@@ -451,13 +451,19 @@ Element.clientWidth 속성은 인라인 요소나 CSS 상에 존재하지 않는
      function tit(num){
       if(num ===1){
         tit1.innerText = "McDonald's";
+        tit1.style.transform = "translateX(0%)";
         tit2.innerText = "Burgers.";
+        tit2.style.transform = "translateX(0%)";
       }else if(num ===2){
         tit1.innerText = "맥도날드";
+        tit1.style.transform = "translateX(-200%)";
         tit2.innerText = "Fries & More.";
+        tit2.style.transform = "translateX(-200%)";
       }else{
         tit1.innerText = "맛있는 햄버거";
+        tit1.style.transform = "translateX(-100%)";
         tit2.innerText = "Quality Ingredients.";
+        tit2.style.transform = "translateX(-100%)";
       }
      }
     </script>

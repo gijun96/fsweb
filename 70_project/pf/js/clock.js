@@ -1,13 +1,12 @@
 
 function setClock(){
-    let dateinfo = new Date();
-    let hour = modifyNumber(dateinfo.getHours());
-    let min = modifyNumber(dateinfo.getMinutes());
-    let sec = modifyNumber(dateinfo.getSeconds());
-    let year = dateinfo.getFullYear();
+    const dateinfo = new Date();
+    const hour = modifyNumber(dateinfo.getHours());
+    const min = modifyNumber(dateinfo.getMinutes());
+    const year = dateinfo.getFullYear();
     // monthIndex를 반환해주기 때문에 1을 더해준다.
-    let month = dateinfo.getMonth()+1;
-    let date = dateinfo.getDate();
+    const month = dateinfo.getMonth()+1;
+    const date = dateinfo.getDate();
     document.getElementById('time').innerHTML = hour + ":" + min;
     document.getElementById('date').innerHTML = year + "년" + month + "월" + date + "일";
 

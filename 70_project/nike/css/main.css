@@ -29,7 +29,7 @@ img {
 }
 */
 .main_img img {
-  position: relative;
+  position: flex;
 }
 .txt {
   display: flex;

@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML+CSS+JS</title>
     <style>
-        div {
-            position: absolute;
-            left:0;
-            top:300px;
-            width: 200px;
-            height: 200px;
-            background: blue;
-        }
+      div {
+        position: absolute;
+        left: 50px;
+        top: 300px;
+        width: 200px;
+        height: 200px;
+        border: 1px solid blue;
+    }
     </style>
-</head>
+  </head>
 
-<body>
-    <button>버튼</button><span></span>
+  <body>
+    <button>버튼</button>
     <div></div>
 
     <script>
-        /* 
+      /* 
+            요소.offsetLeft ~ 창 끝에서 요소의 x축 위치 반환
             요소.offsetTop ~ 창 끝에서 요소의 y축 위치 반환
         */
 
+        // 요소 선택
+      const btn = document.querySelector("button");
+      const box = document.querySelector("div");
+        // box의 x, y값 출력
+      const box_x = box.offsetLeft;
+      const box_y = box.offsetTop;
+      console.log(box_x);
+      console.log(box_y);
+    //  span 생성
+      const Nspan = document.createElement("span");
+    //   버튼을 눌렀을 때
+      btn.addEventListener("click", () => {
+        // 생성한 span을 box의 자식요소로 넣는다.
+        box.appendChild(Nspan);
+        Nspan.innerText = `box.offsetLeft = ${box_x} box.offsetTop = ${box_y}`;
+      });
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML+JS</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML+JS</title>
+        <style>
+            div{
+                width: 600px;
+                height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            ul{
+                width: 400px;
+                height: 300px;
+            }
+        </style>
 </head>
 
 <body>
-    <p><span class="txt1">텍스트</span></p>
-    <p><span class="txt2">텍스트</span></p>
+    <h1>요소 탐색 ~ 부모, 자식, 형제</h1>
+    <div>
+        <ul>
+            <li>부모 관계(prentElement)</li>
+            <li>자식 관계(children)</li>
+            <li>형제 관계(next,previous/ElementSibling)</li>
+        </ul>
+    </div>
 
     <script>
+        const itemlist = document.querySelector("ul");
+
+        const box =  itemlist.parentElement;
+        box.style.background = "lightblue";
+        itemlist.style.background = "lightcoral";
+        itemlist.children[1].innerText = "itemlist.children[1]";
+        itemlist.children[1].previousElementSibling.innerText = "itemlist.children[1].previousElementSibling";
+        itemlist.children[1].nextElementSibling.innerText = "itemlist.children[1].nextElementSibling";
         /* 
+
+
             document.documentElement ~ <html>
             document.body ~ <body>
+            
+            노드: 요소, 텍스트, 주석
+
             parentElement ~ 부모 요소 노드 선택
             children[노드번호] ~ 자식 요소 노드 선택
             nextElementSibling ~ 다음 형제 요소 노드 선택

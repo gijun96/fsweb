@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML+CSS</title>
+  <style>
+    body{height: 2000px;}
+  </style>
+</head>
+<body>
+  <h1>창 크기</h1>
+  <p></p>
+  <script>
+    /*
+      창의 크기
+      window.innerWidth : 창의 콘텐츠(스크롤바 포함) 너비
+      window.innerHeight : 창의 콘텐츠 (스크롤바 포함) 높이
+      window.outerWidth : 창 전체(도구모음 등) 너비
+      window.outerHeight : 창 전체(도구 모음 등) 높이
+    */
+   const p =document.querySelector("p");
+   p.innerText = 
+   `window.innerWidth : ${window.innerWidth}
+    window.innerHeight: ${window.innerHeight}
+    window.outerWidth : ${window.outerWidth}
+    window.outerHeight: ${window.outerHeight}
+   `
+   
+  </script>
+</body>
+</html>

@@ -7,26 +7,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
     <style>
-        div {
+        .container{
+            display: flex;
+        }
+        .box1 {
             width: 200px;
             height: 400px;
             padding: 20px;
             border: 5px solid blue;
             margin: 50px;
-            background: blue;
+            /* background: blue; */
+        }
+        .box2 {
+            box-sizing: border-box;
+            width: 200px;
+            height: 400px;
+            padding: 20px;
+            border: 5px solid blue;
+            margin: 50px;
+            /* background: blue; */
         }
     </style>
 </head>
 
 <body>
-    <div></div>
+    <div class="container">
+
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
 
     <script>
         /* 
-            요소.offsetWidth ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 너비(픽셀 단위)를 반환
-            요소.offsetHeight ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 높이(픽셀 단위)를 반환
+        요소의 가로/세로 크기
+        요소.offsetWidth ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 너비(픽셀 단위)를 반환
+        요소.offsetHeight ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 높이(픽셀 단위)를 반환
+        
+        요소.clientWidth ~ 패딩 및 스크롤 막대를 포함하여 요소의 볼 수 있는 너비(픽셀 단위)를 반환
+        요소.clientWidth ~ 패딩 및 스크롤 막대를 포함하여 요소의 볼 수 있는 높이(픽셀 단위)를 반환
+        
+        가져오기
+            Element.offsetWidth
+        
         */
-
+       const box1 = document.querySelector('.box1');
+       const box2 = document.querySelector('.box2');
+       console.log("box1 clientWidth:"+box1.clientWidth);
+       console.log("box2_borderbox.clientWidth:"+box2.clientWidth);
+       console.log("box1.offsetWidth"+box1.offsetWidth);
+       console.log("box2_borderbox.offsetWidth"+box2.offsetWidth);
+       
+       let box1_width = box1.offsetWidth;
+       const btn  =document.createElement('button');
+       document.body.appendChild(btn);
+       btn.style.width = "150px";
+       btn.style.height = "50px";
+       btn.innerText = "Button";
+       
+       const newP = document.createElement("p");
+       const newP2 = document.createElement("p");
+       box1.appendChild(newP);
+       box1.appendChild(newP2);
+       newP.innerText = "clientWidth : "+box1.clientWidth;
+       newP2.innerText = "offsetWidth : "+box1.offsetWidth;
+       btn.addEventListener("click", ()=>{
+           console.log("click");
+           box1.style.width = '100px';
+           console.log("box1.offsetWidth"+box1.offsetWidth);
+           newP.innerText = box1.clientWidth;
+           newP2.innerText = box1.offsetWidth;
+        })
+        
     </script>
 </body>
 

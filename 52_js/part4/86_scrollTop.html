@@ -13,22 +13,38 @@
 
         p {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
             font-size: 30px;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 
 <body>
     <p></p>
-
+    <button class="btn">Button</button>
     <script>
         /* 
             document.documentElement ~ <html> 요소 반환
             document.querySelector('html')
             document.documentElement.scrollTop ~ 창에서 스크롤한 양 반환
         */
+       const html = document.documentElement;
+       const btn = document.querySelector('.btn');
+        const txt = document.querySelector('p');
+        let scrollVal = html.scrollTop;
+       //    console.log(html.scrollTop);
+        function scroll(){
+            txt.innerText =  `ScrollTop : ${html.scrollTop}`;
+
+        }
+        document.addEventListener("scroll", scroll);
+        scroll();
+        btn.addEventListener("click", ()=>{
+            html.scrollTop = 500;
+        })
+        
 
     </script>
 </body>

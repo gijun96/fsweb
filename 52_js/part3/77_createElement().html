@@ -1,26 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML+JS</title>
+    <style>
+        .on{
+            background:lightblue;
+        }
+    </style>
 </head>
 
-<body>
+  <body>
     <h1>텍스트 노드를 사용하는 새로운 요소 추가하기</h1>
-    <div id="info">
-    </div>
-
     <script>
-        /* 
-            요소.createElement(노드명) ~ 요소에 요소 노드 추가
-            요소.createTextNode(텍스트) ~ 요소에 텍스트 노드 추가
-            부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
+      /* 
+            노드: 요소, 텍스트, 주석
+            document.createElement(노드명) ~ document 요소 노드 추가
+            document.createAttribute(노드명) ~ document 요소 노드 추가
+            document.createTextNode(텍스트) ~ document 텍스트 노드 추가
+
+            요소.setAttributeNode(속성) ~ 요소에 속성 연결
+            부모요소.appendChild(자식) ~ 부모 노드에 끝에 자식 노드 삽입
+            부모요소.insertBefore(자식, 기준자식) ~ 기준자식 앞에 자식 삽입
+
+            요소.setAttribute('속성', 값) ~ HTML의 속성 값 변경
+            요소.getAttribute('속성') ~ HTML의 속성 값 가져오기
+
+            요소.classList.add("클래스명")  ~ 클래스 추가
+            요소.classList.remove("클래스명")   ~클래스 삭제
+            요소.classList.contains("클래스명") ~ 클래스 확인
+
         */
+      const tit = document.querySelector("h1");
+      const newP = document.createElement("p");
+      document.body.appendChild(newP);
+      newP.innerText = "Hello World!";
+
+      const bodyT = document.body;
+      // div와 img 태그 삽입
+      const newDiv = document.createElement("div");
+      // bodyT.append(newDiv);
+      bodyT.insertBefore(newDiv, tit);
+      newDiv.style.color = "red";
+      newDiv.classList.add("on");
+      newDiv.innerText = "newDiv";
+      const newImg = document.createElement("img");
+      newDiv.appendChild(newImg);
+    //   newImg.src = "70_project\nike\assets\nike_image\jorden1.jpg";
+      newImg.setAttribute('src', '/70_project/images/Bear_closeup.jpg');
+      newImg.style.height = "100%";
+      // newImg.setAttribute("src", '70_project\images\Bear_closeup.jpg');
+      // newImg.setAttribute('alt');
+      newImg.setAttribute("alt", "곰");
+
+      const btn = document.createElement('button');
+      newDiv.appendChild(btn);
+      btn.innerText = 'btn';
+      btn.addEventListener('click', ()=>{
+        newDiv.classList.toggle('on');
+      })
+
+    //   contains()
+    //   btn.addEventListener('click', ()=>{
+    //       if(newDiv.classList.contains('on')){
+    //           newDiv.classList.remove('on');
+    //         }else{
+    //             newDiv.classList.add('on');
+    //         }
+    //     })
+
 
     </script>
-</body>
-
+  </body>
 </html>

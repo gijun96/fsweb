@@ -58,7 +58,7 @@
    slideList[idx].style.left = "-100%";
    slideList[idx].style.transition = `left ${speed / 1000}s ease-out`;
    // 4 -> 3 -> 2 -> 1 -> 0
-   if (idx === 0) idx = 5;
+   if (idx === 0) idx = slideList.length;
    slideList[idx - 1].style.left = "0%";
    slideList[idx - 1].style.transition = `left ${speed / 1000}s ease-out`;
    indiActive(idx - 1, idx);
@@ -66,11 +66,11 @@
    // setTimeout(함수, 시간): 시간후 1회
    // setInterval(함수, 시간): 시간후 반복
    setTimeout(function () {
-     if (idx === 5) idx = 0;
+     if (idx === slideList.length) idx = 0;
      slideList[idx].style.left = "100%";
      slideList[idx].style.transition = "none";
      idx--;
-     if (idx === -1) idx = 4;
+     if (idx === -1) idx = slideList.length-1;
    }, 700);
  }
 

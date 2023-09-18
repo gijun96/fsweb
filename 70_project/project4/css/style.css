@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url(./reset.css);
 @import url(./typo.css);
-
+@import url(./carousel.css);
 
 html {
   scroll-behavior: smooth;
@@ -28,7 +28,7 @@ body{
 }
 /* 페럴렉스 이미지 */
 .sec3 {
-  background: url(../images/230814_1_pc_pick_bg.jpg)50% 50%/cover no-repeat;
+  background: url(../images/230814_1_pc_pick_bg.jpg)100% 100% no-repeat fixed;
 }
 .sec3_inner{
  display: flex;
@@ -40,11 +40,24 @@ body{
 }
 .des{
   width: 400px;
+  text-align: right;
+  opacity: 0;
+  transition: .8s;
 }
-
-
+.sec3 .tit1{
+  transform: translateX(-400px);
+  transition: .5s;
+}
+.sec3 .tit2{
+  transform: translateX(-400px);
+  transition: .7s;
+  margin: 48px 0;
+}
 /* 고스트 버튼 */
-.sec3 a{
+.proBtn{
+  display: inline-block;
+  transform: translateX(-400px);
+  transition: .9s;
   padding: 6px 24px;
   border: 2px solid #fff;
   border-radius: 5px;
@@ -52,9 +65,15 @@ body{
 /* 상품이미지 */
 #product{
   text-indent: -9999999px;
-  width: 912px;
-  height: 575px;
+  width: 944px;
   background: url(../images/autumn_img.png);
+  scale: 1.5;
+  transition: .5s;
+}
+#poduct{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .sec4 {
   background: lightgreen;

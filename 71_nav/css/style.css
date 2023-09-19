@@ -1,0 +1,136 @@
+/* reset.css */
+html {
+    font-size: 10px;
+}
+
+body,
+figure,
+ul {
+    margin: 0;
+}
+
+body {
+    font-size: 1.5rem;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 4.4rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+/* 섹션 */
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1400px;
+    height: 700px;
+}
+
+/* 탭 버튼 */
+#tabs .btn {
+    z-index: 9999;
+    position: absolute;
+    right: 335px;
+    list-style: none;
+}
+
+#tabs .btn a {
+    /* 버튼의 공통 글자 색 */
+    color: #555;
+}
+
+#tabs .btn li.on a {
+    /* on클래스가 있는 것만 글자 색 변경 */
+    color: #007fa8;
+}
+
+#tabs .btn li {
+    display: inline-block;
+    padding: 8px;
+}
+
+#tabs .btn li+li::before {
+    content: '|';
+    margin-right: 20px;
+}
+
+/*  탭 내용 */
+#tabs div {
+    display: none;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    width: 1120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#tabs div.on {
+    display: flex;
+}
+
+#tabs figure {
+    flex-shrink: 0;
+    width: 576px;
+}
+
+#tabs figcaption {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 8px 0;
+    letter-spacing: -1.4px;
+}
+
+#tabs figure:first-of-type::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: "1위";
+    width: 60px;
+    height: 60px;
+    background: #007fa8;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#tabs figure:first-of-type~figure {
+    width: 224px;
+}
+
+#tabs figure:first-of-type figcaption {
+    position: absolute;
+    left: 633px;
+    top: 60px;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: -1.8px;
+}
+
+#tabs figure:first-of-type+figure {
+    margin-left: 30px;
+}

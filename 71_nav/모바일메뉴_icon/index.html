@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모바일 메뉴_아이콘</title>
+ <style>
+   /* 모바일 버튼 */
+   .mBtn {
+            z-index: 9999;
+            position: absolute;
+            right:20px;
+            top:20px;
+            width: 20px;
+            height: 16px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .mBtn span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            border-top: 3px solid #000;
+            transition: .3s;
+        }
+
+        .mBtn span:first-of-type {
+          /* 첫번째 span 위로 */
+            top: 0;
+        }
+
+        .mBtn span:last-of-type {
+          /* 마지막 span 아래로 */
+            top: 100%;
+        }
+        /* .active가 있으면 x모양 */
+        /* 첫 번째 span을 숨김 */
+        .mBtn.active span:first-of-type {
+            opacity: 0;
+        }
+        /* 모든 span을 수직 중앙배치 */
+        .mBtn.active span:first-of-type,
+        .mBtn.active span:last-of-type {
+            top: 50%;
+        }
+
+        .mBtn.active span:nth-of-type(2) {
+            transform: rotate(45deg);
+            border-top: 3px solid #fff;
+        }
+
+        .mBtn.active span:nth-of-type(3) {
+            transform: rotate(-45deg);
+            border-top: 3px solid #fff;
+        }
+
+        /* 모바일 헤더 */
+        #mHeader {
+            position: absolute;
+            top:0;
+            right:-100%;
+            width: 50%;
+            height: 100vh;
+            background: #222;
+            padding: 60px 30px;
+        }
+        #mHeader .gnb {
+            margin-top: 48px;
+        }
+        #mHeader .main {
+            font-size: 1.8rem;
+        }
+
+        #mHeader .main>li {
+            position: relative;
+            margin-bottom: 16px;
+        }
+        #mHeader .main>li::after {
+            position: absolute;
+            top:0;
+            right: 0;
+            content: '>';
+            color: #fff;
+            transition: .3s;
+        }
+        #mHeader .main>li.on::after {
+            transform: rotate(90deg);
+        }
+        #mHeader a {
+            color: #fff;
+        }
+        #mHeader .sub {
+            font-size: 1.4rem;
+            margin-top: 16px;
+            padding-left: 32px;
+            height:0;
+            overflow:hidden;
+
+        }
+        #mHeader .sub li {
+            margin: 8px;
+        }
+        #mHeader .sub a {
+            color: #777;
+        }
+        #mHeader .sub a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+ </style>
+
+</head>
+<body>
+
+  <button type="button" class="mBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+
+<script>
+  // 버튼 클릭 시
+  // 햄버거 => X버튼으로 변경
+  // .mBtn.active
+  const mBtn = document.querySelector('.mBtn');
+  mBtn.addEventListener('click', ()=>{
+    mBtn.classList.toggle('active');
+    // 식별용 배경 색
+    mBtn.style.background = 'lightblue';
+  })
+</script>
+</body>
+</html>

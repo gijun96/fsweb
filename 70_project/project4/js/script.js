@@ -22,8 +22,47 @@ window.addEventListener('scroll', ()=>{
     }
 })
 
+// //carousel
+// sec2 tab
+const sec2_btn = document.querySelectorAll(".btn li"),
+  tablist = document.querySelectorAll("#tabs div");
+for (let i = 0; i < sec2_btn.length; i++) {
+  sec2_btn[i].addEventListener("click", (e) => {
+    e.preventDefault();
+    for (let j = 0; j < sec2_btn.length; j++) {
+      tablist[j].classList.remove("on");
+    }
+    tablist[i].classList.add("on");
+  });
+}
 
 
-// carousel
+// //sec2 tab
+
+// sec4 video
+
+      // 변수 선언
+      const vidWrap = document.querySelector(".vid"),
+        vid = document.querySelector(".vid video"),
+        sec4_btn = document.querySelector(".sec4 .btn"),
+        btnSpan = document.querySelector(".btn span");
+
+      // 다중 이벤트 인식
+      vidWrap.addEventListener(
+        "mouseenter",
+        () => {
+          sec4_btn.style.display = "block";
+        },
+        "mouseleave",
+        () => {
+          sec4_btn.style.display = "none";
+        }
+      );
+      // btn click 이벤트 인식
+      sec4_btn.addEventListener("click", () => {
+        vid.play();
+        btnSpan.classList.toggle("on");
+        if (btnSpan.classList.contains("on")) vid.pause();
+      });
 
      

@@ -3,6 +3,17 @@
 @import url(./typo.css);
 @import url(./carousel.css);
 
+/* 스크롤바 숨김 */
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -14,6 +25,180 @@ body{
   display: flex;
   flex-direction: column;
 }
+ /* header */
+ #header {
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  /* position: relative; */
+  transition: .4s ease-in-out;
+}
+
+#header:hover {
+  background: #0F2244 !important;
+}
+
+#header::after {
+  content: '';
+  position: absolute;
+  top: 95px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  transition: height .5s ease-out;
+}
+
+#header:hover::after {
+  height: 200px;
+}
+
+/* logo */
+#header .logo {
+  width: 207px;
+}
+
+#header .inner {
+  height: 95px;
+  margin: 0 auto;
+}
+
+#header .gnb {
+  position: relative;
+  z-index: 1;
+  height: 95px;
+  overflow: hidden;
+  transition: .4s ease-in-out;
+}
+
+#header:hover .gnb {
+  height: 295px;
+}
+
+.gnb .main {
+  display: flex;
+}
+
+.gnb .main>li {
+  text-align: center;
+  line-height: 95px;
+}
+
+.gnb .main>li>a {
+  position: relative;
+}
+
+.gnb .main>li>a::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0%;
+  width: 100%;
+  height: 2px;
+  background: #b0b3b1;
+  display: block;
+  transform: scaleX(0);
+  transition: .3s;
+}
+
+.gnb .main>li>a:hover::after {
+  transform-origin: 50% 50%;
+  transform: scaleX(1);
+}
+
+.gnb .main>li+li {
+  margin-left: 50px;
+}
+
+.gnb .main>li>a {
+  transition: .3s;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.gnb .sub li {
+  line-height: 2;
+}
+
+.gnb .sub li:first-of-type {
+  padding-top: 16px;
+}
+
+.gnb .sub li a {
+  color: #555;
+  font-size: 1.6rem;
+}
+
+.gnb li a:hover {
+  color: #b0b3b1;
+}
+
+/* util */
+.util,
+.util ul {
+  display: flex;
+  line-height: 95px;
+  /* align-items: center; */
+  font-size: 1.3rem;
+}
+
+.util a {
+  color: #fff;
+}
+
+#header:hover .util a {
+  color: #bab3ac;
+}
+
+#header .sns {
+  position: relative;
+  width: 32px;
+  margin-right: 16px;
+  font-size: 1.8rem;
+  transition: .3s;
+  background: no-repeat 0% 50%/100%;
+}
+
+.sns img {
+  position: absolute;
+  top: 35%;
+  left: 2px;
+  opacity: 0;
+  transition: .3s;
+}
+
+.sns:hover span {
+  opacity: 0;
+}
+
+.sns:hover img {
+  opacity: 1;
+}
+
+.sns::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 49%;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #fff;
+  margin-left: 10px;
+}
+
+#header:hover .sns::after {
+  background: #bab3ac;
+}
+
+#header .member li {
+  margin: 0 6px;
+}
+/* //header */
+
 .sec {
   flex-shrink: 0;
   width: 100%;
@@ -23,9 +208,131 @@ body{
 .sec1 {
   background: lightblue;
 }
+.sec1 .ctls{
+  font-size: 48px;
+  font-weight: bold;
+}
 .sec2 {
   background: lightcoral;
 }
+/* sec2 tab */
+
+.sec2 a {
+  text-decoration: none;
+}
+
+.sec2 h2 {
+  font-size: 4.4rem;
+  text-align: center;
+}
+
+.sec2 p {
+  text-align: center;
+  padding-bottom: 48px;
+}
+
+/* 섹션 */
+.sec2 .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1400px;
+  height: 700px;
+}
+
+/* 탭 버튼 */
+#tabs .btn {
+  z-index: 9999;
+  position: absolute;
+  right: 335px;
+  list-style: none;
+}
+
+#tabs .btn a {
+  /* 버튼의 공통 글자 색 */
+  color: #555;
+}
+
+#tabs .btn li.on a {
+  /* on클래스가 있는 것만 글자 색 변경 */
+  color: #007fa8;
+}
+
+#tabs .btn li {
+  display: inline-block;
+  padding: 8px;
+}
+
+#tabs .btn li+li::before {
+  content: '|';
+  margin-right: 20px;
+}
+
+/*  탭 내용 */
+#tabs div {
+  display: none;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  width: 1120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#tabs div.on {
+  display: flex;
+}
+
+#tabs figure {
+  flex-shrink: 0;
+  width: 576px;
+}
+
+#tabs figcaption {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 8px 0;
+  letter-spacing: -1.4px;
+}
+
+#tabs figure:first-of-type::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  content: "1위";
+  width: 60px;
+  height: 60px;
+  background: #007fa8;
+  font-size: 2rem;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#tabs figure:first-of-type~figure {
+  width: 224px;
+}
+
+#tabs figure:first-of-type figcaption {
+  position: absolute;
+  left: 633px;
+  top: 60px;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: -1.8px;
+}
+
+#tabs figure:first-of-type+figure {
+  margin-left: 30px;
+}
+
+/* //sec2 tab */
+
+
+
 /* 페럴렉스 이미지 */
 .sec3 {
   background: url(../images/230814_1_pc_pick_bg.jpg)100% 100% no-repeat fixed;
@@ -75,7 +382,81 @@ body{
   height: 100%;
   object-fit: cover;
 }
-.sec4 {
-  background: lightgreen;
+/* sec4 */
+html .sec4{
+  font-size: 10px;
 }
 
+body .sec4{
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+
+
+/* 섹션 */
+.sec4 {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+}
+
+.sec4 .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sec4 h2 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.sec4 p {
+  margin-bottom: 40px;
+}
+
+/* 비디오 */
+.vid {
+  position: relative;
+  width: 780px;
+  margin: 0 auto 40px;
+}
+/* 비디오 플레이어 버튼 */
+.sec4 .vid .btn {
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: none;
+  padding-top: 30px;
+}
+/* 정지버튼 */
+.vid .btn span {
+  display: inline-block;
+  width: 10px;
+  height: 40px;
+  background: #fff;
+  margin: 0 6px;
+}
+/* 플레이 버튼 */
+.vid .btn span.on {
+  width: 0;
+  height: 0;
+  margin-left: 15px;
+  background: transparent;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #fff;
+  border-right: 0px solid transparent;
+}
+.vid .btn span.on + span {
+  display: none;
+}

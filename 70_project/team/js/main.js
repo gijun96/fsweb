@@ -4,16 +4,20 @@ $('.sec1_slider').bxSlider({
   stopAutoOnClick: true,
   pager: true,
   slideWidth: 1600,
-  controls: false,
+  controls: true,
+  speed: 500,
+  pause: 4000
 });
 
 $('.item_list').bxSlider({
-  pager: false,
+  pager: true,
   slideWidth: 345,
   minSlides: 3, 
   maxSlides: 3,
   controls: true,
-  auto: true  
+  auto: true,  
+  stopAutoOnClick: true,
+  button: true
 });
 
 document.querySelector(".item_list").style.background = "none";

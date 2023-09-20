@@ -8,9 +8,9 @@
 const ua = navigator.userAgent.toLowerCase();
 if(ua.indexOf('window')>0){
   // ua에 window 문자열이 있으면 데스크탑 http://id.dothome.co.kr/index.html 
-  location.href = 'http://nikea.dothome.co.kr/main.html';
+  location.href = 'http://https://gijun96.github.io/fsweb/70_project';
   // console.log("Window User");
 }else{
   // ua에 window 문자열이 없으면 모바일 http://id.dothome.co.kr/m/index.html
-  location.href = 'http://nikea.dothome.co.kr/m/index.html';
+  location.href = 'https://gijun96.github.io/fsweb/70_project/m/index.html';
 }

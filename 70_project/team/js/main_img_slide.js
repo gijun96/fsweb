@@ -34,7 +34,7 @@ function btnHide() {
   if (index === 0) {
     prev_btn.style.display = "none";
     next_btn.style.display = "block";
-  } else if (index === item.length / 3 - 1) {
+  } else if ((index === item.length / 3) - 1) {
     next_btn.style.display = "none";
     prev_btn.style.display = "block";
   } else {

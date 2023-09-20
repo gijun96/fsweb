@@ -3,7 +3,6 @@ function setClock(){
     let dateinfo = new Date();
     let hour = modifyNumber(dateinfo.getHours());
     let min = modifyNumber(dateinfo.getMinutes());
-    let sec = modifyNumber(dateinfo.getSeconds());
     let year = dateinfo.getFullYear();
     // monthIndex를 반환해주기 때문에 1을 더해준다.
     let month = dateinfo.getMonth()+1;

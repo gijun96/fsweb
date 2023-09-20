@@ -174,43 +174,23 @@ nav ul {
   transform: scale(1.4);
 }
 
-.skill {
-  padding: 80px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.skill div {
-  margin-top: 16px;
-}
-.progress_bar {
-  height: 30px;
-  background-color: #777;
-  color: white;
-}
-.progress_bar span{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.progress_full {
-  position: relative;
-  width: 700px;
-  height: 30px;
-  background-color: #999;
-  opacity: 0.75;
-}
-#bar1 {
-  width: 630px;
-}
-#bar2 {
-  width: 490px;
-}
-#bar3 {
-  width: 420px;
+
+.progress {
+  width: 100%;
+  background-color: #ddd;
+  margin: 20px 0;
+ 
 }
 
+.progressBar {
+  width: 0%;
+  height: 30px;
+  background-color: #04AA6D;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  
+}
 .pf_bar {
   height: 100px;
   background-color: #555;
@@ -288,7 +268,7 @@ nav ul {
 .content_box img {
   width: 225px;
   height: 168px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
 }
 .content_box a {

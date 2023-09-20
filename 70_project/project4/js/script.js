@@ -65,4 +65,3 @@ for (let i = 0; i < sec2_btn.length; i++) {
         if (btnSpan.classList.contains("on")) vid.pause();
       });
 
-     

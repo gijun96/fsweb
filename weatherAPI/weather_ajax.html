@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<body>
+
+  <script>
+  const apiURI = 
+  "https://api.openweathermap.org/data/2.5/weather?q=Anyang-si,1846898&appid=8bd12e3390157e7ad5e2332bfa1b7966&units=metric";
+
+  $.ajax({
+    url : apiURI,
+    type: get,    /* 타입(GET, POST, PATCH, PUT등) */
+    success : function(resp){
+      
+    }
+  })
+
+  </script>
+
+</body>
+</html>

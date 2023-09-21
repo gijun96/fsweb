@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weather1</title>
+</head>
+<body>
+  <h2>weather api</h2>
+  <div class="ctemp">현재 온도 :</div>
+  <div class="clowtemp">최저 온도 : </div>
+  <div class="chightemp">최고 온도: </div>
+  <div class="cicon">아이콘 : </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+  <script>
+    
+      $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=Anyang-si,1846898&appid=8bd12e3390157e7ad5e2332bfa1b7966&units=metric', function(data){
+        // data할일
+        const $cTemp = data.main.temp;
+        const $cLowtemp = data.main.temp_min;
+        const $cHightemp = data.main.temp_max;
+        const $wIcon = data.weather[0].icon;
+        console.log('현재 온도 :' + $cTemp);
+        console.log('최저 온도 : ' + $cLowtemp);
+        console.log('최고 온도: ' + $cHightemp);
+        console.log('아이콘 :' + $wIcon);
+
+        $(".ctemp").append($cTemp);
+        $(".clowtemp").append($cLowtemp);
+        $(".chightemp").append($cHightemp);
+        // $(".cicon").append($wIcon);
+
+        // $(".cicon").append("<img src ='https://openweathermap.org/img/wn/"+ $wIcon +".png'>");
+        $(".cicon").append(`<img src ='https://openweathermap.org/img/wn/${$wIcon}.png'>`);
+        var $now = new Date();
+        var $cDate =
+        `${$now.getFullYear()}년 ${($now.getMonth()+1)}월 ${$now.getDate()}일 <br>
+        ${$now.getHours()} : ${$now.getMinutes()}<br>`;
+        console.log($cDate);
+      $("h2").prepend($cDate);        
+      });
+
+  </script>
+</body>
+</html>

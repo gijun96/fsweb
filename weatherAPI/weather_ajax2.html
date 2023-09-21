@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fa9c464e26.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let watherIcon = {
+        "01": "fas fa-sun",
+        "02": "fas fa-cloud-sun",
+        "03": "fas fa-cloud",
+        "04": "fas fa-cloud-meatball",
+        "09": "fas fa-cloud-sun-rain",
+        "10": "fas fa-cloud-showers-haeavy",
+        "11": "fas fa-poo-storm",
+        "13": "fas fa-snowflake",
+        "50": "fas fa-smog",
+      };
+      let cityId = {
+        "1846898": "안양시",
+        "1835848": "서울",
+        "1843561": "인천",
+        "1835553": "수원",
+        "1897000": "성남",
+        "1846918": "안산"
+      }
+
+
+      const apiURI =
+      "https://api.openweathermap.org/data/2.5/weather?q=Anyang-si,1846898&appid=8bd12e3390157e7ad5e2332bfa1b7966&units=metric";
+      
+      $.ajax({
+        url: apiURI,
+        type: "GET" /* 타입(GET, POST, PATCH, PUT등) */,
+        success: function (data) {
+          /* 0인덱스 번호부터 두글자 04d => 04 */
+          const $Icon = data.weather[0].icon.substr(0, 2);
+          /* round - 반올림, ceil - 올림, floor - 내림 */    
+          const $Temp = Math.floor(data.main.temp) + "℃"; 
+          const $city = data.name;
+          const $cityId = data.id;
+          console.log($cityId);
+          // console.log(watherIcon[$Icon]);
+          // console.log($Temp);
+          // console.log($city);
+          // $(".currIcon").addClass(watherIcon[$Icon]);
+          $(".currIcon").append(`<i class="${watherIcon[$Icon]}"></i>`);
+          $(".currTemp").append("온도 : "+$Temp);
+          $(".city").append("도시 : "+cityId[$cityId]);
+
+        },
+      });
+      </script>
+    <style>
+     .weather{
+      width: 300px;
+      height: 150px;
+      text-align: center;
+      background-color: cornflowerblue;
+      color: #fff;
+    }
+    .weather > div {
+      float: left;
+      height: 75px;
+      line-height: 75px;
+      width: 50%;
+    }
+    .weather > div.currIcon,
+    .weather > div.currTemp {
+      font-size: 30px;
+    }
+    .weather > div.city {
+      width: 100%;
+      font-size: 23px;
+    }
+
+    </style>
+
+      </head>
+  <body>
+    <div class="weather">
+      <div class="currIcon"></div>
+      <div class="currTemp"></div>
+      <div class="city"></div>
+    </div>
+
+  </body>
+  </html>

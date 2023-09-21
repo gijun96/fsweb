@@ -53,8 +53,8 @@ circle{
   fill:none;
   stroke: url(#GradientColor);
   stroke-width: 20px;
-  stroke-dasharray: 472;
-  stroke-dashoffset:472;
+  stroke-dasharray: 460;
+  stroke-dashoffset:460;
   animation: anim 2s linear forwards;
 
 }
@@ -62,12 +62,18 @@ svg{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
+  rotate: -90deg;
 }
 
 @keyframes anim {
   100%{
-    stroke-dashoffset: 165.2;
+    /* 180.25 =>  .65 => 308.75 */
+     stroke-dashoffset: 166.25;  
+
+    /* max */
+     /* stroke-dashoffset: 236;  */
+     /* stroke-dashoffset: 475; */
 
   }
 }

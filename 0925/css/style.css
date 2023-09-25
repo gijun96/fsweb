@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.bigbox{
+  border: 1px solid black;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.bigbox h2{
+  text-align: center;
+  font-size: 30px;
+  
+}
+.bigbox .box{
+  width: 150px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* .box1{
+  background: url(../images/a1.jpg)no-repeat 50% 50%;
+  transition: .5s;
+}
+.box1:hover{
+  scale: 1.2;
+  overflow: hidden;
+} */
+.box1{
+  background: url(../images/aa1.jpg)no-repeat 50% 0%;
+  transition: .5s;
+}
+.box1:hover{
+  background: url(../images/aa1.jpg)no-repeat 50% 100%;
+}
+
+.box2{
+  background: url(../images/ab2.jpg)no-repeat 0% 50%;
+  transition: .5s;
+} 
+.box2:hover{
+  background: url(../images/ab2.jpg)no-repeat 100% 50%;
+}
+.box3{
+  background: url(../images/a3.jpg)no-repeat 50% 50%;
+  position: relative;
+}
+.box3::before{
+  content: '';
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  position: absolute;
+  z-index: 9;
+  width: 150px;
+  height: 200px;
+  top: 0;
+  left: -100%;
+  background: rgba(0, 0, 0, .5);
+  transition: .3s;
+}
+.box3:hover::before{
+  left: 0;
+}
+.box3::after{
+  content: '페르시안 고양이\a\a나만없어 고양이\A 귀여운 고양이\A  2살먹은 고양이';
+  white-space: pre;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 20%;
+  color: white;
+  opacity: 0;
+  transition: .2s;
+  transition-delay: .3s;
+  z-index: 9;
+}
+
+.box3:hover::after{
+  opacity: 1;
+}
+.box4{
+  background: url(../images/a4.jpg)no-repeat 50% 50%;
+}
+.box5{
+  background: url(../images/a5.jpg)no-repeat 50% 50%;
+}

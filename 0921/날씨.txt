@@ -1,0 +1,64 @@
+날씨 api 사이트 
+
+http://openweathermap.org/
+
+
+Sign in 가입
+본인 이름클릭 – myapikey 
+api key 탭을 눌러서 키 값을 복사한다.
+cd63accc133fc76e1f94a3f270442688
+
+홈으로 와서
+하단 푸터에 how to start 클릭
+
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}
+
+도시코드를 검색하려면
+
+메인화면 - 돋보기(검색창) - weather in your city      placeholder로 
+써진부분에 anyang  또는 seoul 검색하고 클릭하면
+선택된 도시의 날씨를 알수있다. 
+주소창 상단에보면
+https://openweathermap.org/city/1846898
+1846898 안양 도시코드 id = 1846898
+서울 1835848
+
+
+http://api.openweathermap.org/data/2.5/forecast?id=1846898&appid=cd63accc133fc76e1f94a3f270442688
+json로 날씨가 기술되 있다.
+
+구글 주소창 검색
+json 데이터가 나온다.
+ctrl + a 모두 선택한후 ctrl + c 복사 해서
+vscode에 와서 ctrl + v 한다. 
+ctrl + k + f 자동을 코드 정렬
+
+
+{"name" : "Jones"}
+javaScript Object Notation(JSON) - 자바스크립트 객체 문법으로 구조화된 데이터표현  
+ 
+출력되어 나온 온도는 Kelvin 온도입니다.
+296.73
+
+메뉴 - api -  Parameters of API reponse - json
+ - Units of measurement
+
+&units=metric -->섭씨
+
+&units=imperial(화씨)
+
+
+http://api.openweathermap.org/data/2.5/forecast?id=1846898&appid=cd63accc133fc76e1f94a3f270442688&units=metric
+
+forcast(예보)
+weather(현재날씨)
+
+http://api.openweathermap.org/data/2.5/weather?id=1846898&appid=cd63accc133fc76e1f94a3f270442688&units=metric
+
+날씨아이콘
+https://openweathermap.org/weather-conditions
+
+
+
+
+

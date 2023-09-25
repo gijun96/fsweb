@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .box{
+      border: 1px solid black;
+      width: 600px;
+      height: 600px;
+      position: relative;
+      left: 10%;
+      top: 10px;
+    }
+    .circle{
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+  .cir1 div{
+      position: absolute;
+      left: 50px;
+      z-index: 9;
+      width: 0;
+      height: 0;
+      border: 1px solid black;
+      animation: line1 2s  forwards;
+    }
+    @keyframes line1 {
+      0%{
+        width: 0;
+      }100%{
+        width: 499px;
+      }
+    }
+    .cir2{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .cir2 div{
+      position: absolute;
+      top: 50px;
+      width: 0;
+      height: 0;
+      animation: line2 2s 2s forwards;
+    }
+    @keyframes line2 {
+      0%{
+        border: 1px solid black;
+        width: 1px;
+        height: 0;
+      }100%{
+        border: 1px solid black;
+        width: 1px;
+        height: 498px;
+        z-index: 9;
+      }
+    }
+
+    .cir3{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    .cir3 div{
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+      animation: line3 2s 4s forwards;
+      width: 0;
+      height: 0;
+    }
+    @keyframes line3 {
+      0%{
+        border: 1px solid black;
+        height: 1px;
+        width: 0;
+      }100%{
+        border: 1px solid black;
+        width: 499px;
+        height: 1px;
+        z-index: 9;
+      }
+
+    }
+    .cir4{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .cir4 div{
+      position: absolute;
+      left: 49px;
+      bottom: 51px;
+      width: 0;
+      height: 0;
+      animation: line4 2s ease-in-out 6s forwards;
+    }
+    @keyframes line4 {
+     0%{
+      width: 0;
+      height: 0;
+      border: 1px solid black;
+     }100%{
+      width: 1px;
+      height: 498px;
+      z-index: 9;
+      border: 1px solid black;
+     }
+    }
+    .img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(./img/woman.png)no-repeat 50% 50%;
+      opacity: 0;
+      animation: fade-in 2s ease-in-out 8s forwards;
+      width: 300px;
+      height: 300px;
+
+    }
+    @keyframes fade-in {
+      0%{
+        opacity: 0;
+      }100%{
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="circle cir1">
+      <div></div>
+    </div>
+    <div class="circle cir2">
+      <div></div>
+    </div>
+    <div class="circle cir3">
+      <div></div>
+    </div>
+    <div class="circle cir4">
+      <div></div>
+    </div>
+    <div class="img"></div>
+  </div>
+</body>
+</html>

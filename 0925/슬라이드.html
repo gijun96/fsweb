@@ -4,7 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/carousel.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+.carousel_wrapper{
+  width: 1200px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.carousel ul{
+  width: 1200px;
+  height: 400px;
+  display: flex;
+  transition: .5s;
+}
+.carousel img{
+  width: 1200px;
+  height: 400px;
+}
+  </style>
 </head>
 <body>
   <div class="carousel_wrapper">
@@ -17,6 +42,26 @@
       </ul>
     </div>
   </div>
-  <script src="js/script.js"></script>
+  <script>
+    const list = document.querySelector(".list");
+let i = 0;
+function auto(){
+  setInterval(() => {
+    if (i === 3){
+      setTimeout(() => {
+      i=0;
+      list.style.transition = "none";
+      list.style.transform = `translateX(-${1200 * i}px)`;
+    }, 500);
+  }
+  i++;
+  list.style.transform = `translateX(-${1200 * i}px)`;
+  list.style.transition = ".5s";
+}, 2000);
+
+}
+auto();
+
+  </script>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <div id="modalBox">
+      <img src="./images/ph_sec1.jpg" width="100%" alt="img1" />
+      <div class="offer-text">
+        <h2>Get 15% OFF</h2>
+        <small>on all beauty products</small>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+          quibusdam.
+        </p>
+        <form action="#">
+          <input type="email" placeholder="Email Address" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="cookie_input">
+        <input type="checkbox" onclick="check_res()" /><a
+          href="#"
+          onclick="closeModel()"
+          >3일동안 보지 않기</a
+        >
+      </div>
+      <img
+        class="close_icon"
+        src="./images/close_icon.png"
+        alt="closeIcon"
+        onclick="closeModel()"
+      />
+    </div>
+
+    <script>
+      const modelBox = document.getElementById("modalBox");
+      const cookie_input = document.querySelector("cookie_input");
+      document.onmouseleave = function () {
+        modelBox.style.display = "block";
+      };
+
+      function closeModel() {
+        modelBox.style.display = "none";
+      }
+
+      function check_res() {
+        const checkbox = document.querySelector(".cookie_input input");
+        const is_check = checkbox.checked;
+        console.log(is_check);
+        if (is_check === true) {
+          modelBox.style.display = "none";
+        }
+        // is_check = ;
+      }
+    </script>
+  </body>
+</html>

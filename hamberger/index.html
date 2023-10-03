@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>햄버거 아이콘</title>
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+  <script>
+    $(function () {
+      $(document).ready(function () {
+        $(".hamburger").click(function () {
+          $(this).toggleClass("active");
+        });
+      });
+    });
+  </script>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    p,
+    li,
+    a {
+      font-size: 14px;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1200px;
+      text-align: center;
+    }
+
+    /* ALL */
+    .list {
+      padding: 80px 30px;
+      box-sizing: border-box;
+      background-color: mediumpurple;
+      color: #ecf0f1;
+      text-align: center;
+    }
+
+    .hamburger .line {
+      width: 50px;
+      height: 5px;
+      background-color: #ecf0f1;
+      display: block;
+      margin: 8px auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger:hover {
+      cursor: pointer;
+    }
+
+    /* hamburger-1 */
+    #hamburger-1.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    #hamburger-1.active .line:nth-child(1) {
+      transform: translateY(13px) rotate(45deg);
+    }
+
+    #hamburger-1.active .line:nth-child(3) {
+      transform: translateY(-13px) rotate(-45deg);
+    }
+
+    /* hamburger-2 */
+    #hamburger-2.active .line:nth-child(1) {
+      transform: translateY(13px);
+    }
+
+    #hamburger-2.active .line:nth-child(3) {
+      transform: translateY(-13px);
+    }
+
+    /* hamburger-3 */
+    #hamburger-3.active .line:nth-child(1),
+    #hamburger-3.active .line:nth-child(3) {
+      width: 40px;
+    }
+
+    #hamburger-3.active .line:nth-child(1) {
+      transform: translateX(-10px) rotate(-45deg);
+    }
+
+    #hamburger-3.active .line:nth-child(3) {
+      transform: translateX(-10px) rotate(45deg);
+    }
+
+    /* hamburger-4 */
+    #hamburger-4.active .line:nth-child(1),
+    #hamburger-4.active .line:nth-child(3) {
+      width: 40px;
+    }
+
+    #hamburger-4.active .line:nth-child(1) {
+      transform: translateX(10px) rotate(45deg);
+    }
+
+    #hamburger-4.active .line:nth-child(3) {
+      transform: translateX(10px) rotate(-45deg);
+    }
+
+    /* hamburger-5 */
+    #hamburger-5.active {
+      transform: rotate(90deg);
+    }
+
+    #hamburger-5.active .line:nth-child(2) {
+      transition: none;
+    }
+
+    #hamburger-5 .line:nth-child(2) {
+      transition-delay: 0.3s;
+    }
+
+    #hamburger-5.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    #hamburger-5.active .line:nth-child(1),
+    #hamburger-5.active .line:nth-child(3) {
+      width: 35px;
+      transform-origin: right;
+    }
+
+    #hamburger-5.active .line:nth-child(1) {
+      transform: translateY(15px) rotate(45deg);
+    }
+
+    #hamburger-5.active .line:nth-child(3) {
+      transform: translateY(-15px) rotate(-45deg);
+    }
+
+    /* hamburger-6 */
+    #hamburger-6.active {
+      transition: all 0.3s ease-in-out;
+      transition-delay: 0.6s;
+      transform: rotate(45deg);
+    }
+
+    #hamburger-6.active .line:nth-child(2) {
+      width: 0px;
+    }
+
+    #hamburger-6.active .line:nth-child(1),
+    #hamburger-6.active .line:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    #hamburger-6.active .line:nth-child(1) {
+      transform: translateY(13px);
+    }
+
+    #hamburger-6.active .line:nth-child(3) {
+      transform: translateY(-13px) rotate(90deg);
+    }
+
+    /* hamburger-7 */
+    #hamburger-7.active .line:nth-child(1) {
+      width: 30px;
+    }
+
+    #hamburger-7.active .line:nth-child(2) {
+      width: 40px;
+    }
+
+    #hamburger-7.active .line {
+      transform: rotate(30deg);
+    }
+
+    /* hamburger-8 */
+    #hamburger-8.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    #hamburger-8.active .line:nth-child(1) {
+      transform: translateY(13px);
+    }
+
+    #hamburger-8.active .line:nth-child(3) {
+      transform: translateY(-13px) rotate(90deg);
+    }
+
+    /* hamburger-9 */
+    #hamburger-9 {
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #hamburger-9.active {
+      transform: rotate(45deg);
+    }
+
+    #hamburger-9:before {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      width: 70px;
+      height: 70px;
+      border: 5px solid transparent;
+      top: calc(50% - 35px);
+      left: calc(50% - 35px);
+      border-radius: 100%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #hamburger-9.active:before {
+      border: 5px solid #ecf0f1;
+    }
+
+    #hamburger-9.active .line {
+      width: 35px;
+    }
+
+    #hamburger-9.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    #hamburger-9.active .line:nth-child(1) {
+      transform: translateY(13px);
+    }
+
+    #hamburger-9.active .line:nth-child(3) {
+      transform: translateY(-13px) rotate(90deg);
+    }
+
+    /* hamburger-10 */
+    #hamburger-10 {
+      transition: all 0.3s ease-in-out;
+    }
+
+    #hamburger-10.active {
+      transform: rotate(90deg);
+    }
+
+    #hamburger-10.active .line:nth-child(1) {
+      width: 30px
+    }
+
+    #hamburger-10.active .line:nth-child(2) {
+      width: 40px
+    }
+
+    /* hamburger-11 */
+    #hamburger-11 {
+      transition: all 0.3s ease-in-out;
+    }
+
+    #hamburger-11.active {
+      animation: smallbig 0.6s forwards;
+    }
+
+    @keyframes smallbig {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(0);
+      }
+    }
+
+    #hamburger-11.active .line:nth-child(1),
+    #hamburger-11.active .line:nth-child(2),
+    #hamburger-11.active .line:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+
+    #hamburger-11.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    #hamburger-11.active .line:nth-child(1) {
+      transform: translateY(13px) rotate(45deg);
+    }
+
+    #hamburger-11.active .line:nth-child(3) {
+      transform: translateY(-13px) rotate(-45deg);
+    }
+
+    /* hamburger-12 */
+
+    #hamburger-12.active .line:nth-child(1) {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    #hamburger-12.active .line:nth-child(3) {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+      <div class="list">
+        <div class="hamburger" id="hamburger-1">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="hamburger" id="hamburger-2">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="hamburger" id="hamburger-3">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="hamburger" id="hamburger-4">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="hamburger" id="hamburger-5">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="hamburger" id="hamburger-6">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="hamburger" id="hamburger-7">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="hamburger" id="hamburger-8">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="hamburger" id="hamburger-9">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="hamburger" id="hamburger-10">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="hamburger" id="hamburger-11">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="hamburger" id="hamburger-12">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+  </div>
+</body>
+
+</html>

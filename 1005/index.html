@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.js"></script>
+    <title>slider</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header{
+        height: 200px;
+        background-color: lightpink;
+      }
+      .wrapper{
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background: #fff;
+}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+      .slider li {
+        width: 1200px;
+        height: 500px;
+      }
+      .slider li img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      .bx-wrapper .bx-prev{
+        left: 0;
+      }
+      .bx-wrapper .bx-next{
+        right: 0;
+      }
+      .bx-wrapper .bx-prev,
+      .bx-wrapper .bx-prev:hover,
+      .bx-wrapper .bx-prev:focus {
+        background: url(./bx/images/btn_slide_prev.png) no-repeat 50% 50%;
+        width: 50px;
+        height: 50px;
+      }
+      .bx-wrapper .bx-controls-direction a {
+        width: 100px;
+        height: 100px;
+        transform: translateY(-50%);
+      }
+      .bx-wrapper .bx-next,
+      .bx-wrapper .bx-next:hover,
+      .bx-wrapper .bx-next:focus {
+        background: url(./bx/images/btn_slide_next.png) no-repeat 50% 50%;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        헤더
+      </header>
+      <ul class="slider">
+        <li><img src="./bx/img/images(1).jpg" alt="p1" /></li>
+        <li><img src="./bx/img/images(2).jpg" alt="p2" /></li>
+        <li><img src="./bx/img/images(3).jpg" alt="p3" /></li>
+        <li><img src="./bx/img/images(4).jpg" alt="p4"></li>
+        <li><img src="./bx/img/images(5).jpg" alt="p5"></li>
+      </ul>
+    </div>
+    <script>
+      $(".slider").bxSlider({
+        auto: true,
+        autoControls: false,
+        stopAutoOnClick: true,
+        pager: true,
+        slideWidth: 1200,
+      });
+    </script>
+  </body>
+</html>

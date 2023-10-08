@@ -15,9 +15,9 @@ public class exam_46 {
         arr[2] = scanner.nextInt();
 
         for(int i =0;i<3;i++){
-            if(arr[i]>=170){
+            if(arr[i]>170){
                 System.out.println("PASS");
-            }else{
+            }else if(arr[i] <=170){
                 System.out.println("CRASH");
             }
         }

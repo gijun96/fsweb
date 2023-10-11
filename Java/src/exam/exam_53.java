@@ -22,8 +22,8 @@ public class exam_53 {
                         c.multiply(b, a),
                         c.divide(a, b),
                         c.divide(b, a),
-                        c.sqrt(a, b),
-                        c.sqrt(b, a)
+                        c.pow(a, b),
+                        c.pow(b, a)
         };
 
         System.out.printf("%d + %d = %.0f, ", a, b, arr[0]);
@@ -61,7 +61,7 @@ int b;
         double divide (int a, int b){
             return (double) a / b;
         }
-        double sqrt(int a, int b){return Math.pow(a ,b);}
+        double pow(int a, int b){return Math.pow(a ,b);}
     }
 }
 

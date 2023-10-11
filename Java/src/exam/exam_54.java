@@ -13,11 +13,11 @@ public class exam_54 {
         c.b =scanner.nextInt();
 
         if(c.b%c.a ==0){
-            System.out.printf("%d\t%d =====> %d * %d = %d", c.a, c.b, c.a, c.x(), c.b);
+            System.out.printf("%d\t%d =====> %d * %d = %d\n", c.a, c.b, c.a, c.x(), c.b);
         }else if(c.a%c.b ==0){
-            System.out.printf("%d\t%d =====> %d * %d = %d", c.b, c.a, c.b, c.x(), c.a);
+            System.out.printf("%d\t%d =====> %d * %d = %d\n", c.b, c.a, c.b, c.x(), c.a);
         }else{
-            System.out.printf("%d\t%d =====> none", c.a, c.b);
+            System.out.printf("%d\t%d =====> none\n", c.a, c.b);
         }
     }
 
@@ -27,8 +27,6 @@ class Calc{
     int a;
     int b;
     int x(){
-        this.a =a;
-        this.b =b;
         int result = 0;
         if(b%a ==0){
             result = b/a;

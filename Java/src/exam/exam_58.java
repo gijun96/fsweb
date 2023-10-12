@@ -13,11 +13,9 @@ public class exam_58 {
         System.out.println("c를 입력하세요");
     int c = scanner.nextInt();
 
-    if (c < (a+b)){
-        System.out.println("yes");
-    }else{
-        System.out.println("no");
-    }
+    if (c < (a+b)) System.out.println("yes");
+    else System.out.println("no");
+
 
     }
 }

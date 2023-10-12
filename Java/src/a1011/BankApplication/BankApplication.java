@@ -76,10 +76,10 @@ class Bank{
     }
 
     public void setAccoutn(String _acc, String _name, String _money){
-        acc= _acc;
-        name = _name;
-        money = _money;
-//        accArr[count] = {acc, name, money};
+        this.acc= _acc;
+        this.name = _name;
+        this.money = _money;
+//        accArr[count] += new String[10];
         count++;
     }
 

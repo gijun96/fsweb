@@ -54,17 +54,28 @@ nav {
   height: 330px;
   vertical-align: top;
 }
-.gnb li a {
+.gnb li {
+  text-align: center;
   height: 50px;
   width: 200px;
   padding: 16px 24px;
   display: block;
 }
 .sub {
+  text-align: center;
   position: absolute;
   z-index: 10;
   display: none;
   transition: 0.5s;
+}
+.sub li{
+  transform: translateX(-15%);
+  line-height: 2.4rem;
+}
+.sub li a.on{
+  font-weight: bold;
+  position: relative;
+  background: url(../images/menu_hover.png)no-repeat center left;
 }
 .gnb:hover .sub {
   display: block;

@@ -1,25 +1,21 @@
 package exam;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
-
 public class exam_59 {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[] num = new String[6];
         //        출력 확인용
         String str1 ="";
         // ==================================LOTTO NUMBER==============================================
-        System.out.println("로또 당첨 번호 6자리를 입력해주세요.");
+        System.out.println("로또 당첨 번호 6개를 입력해주세요.");
         for (int i = 0; i < num.length; i++) {
-            System.out.println((i+1)+" 번째 자리를 입력해주세요.");
+            System.out.println((i+1)+" 번째 번호를 입력해주세요.");
             String n = scanner.nextLine().replaceAll("[^0-9]", "");
              Outer: while (true){
-                        if(n =="" || Integer.parseInt(n) > 45 || Integer.parseInt(n) <1) {
+                        if(n.isEmpty() || Integer.parseInt(n) > 45 || Integer.parseInt(n) <1) {
                             System.out.println("숫자를 다시입력해주세요.");
-                            System.out.println((i + 1) + " 번째 자리를 입력해주세요.");
+                            System.out.println((i + 1) + " 번째 번호를 입력해주세요.");
                             n = scanner.nextLine().replaceAll("[^0-9]", "");
                             continue;
                         }else{
@@ -42,7 +38,7 @@ public class exam_59 {
         System.out.println("보너스번호를 입력해주세요.");
         String bonus_n = scanner.nextLine().replaceAll("[^0-9]", "");
         Outer: while (true){
-                if(bonus_n =="" || Integer.parseInt(bonus_n) > 45 || Integer.parseInt(bonus_n) <1) {
+                if(bonus_n.isEmpty() || Integer.parseInt(bonus_n) > 45 || Integer.parseInt(bonus_n) <1) {
                     System.out.println("숫자를 다시입력해주세요.");
                     System.out.println("보너스 번호를 다시 입력해주세요.");
                     bonus_n = scanner.nextLine().replaceAll("[^0-9]", "");
@@ -50,7 +46,7 @@ public class exam_59 {
                 }else {
                     for (int i=0; i< num.length;i++){
                         if (bonus_n.equals(num[i])) {
-                            System.out.println("중복입니다. 숫자를 다시 입력해주세요.");
+                            System.out.println("중복입니다. 번호를 다시 입력해주세요.");
                             bonus_n = scanner.nextLine().replaceAll("[^0-9]", "");
                             continue Outer;
                         }
@@ -64,11 +60,11 @@ public class exam_59 {
         // ==========================USER NUMBER====================================================
         System.out.println("당신의 당첨번호를 입력해주세요.");
         for (int i = 0; i < user_num.length; i++) {
-            System.out.println((i+1)+" 번째 자리를 입력해주세요.");
+            System.out.println((i+1)+" 번째 번호를 입력해주세요.");
             String user_n = scanner.nextLine().replaceAll("[^1-9]", "");
             while (true){
-                    if(user_n =="" || Integer.parseInt(user_n) > 45 || Integer.parseInt(user_n) <1) {
-                        System.out.println("숫자를 다시입력해주세요.");
+                    if(user_n.isEmpty() || Integer.parseInt(user_n) > 45 || Integer.parseInt(user_n) <1) {
+                        System.out.println("번호를 다시입력해주세요.");
                         System.out.println((i + 1) + " 번째 자리를 입력해주세요.");
                         user_n = scanner.nextLine().replaceAll("[^0-9]", "");
                         continue;

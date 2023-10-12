@@ -1,12 +1,14 @@
-const f1 = document.querySelector(".f1");
-const p = f1.querySelectorAll("p");
-const span = f1.querySelector("span");
-f1.addEventListener("click", () => {
-  console.log("box click");
-  p[0].style.opacity = "1";
-  p[1].style.opacity = "1";
-  span.style.opacity = "1";
-  p[0].style.marginTop = "0";
-  p[1].style.marginTop = "0";
-  span.style.marginTop = "0";
-});
+const sublist = document.querySelectorAll(".sub li a");
+
+for(let i =0;i<sublist.length;i++){
+    sublist[i].addEventListener("mouseenter", ()=>{
+      for(let j=0; j<sublist.length;j++){
+        sublist[j].classList.remove("on");
+      }
+      sublist[i].classList.add("on");
+    }), "mouseleave", ()=>{
+      for(let j=0; j<sublist.length;j++){
+        sublist[j].classList.remove("on");
+      }
+    }
+}

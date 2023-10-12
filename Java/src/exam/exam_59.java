@@ -11,7 +11,7 @@ public class exam_59 {
         String[] num = new String[6];
         //        출력 확인용
         String str1 ="";
-
+        // ==================================LOTTO NUMBER==============================================
         System.out.println("로또 당첨 번호 6자리를 입력해주세요.");
         for (int i = 0; i < num.length; i++) {
             System.out.println((i+1)+" 번째 자리를 입력해주세요.");
@@ -33,15 +33,12 @@ public class exam_59 {
                         }
                 break ;
             }
-
-
-
             num[i] = n;
 //            출력확인용
         str1 +=(num[i] +",");
         }
         System.out.println(str1);
-
+        // ==============================BONUS NUMBER==============================================
         System.out.println("보너스번호를 입력해주세요.");
         String bonus_n = scanner.nextLine().replaceAll("[^0-9]", "");
         Outer: while (true){
@@ -64,6 +61,7 @@ public class exam_59 {
         String[] user_num = new String[6];
 //        출력 확인용
             String str2 ="";
+        // ==========================USER NUMBER====================================================
         System.out.println("당신의 당첨번호를 입력해주세요.");
         for (int i = 0; i < user_num.length; i++) {
             System.out.println((i+1)+" 번째 자리를 입력해주세요.");
@@ -78,11 +76,12 @@ public class exam_59 {
                 break ;
             }
             user_num[i] = user_n;
-
             //출력 확인용
             str2 +=(user_num[i]+",");
         }
         System.out.println(str2);
+        // =========================================================================================
+        // 결과 출력
         int result = 0;
         int result_b = 0;
         for (int i = 0; i < user_num.length; i++) {
@@ -101,7 +100,6 @@ public class exam_59 {
         } else if (result == 4) System.out.println("4등!");
         else if (result == 3) System.out.println("5등!");
         else System.out.println("꽝!");
-        System.out.println();
     }
 }
 

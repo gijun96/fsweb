@@ -94,7 +94,7 @@ public class BankApplication {
         }
      }
      public static void deposit(String accNumber, String balance) {
-          boolean rel = true;
+          rel = true;
          for (int i = 0; i< index;i++){
             if(accArr[i][0].equals(accNumber)){
                 rel =false;
@@ -105,7 +105,7 @@ public class BankApplication {
          if (rel) System.out.println("계좌 번호를 확인해 주세요.");
      }
      public  static void withdrawal(String accNumber, String balance){
-         boolean rel = true;
+        rel = true;
          for (int i = 0; i< index;i++){
              if(accArr[i][0].equals(accNumber)){
                  rel =false;

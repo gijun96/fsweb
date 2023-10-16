@@ -33,8 +33,6 @@ $(function(){
           sublist[j].classList.remove("on");
         }
         sublist[i].classList.add("on");
-      }, "mouseleave", ()=>{
-          EventTarget.classList.remove("on");
       });
   }
 

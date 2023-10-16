@@ -1,16 +1,8 @@
 package exam.thisIsJava.chapter06;
-
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
-
 
 public class BankApplication {
     public static void main(String[] args) {
-        Account account =new Account();
-
         Scanner scanner = new Scanner(System.in);
         O: while (true) {
             System.out.println("================================================");
@@ -28,7 +20,6 @@ public class BankApplication {
                     System.out.print("초기입급액 : ");
                     String _money = scanner.nextLine();
                     Account.add(_acc, _name, _money);
-
                     break;
 //               2. 계좌목록
                 case "2":
@@ -36,7 +27,6 @@ public class BankApplication {
                     System.out.println("   계좌 목록   ");
                     System.out.println("--------------");
                     Account.display();
-
                     break;
                 //3. 예금
                 //계좌번호, 금액을 받아 해당 계좌번호를 가진 Account에 금액 추가
@@ -61,21 +51,17 @@ public class BankApplication {
                     System.out.println("프로그램 종료");
                     break O;
             }
-
-
         }
-
-
     }
 }
  class Account{
-     public static String[][] accArr = new String[100][3];
+     private static String[][] accArr = new String[100][3];
      public static boolean rel;
      public static int sum;
-     static int index =0;
+     private static int index =0;
      static void add(String acc, String name, String balance){
          if (index <100){
-        for (int i =0; i<3; i++){
+        for (int i =0; i<accArr[0].length; i++){
             accArr[index][0] = acc;
             accArr[index][1] = name;
             accArr[index][2] = balance;
@@ -85,32 +71,30 @@ public class BankApplication {
          }else {
              System.out.println("더 이상 계좌를 생성 할 수 없습니다.");
          }
-
     }
      public static void display() {
         for (int i = 0; i< index;i++){
-            System.out.printf("%s\t%s\t%s\n", accArr[i][0], accArr[i][1], accArr[i][2]);
-
-        }
+                System.out.printf("%s\t%s\t%s\n", accArr[i][0], accArr[i][1], accArr[i][2]);
+            }
      }
      public static void deposit(String accNumber, String balance) {
           rel = true;
          for (int i = 0; i< index;i++){
-            if(accArr[i][0].equals(accNumber)){
+            if(accArr[i][0].equals(accNumber) && Integer.parseInt(balance) > 0){
                 rel =false;
                     sum= Integer.parseInt(accArr[i][2])+Integer.parseInt(balance);
                     accArr[i][2] = String.valueOf(sum);
             }
          }
-         if (rel) System.out.println("계좌 번호를 확인해 주세요.");
+         if (rel) System.out.println("계좌 번호 및 입금 금액을 확인해 주세요.");
      }
      public  static void withdrawal(String accNumber, String balance){
         rel = true;
          for (int i = 0; i< index;i++){
              if(accArr[i][0].equals(accNumber)){
                  rel =false;
-                 if (Integer.parseInt(accArr[i][2])<Integer.parseInt(balance)) {
-                     System.out.println("잔액이 모자랍니다.");
+                 if (Integer.parseInt(accArr[i][2])<Integer.parseInt(balance) || Integer.parseInt(balance) <0) {
+                     System.out.println("잔액이 모자랍니다 \n 출금액을 확인해 주세요.");
                  }else {
                      sum = Integer.parseInt(accArr[i][2]) - Integer.parseInt(balance);
                      accArr[i][2] = String.valueOf(sum);
@@ -120,6 +104,4 @@ public class BankApplication {
          }
          if (rel) System.out.println("계좌 번호를 확인해 주세요.");
      }
-
-
  }

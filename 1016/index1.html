@@ -110,28 +110,83 @@
             </div>
           </li>
         </ul>
+
+        <div class="contact_circle">
+          <div>
+            <p><a href="#">TALK</a></p>
+          </div>
+          <div>
+            <p><a href="#">CALL</a></p>
+          </div>
+          <div>
+            <p><a href="#">TIME</a></p>
+          </div>
+        </div>
       </section>
-      <div class="contact_circle">
-        <div>
-          <p><a href="#">TALK</a></p>
+      <!-- // section1 -->
+
+      <!-- section2 -->
+      <section id="s2">
+        <div class="s2_content">
+          <div class="s2_tit">
+            <img src="./img/sec2_tit.png" alt="s2_tit" />
+            <h2>심리상담</h2>
+            <p>
+              인간관계에서의 문제, 심리적 문제로 어려움을 겪고 계시는 분들에게
+              <br />전문적인 상담을 진행하며 효과적인 치료를 이어갑니다.
+            </p>
+          </div>
+          <div class="s2_video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Y_n3hSD6qYg?si=KEg8RLVyXttQ6Hv_&amp;controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
-        <div>
-          <p><a href="">CALL</a></p>
+      </section>
+      <!-- //section2 -->
+
+      <!-- section3 -->
+      <section id="s3">
+        <div class="s3_content">
+          <div class="s3_tit">
+            <img src="./img/sec1_tit.png" alt="s3_tit" />
+            <h2>다소니</h2>
+            <h3>다소니전문 상담/검사가 필요하시다면?</h3>
+          </div>
+          <ul class="s3_ul">
+            <li class="s3_sidebar l_bar">
+              <a href="#">성인</a>
+              <a href="#">아동/청소년</a>
+              <a href="#">부부/가족</a>
+            </li>
+            <li class="s3_li_l s3_box">
+              <h6>심리상담예약신청</h6>
+              <img src="./img/icon_mouse.png" alt="" />
+              <a href="#" class="s3_btn">바로하기&nbsp;&nbsp;&gt;</a>
+            </li>
+            <li class="s3_li_r s3_box">
+              <h6>심리검사예약신청</h6>
+              <img src="./img/icon_pc.png" alt="" />
+              <a href="#" class="s3_btn">신청하기&nbsp;&nbsp;&gt;</a>
+            </li>
+            <li class="s3_sidebar r_bar">
+              <a href="#">전문심리검사</a>
+              <a href="#">종합심리평가</a>
+              <a href="#">신경심리평가</a>
+            </li>
+          </ul>
         </div>
-        <div>
-          <p><a href="">TIME</a></p>
-        </div>
-      </div>
+      </section>
+      <!-- //section3 -->
+
+      <!-- //wrap -->
     </div>
-
-    <script>
-      const circles = document.querySelector(".contact_circle");
-
-      window.addEventListener("scroll", () => {
-        const html = document.documentElement;
-        let scrollY_val = html.scrollTop;
-        circles.style.transform = `translateY(${scrollY_val}px)`;
-      });
-    </script>
+    <script src="js/main_script.js"></script>
   </body>
 </html>

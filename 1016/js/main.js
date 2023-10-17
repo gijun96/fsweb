@@ -22,6 +22,4 @@ $(function () {
       $(".slider li .circle_poss").addClass("on");
     },
   });
-
-  
 });

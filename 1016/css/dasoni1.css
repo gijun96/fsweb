@@ -222,7 +222,7 @@ header .gnb {
 /* contact_circle */
 .contact_circle {
   position: absolute;
-  top: 45%;
+  top: 50%;
   right: 18%;
   transition: all 2s ease;
 }

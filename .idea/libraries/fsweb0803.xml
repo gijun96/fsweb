@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="fsweb0803">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dasoni.zip!/" />
+      <root url="jar://$PROJECT_DIR$/circle progress bar.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

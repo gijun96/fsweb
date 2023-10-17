@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="50_html">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/50_html/50_html.zip!/" />
+      <root url="jar://$PROJECT_DIR$/50_html/50_html (2).zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

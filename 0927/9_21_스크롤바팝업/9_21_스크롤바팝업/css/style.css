@@ -1,7 +1,7 @@
 *{margin: 0; padding: 0;}
 body{overflow-x: hidden;}
 
-h1{
+h1.htop{
     position: fixed; 
     right: 10px; 
     bottom: 10px; 
@@ -51,7 +51,7 @@ nav ul li.on a{color: orange;}
 section > div{height: 700px;}
 
 section > div p{color: #fff; padding: 8px;}
-
+section > div p.p1{color:black;}
 #area1{background-color: aquamarine;}
 #area2{background-color: salmon;}
 #area3{background-color: blueviolet;}
@@ -80,49 +80,46 @@ section > div p{color: #fff; padding: 8px;}
 }
 
 #floatdiv ul li.on{background-color: orange;}
-
 #popup{
-  width: 301px;
-  height: 351px;
-  position: absolute;
-  top: 210px;
-  left: 50px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-  z-index: 999;
-  display: none;
+    width:301px;
+    height:351px;
+    position: absolute;
+    top:210px;
+    left:50px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
 }
-
 #notice_wrap{
-  width:301px;
-  position: absolute;
-  left:450px;
-  top:210px;
-  box-shadow: 0 0 8px #000;
-  font-size:12px;
-  z-index:999;
+    width:301px;
+    position: absolute;
+    left:450px;
+    top:210px;
+    box-shadow: 0 0 8px #000;
+    font-size:12px;
+    z-index:999;
 }
 #notice_wrap img{float:left;}
 .closeWrap{
-  background-color: #000;
-  color:#fff;
-  text-align: right;
-  padding: 5px 10px;
+    background-color: #000;
+    color:#fff;
+    text-align: right;
+    padding: 5px 10px;
 }
 
 .closeWrap button{
- margin-left: 20px; 
- cursor:pointer;
+   margin-left: 20px; 
+   cursor:pointer;
 }
 
 #pdt_basic{
     position: fixed;
-    width: 326px;
-    height: 450px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width:326px;
+    height:450px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
     opacity: 0;
-
 }
 
 #leftdiv{
@@ -162,3 +159,43 @@ section > div p{color: #fff; padding: 8px;}
 #leftdiv .leftdiv_title.on{
     background: url(../images/remote_mainon.png) no-repeat 0 0;
 }/*홈(집) 색상오랜지*/
+#area4{position: relative;}
+
+.s4_cover{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:900px;
+    margin-left: -450px;
+    height:200px;
+    text-align: center;
+    border:1px solid red;
+    display:flex;
+  }
+  .s4_cover > div{
+    background-color: rgba(255,255,255,0.7);
+    width:200px;
+    color:black;
+    padding: 30px 0;
+    margin-top: 70px;
+    margin-left: 20px;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+  .s4_cover>div.active{
+    margin-top: 0px;
+    opacity: 1;
+ 
+  }
+  .s4_cover > div.s4_1{
+    transition: all 0.8s;
+  }
+  .s4_cover > div.s4_2{
+    transition: all 0.8s 0.4s;
+  }
+  .s4_cover > div.s4_3{
+    transition: all 0.8s 0.8s;
+  }
+  .s4_cover > div.s4_4{
+    transition: all 0.8s 1.2s;
+  }

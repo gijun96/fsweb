@@ -544,12 +544,19 @@ header .gnb {
   width: 20px;
   height: 20px;
   text-indent: -99999999px;
-  background: url(../img/sec5_plus.png)no-repeat center center/cover;
   transition: all .5s;
 }
-
+.s5_l a div{
+  background: url(../img/sec5_plus.png)no-repeat 50% 50%/cover;
+}
+.s5_l a div:hover{
+  rotate: 180deg;
+}
 .s5_r a div{
-  background: url(../img/sec5_plus2.png)no-repeat center center/cover;
+  background: url(../img/sec5_plus2.png)no-repeat 50% 50%/cover;
+}
+.s5_r a div:hover{
+  rotate: 180deg;
 }
 .s5_content li a span:nth-of-type(2){
   margin-left: auto;

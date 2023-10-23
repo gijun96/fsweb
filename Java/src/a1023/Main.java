@@ -4,6 +4,7 @@ package a1023;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -42,7 +43,40 @@ public class Main {
                 .distinct()
                 .collect(Collectors.toList());
         System.out.println(cities);
+        //케임브릿지에서의 근무하는 모든 거래자를 찾아서 이름순으로 정렬하시오
+        List<String> Cambridge_traders = transactions.stream()
+                .map(Transaction::getTrader)
+                .filter(s->s.getCity().equals("Cambridge"))
+                .map(s->s.getName())
+                .distinct()
+                .sorted()
+                .collect(Collectors.toList());
+        System.out.println("Cambridge_traders : "+Cambridge_traders);
 
+
+
+
+
+        // 모든 거래자의 이름을 알파벳순으로 정리해서 반환하시오.
+        List<String> traders = transactions.stream()
+                .map(transaction -> transaction.getTrader().getName())
+                .distinct()
+                .sorted()
+                .collect(Collectors.toList());
+        System.out.println("traders : "+traders);
+        //밀라노의 거래자가 있는가
+        List<String> milanTraders = transactions.stream()
+                .map(Transaction::getTrader)
+                .filter(trader -> trader.getCity().equals("Milan"))
+                .map(s->s.getName())
+                .distinct()
+                .collect(Collectors.toList());
+        System.out.println("milanTraders : "+milanTraders);
+
+    // 케임브리지에 거주하는 거래자의 모든 트랜잭션 값을 출력하시오.
+        // 전체 트랜잭션 중 최댓값은 얼마인가?
+
+        // 전체 트랜잭션 중 최소값은 얼마인가?
 
 /*
 *

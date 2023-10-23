@@ -1,10 +1,7 @@
 package a1023;
 
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -13,6 +10,8 @@ public class Main {
         Trader mario = new Trader("Mario", "Milan");
         Trader alan = new Trader("Alan", "Cambridge");
         Trader brian = new Trader("Brian", "Cambridge");
+        int sum = 0;
+
 
         List<Transaction> transactions = Arrays.asList(
                 new Transaction(brian , 2011, 300),
@@ -43,6 +42,7 @@ public class Main {
                 .distinct()
                 .collect(Collectors.toList());
         System.out.println(cities);
+
         //케임브릿지에서의 근무하는 모든 거래자를 찾아서 이름순으로 정렬하시오
         List<String> Cambridge_traders = transactions.stream()
                 .map(Transaction::getTrader)
@@ -53,10 +53,6 @@ public class Main {
                 .collect(Collectors.toList());
         System.out.println("Cambridge_traders : "+Cambridge_traders);
 
-
-
-
-
         // 모든 거래자의 이름을 알파벳순으로 정리해서 반환하시오.
         List<String> traders = transactions.stream()
                 .map(transaction -> transaction.getTrader().getName())
@@ -64,6 +60,7 @@ public class Main {
                 .sorted()
                 .collect(Collectors.toList());
         System.out.println("traders : "+traders);
+
         //밀라노의 거래자가 있는가
         List<String> milanTraders = transactions.stream()
                 .map(Transaction::getTrader)
@@ -74,9 +71,26 @@ public class Main {
         System.out.println("milanTraders : "+milanTraders);
 
     // 케임브리지에 거주하는 거래자의 모든 트랜잭션 값을 출력하시오.
+        int CambridgeValue = transactions.stream()
+                .filter(transaction -> transaction.getTrader().getCity().equals("Cambridge"))
+                .mapToInt(transaction->transaction.getValue())
+                .sum();
+        System.out.println("CambridgeValue : " + CambridgeValue);
+
         // 전체 트랜잭션 중 최댓값은 얼마인가?
+        Optional<Integer> maxValue = transactions.stream()
+                        .mapToInt(Transaction::getValue)
+                                .boxed()
+                                        .max(Integer::compare);
+        System.out.println("최대값 : "+maxValue.toString().replaceAll("[^0-9]", ""));
 
         // 전체 트랜잭션 중 최소값은 얼마인가?
+         Optional<Integer> minValue = transactions.stream()
+                .mapToInt(Transaction::getValue)
+                .boxed()
+                .min(Integer::compare);
+        System.out.println("최소값 : "+minValue.toString().replaceAll("[^0-9]", ""));
+
 
 /*
 *

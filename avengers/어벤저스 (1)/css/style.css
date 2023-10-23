@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 1920px;
+  height: 4000px;
+}
+
+ul li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.bg {
+  background: url(../images/bg.jpg) no-repeat center center/cover;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+.gnb {
+  position: fixed;
+  top: 5%;
+  left: 60%;
+  z-index: 9;
+}
+.gnb li {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 8px 16px;
+}
+.gnb li a {
+  color: #777;
+}
+.gnb li a:hover {
+  color: #fff;
+}
+.sns {
+  position: fixed;
+  top: 5%;
+  left: 90%;
+  z-index: 9;
+}
+.sns li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+.sns li a {
+  color: #777;
+  font-size: 22px;
+}
+.sns li a:hover {
+  color: #fff;
+}
+h1 img {
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  width: 450px;
+  height: 180px;
+}
+
+.scrollNav {
+  position: fixed;
+  top: 35%;
+  left: 10%;
+  width: 200px;
+  z-index: 9;
+}
+.scrollNav li {
+  color: #fff;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.scrollNav li span {
+  display: inline-block;
+  width: 10px;
+  height: 40px;
+  transform: skew(-30deg);
+  z-index: 1;
+  transition: all 0.5s;
+}
+.scrollNav li:hover span,
+.scrollNav li.on span {
+  width: 100%;
+}
+.scrollNav li:hover em {
+  color: #000;
+}
+.scrollNav li:nth-of-type(1) span {
+  background-color: red;
+}
+.scrollNav li:nth-of-type(2) span {
+  background-color: yellow;
+}
+.scrollNav li:nth-of-type(3) span {
+  background-color: lightskyblue;
+}
+.scrollNav li:nth-of-type(4) span {
+  background-color: palevioletred;
+}
+.scrollNav li:nth-of-type(5) span {
+  background-color: greenyellow;
+}
+.scrollNav li em {
+  margin-left: 15px;
+  font-size: 18px;
+  z-index: 9;
+  position: fixed;
+}
+
+section {
+  position: fixed;
+  width: 100%;
+}
+article {
+  position: absolute;
+  opacity: 0;
+  transition: all 1s;
+}
+article.on {
+  opacity: 1;
+}
+article img,
+article p {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.obj11 {
+  transform: translate(-80%, -50%);
+}
+.obj12 {
+  transform: translate(-25%, -45%);
+}
+.obj13 {
+  transform: translate(-60%, -40%);
+}
+
+.obj21 {
+  transform: translate(-27%, -36%);
+}
+.obj22 {
+  transform: translate(-20%, -40%);
+}
+
+.obj31 {
+  transform: translate(-35%, -45%);
+}
+.obj32 {
+  transform: translate(-65%, -40%);
+}
+
+.obj41 {
+  transform: translate(-15%, -45%);
+}
+.obj42 {
+  transform: translate(-60%, -55%);
+}
+.obj43 {
+  transform: translate(-15%, -40%);
+}
+
+.obj51 {
+  transform: translate(-70%, -40%);
+}
+.obj52 {
+  transform: translate(-35%, -85%);
+}
+.obj53 {
+  transform: translate(-60%, -40%);
+}
+
+article:nth-of-type(1) p {
+  left: 65%;
+  top: 45%;
+}
+article:nth-of-type(1) p > span {
+  font-size: 64px;
+  color: red;
+  display: block;
+}
+article:nth-of-type(1) p > em {
+  color: #fff;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+article:nth-of-type(2) p {
+  left: 25%;
+  top: 35%;
+}
+article:nth-of-type(2) p > span {
+  font-size: 64px;
+  color: yellow;
+  display: block;
+}
+article:nth-of-type(2) p > em {
+  color: #fff;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+article:nth-of-type(3) p {
+  left: 60%;
+  top: 35%;
+}
+article:nth-of-type(3) p > span {
+  font-size: 64px;
+  color: lightblue;
+  display: block;
+  width: 300px;
+}
+article:nth-of-type(3) p > em {
+  color: #fff;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+article:nth-of-type(4) p {
+  left: 25%;
+  top: 55%;
+}
+article:nth-of-type(4) p > span {
+  font-size: 64px;
+  color: palevioletred;
+  display: block;
+}
+article:nth-of-type(4) p > em {
+  color: #fff;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+article:nth-of-type(5) p {
+  left: 60%;
+  top: 40%;
+}
+article:nth-of-type(5) p > span {
+  font-size: 64px;
+  color: greenyellow;
+  display: block;
+  width: 500px;
+}
+article:nth-of-type(5) p > em {
+  color: #fff;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  font-size: 14px;
+  font-weight: bold;
+  color: #777;
+  letter-spacing: 1px;
+}

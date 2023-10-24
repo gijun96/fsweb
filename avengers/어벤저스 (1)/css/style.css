@@ -156,10 +156,10 @@ article p {
 }
 
 .obj21 {
-  transform: translate(33%, -36%);
+  transform: translate(10%, -5%);
 }
 .obj22 {
-  transform: translate(60%, 35%);
+  transform: translate(60%, 15%);
 }
 
 .obj31 {
@@ -209,7 +209,7 @@ article:nth-of-type(1) p > em {
 }
 
 article:nth-of-type(2) p {
-  left: 25%;
+  left: 15%;
   top: 35%;
 }
 article:nth-of-type(2) p > span {

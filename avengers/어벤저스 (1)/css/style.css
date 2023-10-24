@@ -120,38 +120,46 @@ h1 img {
 
 section {
   position: fixed;
-  width: 100%;
+  width: 1200px;
+  height: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-article {
+section> article {
+  border: 2px solid red;
+  width: 1200px;
+  height: 700px;
   position: absolute;
   opacity: 0;
   transition: all 1s;
+  z-index: -1;
+
 }
 article.on {
   opacity: 1;
+  scale: 1;
 }
 article img,
 article p {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  position: absolute;
 }
 
 .obj11 {
-  transform: translate(-80%, -50%);
+  transform: translate(-25%, 15%);
 }
 .obj12 {
-  transform: translate(-25%, -45%);
+  transform: translate(-5%, -15%);
 }
 .obj13 {
-  transform: translate(-60%, -40%);
+  transform: translate(-10%, 10%);
 }
 
 .obj21 {
-  transform: translate(-27%, -36%);
+  transform: translate(33%, -36%);
 }
 .obj22 {
-  transform: translate(-20%, -40%);
+  transform: translate(60%, 35%);
 }
 
 .obj31 {
@@ -182,18 +190,22 @@ article p {
 }
 
 article:nth-of-type(1) p {
-  left: 65%;
-  top: 45%;
+  position: absolute;
+  right: -20%;
+  top: 35%;
 }
 article:nth-of-type(1) p > span {
   font-size: 64px;
   color: red;
+  width: 400px;
   display: block;
 }
 article:nth-of-type(1) p > em {
   color: #fff;
   margin-top: 20px;
   letter-spacing: 1px;
+  display: block;
+  width: 600px;
 }
 
 article:nth-of-type(2) p {

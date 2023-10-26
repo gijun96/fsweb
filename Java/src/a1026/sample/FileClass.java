@@ -58,5 +58,4 @@ public class FileClass {
             System.out.println("읽을 파일이 없습니다.");
         }
     }
-
 }

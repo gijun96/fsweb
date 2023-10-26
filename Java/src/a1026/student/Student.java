@@ -7,13 +7,13 @@ public class Student {
         StudentDAO studentDAO = new StudentDAO();
         Scanner sc = new Scanner(System.in);
         while(true){
-            System.out.println("1. 회원정보 입력");
-            System.out.println("2. 회원정보 삭제");
-            System.out.println("3. 회원정보 검색");
-            System.out.println("4. 회원정보 수정");
-            System.out.println("5. 회원정보 보기");
+            System.out.println("1. 학생정보 입력");
+            System.out.println("2. 학생정보 삭제");
+            System.out.println("3. 학생정보 검색");
+            System.out.println("4. 학생정보 수정");
+            System.out.println("5. 학생정보 보기");
             System.out.println("6. 파일로 저장하기");
-            System.out.println("7. 회원정보 파일 불러오기");
+            System.out.println("7. 학생정보 파일 불러오기");
             System.out.println("0. 종료");
 
             System.out.println(">> ");

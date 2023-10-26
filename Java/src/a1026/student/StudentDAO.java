@@ -1,6 +1,5 @@
 package a1026.student;
 
-import a1026.sample.FileClass;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,7 +9,7 @@ public class StudentDAO {
 
     private ArrayList<StudentDTO> slist;
 
-    private FileClass file = new FileClass("student", "memberInfo");
+    private StudentFile file = new StudentFile("student", "studentInfo");
 
     public StudentDAO() {
         slist = new ArrayList<StudentDTO>();
@@ -27,10 +26,13 @@ public class StudentDAO {
     }
 
     private void insert(StudentDTO studentDTO){
+        System.out.println("학생정보가 입력되었습니다.");
         slist.add(studentDTO);
     }
-    private void delete(StudentDTO studentDTO){
-        slist.remove(studentDTO);
+    private void delete(int index)
+    {
+        slist.remove(index);
+        System.out.println("학생정보가 삭제되었습니다.");
     }
     private int find(){
         System.out.println("회원 이름을 입력해주세요.");
@@ -42,37 +44,102 @@ public class StudentDAO {
         }
         return -1;
     }
+    private void select(StudentDTO studentDTO){
+        System.out.println("<학생 전체 자료 조회>");
+        System.out.println(studentDTO.toString());
+    }
+    private void update(int index, StudentDTO studentDTO){
+        slist.set(index, studentDTO);
+        System.out.println("데이터 수정 완료!");
+    }
+
     public void userInsert(){
-        StudentDTO studentDTO = new StudentDTO();
+        StudentDTO s = new StudentDTO();
         System.out.println("회원 정보를 입력하세요");
         System.out.println("학생 아이디:");
-        int id = sc.nextInt();
+        s.setId(sc.nextInt());
         System.out.println("학생 이름:");
-        String name = sc.next();
+        s.setName(sc.next());
         System.out.println("학생 나이 : ");
-        int age =sc.nextInt();
+        s.setAge(sc.nextInt());
         System.out.println("국어 점수 :");
-        int kor= sc.nextInt();
+        s.setKor(sc.nextInt());
         System.out.println("영어 점수 :");
-        int eng =sc.nextInt();
+        s.setEng(sc.nextInt());
         System.out.println("수학 점수 :");
-        int math = sc.nextInt();
+        s.setMath(sc.nextInt());
 
-        studentDTO.setId(id);
-        studentDTO.setName(name);
-        studentDTO.setAge(age);
-        studentDTO.setKor(kor);
-        studentDTO.setEng(eng);
-        studentDTO.setMath(math);
-        insert(studentDTO);
+        insert(s);
     }
-    public void userDelete(){
-        int index = find();
+    public void userSelect(){
+        StudentDTO s = new StudentDTO();
+        int index= find();
         if (index != -1){
-            slist.remove(index);
+           s.setId(slist.get(index).getId());
+           s.setName(slist.get(index).getName());
+           s.setAge(slist.get(index).getAge());
+           s.setKor(slist.get(index).getKor());
+           s.setEng(slist.get(index).getEng());
+           s.setMath(slist.get(index).getMath());
+
+           select(s);
+
         }else {
             System.out.println("회원정보를 찾을 수 없습니다.");
         }
+    }
+    public void userUpdate(){
+        StudentDTO s = new StudentDTO();
+        int index= find();
+        if (index != -1) {
+            System.out.println("회원 정보를 입력하세요");
+            System.out.println("학생 아이디:");
+            s.setId(sc.nextInt());
+            System.out.println("학생 이름:");
+            s.setName(sc.next());
+            System.out.println("학생 나이 : ");
+            s.setAge(sc.nextInt());
+            System.out.println("국어 점수 :");
+            s.setKor(sc.nextInt());
+            System.out.println("영어 점수 :");
+            s.setEng(sc.nextInt());
+            System.out.println("수학 점수 :");
+            s.setMath(sc.nextInt());
+            update(index, s);
+        }else {
+            System.out.println("회원 정보를 찾을 수 없습니다.");
+        }
+    }
+
+    public void userDelete(){
+        int index = find();
+        if (index != -1){
+            delete(index);
+        }else {
+            System.out.println("회원정보를 찾을 수 없습니다.");
+        }
+    }
+    public void printAll(){
+        for (int i =0; i< slist.size();i++){
+            System.out.println(slist.get(i).toString());
+        }
+    }
+    public void dataSave() throws Exception {
+        file.create();
+        String data=" \t\t\t\t번호\t 이름\t 나이\t 주소\n";;
+        for (int i=0; i<slist.size();i++){
+            data += slist.get(i).toString()+"\n";
+        }
+        System.out.println("데이터 저장에 성공하였습니다.");
+        file.write(data);
+    }
+    public void dataload(){
+        try {
+            file.read();
+        }catch (Exception e){
+            System.out.println("파일을 읽을 수 없습니다.");
+        }
+
 
     }
 }
